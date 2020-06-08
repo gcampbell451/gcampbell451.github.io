@@ -1,0 +1,31 @@
+body
+{
+  /* you better change this stuff */
+  margin: 100px;
+  font-family: ariel, sans-serif;
+  color: black;
+  background-color: #99badd;
+  font-size: 125%;
+}
+
+h1
+{
+	text-align: center;
+}
+
+h2
+{
+	text-align: center;
+}
+
+
+figure
+{
+	text-align: center;
+	font-style: italic;
+}
+
+div
+{
+	text-align: center;
+}
