@@ -1,0 +1,65 @@
+header, main, nav, footer, section, article, figure, figcaption, aside { display: block; }
+* { box-sizing: border-box; }
+
+body  {  
+	/*	https://coolors.co/1f3c5c-0f7173-e7ecef-272932-d8a47f	color palette */
+    margin: 10px 20px;
+    font-family: ariel, sans-serif;
+    color: #1F3C5C;
+    background-color: #99BADD;
+    font-size: 105%;
+	
+}
+
+header  {
+	height: 15px;
+	margin-top: 5px;
+	text-align: left;
+	color: #1F3C5C;
+	font-family: Broadway, sans-serif;	
+}
+
+h1  {
+	text-align: center;
+	font-family: Georgia, serif;
+	background-color: #E7ECEF;
+	color: #1F3C5C;	
+}
+
+h2  {
+	text-align: center;
+}
+
+
+figure  {
+	text-align: center;
+	font-style: italic;
+	font-size: 75%;
+	
+}
+
+p  {text-indent: 1em;}
+
+ul li  {font-weight: bold;}
+
+.list-item  {
+	color: #050A0F;}
+
+footer nav  {
+	text-align: center;
+	background-color: #E7ECEF;
+	height: 30px;
+	padding-top: 10px;
+}
+
+footer nav a:link  {color: #1F3C5C;}
+footer nav a:visited  {color: #99BADD;}
+footer nav a:hover  {color: #0F7173}
+
+footer p  {
+	text-align: center;
+	font-size: 75%;
+}
+
+footer div  {
+	text-align: center;}
