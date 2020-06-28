@@ -3,10 +3,10 @@ header, main, nav, footer, section, article, figure, figcaption, aside { display
 body  {  
 	/*	https://coolors.co/1f3c5c-0f7173-e7ecef-272932-d8a47f	color palette */
     font-family: ariel, sans-serif;
-    color: #1F3C5C;
-    background-color: #99BADD;
+    color: #1D1160;
+    background-color: #107D7E;
     font-size: 105%;
-	background-image: linear-gradient(to bottom, #99BADD, #C2E0F0, #99BADD);	
+	background-image: linear-gradient(to bottom, #107D7E, #DAFBFB, #107D7E);	
 	margin-bottom: 20px;
 	width: 90%;
 	margin-left: auto;
@@ -16,7 +16,7 @@ header  {
 	height: 50px;
 	margin-bottom: 10px;
 	text-align: left;
-	color: #1F3C5C;
+	color: #1D1160;
 	font-family: Magneto, serif;
 	padding-bottom: 10px;
 	font-size: 120%;
@@ -26,31 +26,31 @@ header img  {
 	opacity: 0.4;
 }
 h1   {
-	color: #1F3C5C;
+	color: #1D1160;
 }
 main h1  {
 	text-align: center;
 	font-family: Georgia, serif;
-	background-color: #FFFFFF;
-	color: #1F3C5C;
+	background-color: #E7ECEF;
+	color: #1D1160;
 	padding-top: 10px;
 	padding-bottom: 10px;	
 }
 nav  {
 	text-align: center;
-	background-color: #FFFFFF;
+	background-color: #E7ECEF;
 	height: 40px;
 	padding-top: 10px;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 }
-a:link  {color: #1F3C5C;}
+a:link  {color: #1D1160;}
 a:visited  {color: #0F1E2E;}
-a:hover  {color: #000000; background-color: #99BADD;}
+a:hover  {color: #000000; background-color: #107D7E;}
 
-nav a:link  {color: #1F3C5C;}
+nav a:link  {color: #1D1160;}
 nav a:visited  {color: #0F1E2E;}
-nav a:hover  {color: #000000; background-color: #99BADD;}
+nav a:hover  {color: #000000; background-color: #107D7E;}
 h2  {
 	text-align: center;
 }
@@ -63,22 +63,20 @@ figure  {
 
 p  {text-indent: 1em;}
 
-ul li  {font-weight: bold;}
-
 .list-item  {
-	color: #050A0F;}
+	color: #1D1160;}
 
 footer nav  {
 	text-align: center;
-	background-color: #FFFFFF;
+	background-color: #E7ECEF;
 	height: 60px;
 	padding-top: 20px;
 	padding-bottom: 15px;
 }
 
-footer nav a:link  {color: #1F3C5C;}
+footer nav a:link  {color: #1D1160;}
 footer nav a:visited  {color: #0F1E2E;}
-footer nav a:hover  {color: #000000; background-color: #99BADD;}
+footer nav a:hover  {color: #000000; background-color: #107D7E;}
 
 footer p  {
 	text-align: center;
