@@ -1,0 +1,73 @@
+header, main, nav, footer, section, article, figure, figcaption, aside { display: block; }
+* { box-sizing: border-box; }
+body  {  
+	/*	https://coolors.co/1f3c5c-0f7173-e7ecef-272932-d8a47f	color palette */
+    font-family: ariel, sans-serif;
+    color: #E9E3E6;
+    background-color: #4C4244;
+	font-size: 105%;	
+	margin-bottom: 20px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;			
+}
+header  {
+	height: 50px;
+	margin-bottom: 10px;
+	text-align: left;
+	color: #C0C0C0;
+	font-family: Magneto, serif;
+	padding-bottom: 10px;
+	font-size: 120%;
+}
+header img  {
+	color: red;
+}
+h1   {
+	color: #E9E3E6;
+}
+main h1  {
+	text-align: center;
+	font-family: Georgia, serif;
+	color: #E9E3E6;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+}
+nav  {
+	  overflow: hidden;  
+	  width: 100%;
+	  display: flex;
+	  justify-content: space-evenly;
+	  align-items: center;
+	  padding: 5px;
+}
+nav a  {
+	text-decoration: none;
+}
+a:link  {color: #C0C0C0;}
+a:visited  {color: #99BADD;}
+a:hover  {color: #CD7F32; text-decoration:underline;}
+
+nav a:link  {color: #C0C0C0;}
+nav a:visited  {color: #99BADD;}
+nav a:hover  {color: #CD7F32; text-decoration:underline;}
+figure  {
+	text-align: center;
+	font-style: italic;
+	font-size: 90%;
+	
+}
+p  {text-indent: 1em;
+	padding: 15px;
+}
+ul  {
+	padding: 15px;
+}
+.list-item  {
+	color: #CD7F32;}
+
+footer  {
+	text-align: center;
+	font-size: 90%;
+	color: #99BADD;
+}
