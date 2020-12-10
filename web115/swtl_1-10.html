@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | SWTL 1-10</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/> 
+<script src="scripts/swtl_1-10.js"></script>	
+</head>
+<body>   
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Smarter Way to Learn Chapters 1-10</h2>
+	
+	<!-- Chapter 1 -->
+	
+	<h3>Chapter 1&mdash;Alerts</h3>
+	<p>Using the alert() function call we have the system display a message to the user. The formal way to write this function is window.alert(),
+		but it is more common to discard the window. part of the function. Inside the parenthesis we include the text to be displayed within either
+		single or double quotation marks.</p>  
+	<h4>Example:</h4>
+	Click the button to learn the Campbell Ink motto:
+	<button class = "swtlbutton" onclick="chap1();">What's My Motto?</button>
+	
+	<!-- Chapter 2 -->
+	
+	<h3 class = "swtl">Chapter 2&mdash;Variables for Strings</h3>
+	<p>We can create variables to store string values. A string is simply a sequence of characters, such as a name. Once we've assigned the string
+	   to a variable, the variable stores its value in memory. When the variable is referenced, it returns the stored value.</p>
+	<h4>Example:</h4>
+	<strong>var name = "Gregory";</strong> stores the string <strong>Gregory</strong> in the variable <strong>name</strong>. A function was written to display an alert message with the 
+	<strong>name</strong> variable. Click the button to see the result:	
+	<button class = "swtlbutton" onclick="chap2();">What's in the Box?</button><br><br>
+	We can also change the value stored in memory by reassigning its value. In the above function, after declaring <br><br>
+	<strong>var name = "Gregory";</strong> we can then reassign the value by coding <strong>name = "Steve";</strong>.<br><br> Click to see the result of this change:	
+	<button class = "swtlbutton" onclick="chap2b();">What's there Now?</button>
+	
+	<!-- Chapter 3 -->
+	
+	<h3 class = "swtl">Chapter 3&mdash;Variables for Numbers</h3>
+	<p>We can also assign numbers to variables. A big difference between assigning numbers to variables versus strings is that quotation marks
+	   are not used. If a number or string is enclosed in quotation marks, JavaScript can't perform addition on it.</p>
+	<h4>Example:</h4>
+	<strong>var num = 1974;</strong> stores the value 1974 in <strong>num</strong>. Now mathematical operations can be performed on <strong>num</strong>.
+	Click to see the result of adding 46 to <strong>num</strong>:
+	<button class = "swtlbutton" onclick="chap3();">Sum</button><br><br>
+	We can also perform mathematical operations using the variable's own value. Click to see the result of <strong>num</strong>+<strong>num</strong>:
+	<button class = "swtlbutton" onclick="chap3a();">Sum</button>	
+	
+	<!-- Chapter 4 -->
+	
+	<h3 class = "swtl">Chapter 4&mdash;Variables Names Legal and Illegal</h3>
+	<p>It shouldn't be surprising that there are firm naming conventions for variables as computers are literal to a fault. Here are the main rules:</p>
+		<ul>
+			<li>The variable name can't be enclosed in quotation marks.</li>
+			<li>The name can't be a number or start with a number.</li>
+			<li>JavaScript keywords can't be used.</li>
+			<li>The name can't contain spaces.</li>
+			<li>The name must consist of only letters, numbers, dollar signs, and underscores.</li>
+			<li>The name <em>can</em> contain JavaScript keywords.</li>
+			<li>Capital letters are allowed but JavaScript is case-sensitive.</li>
+		</ul>
+	
+	<h4>Examples:</h4>
+	<div id="legal">
+	<h4>Legal Names</h4>
+		<ul>
+			<li>name</li>
+			<li>name1</li>
+			<li>name_1$</li>
+			<li>firstName</li>
+			<li>newAlert</li>
+		</ul>
+	</div>
+	<div id="illegal">
+		<h4>Illegal Names</h4>
+		<ul>
+			<li>"name"</li>
+			<li>2name</li>
+			<li>alert</li>
+			<li>first Name</li>
+			<li>first%Name</li>
+		</ul>
+	</div>
+	<div style="clear:both;"></div>
+	
+	<!-- Chapter 5 -->
+	
+	<h3 class = "swtl">Chapter 5&mdash;Math Expressions: Familiar Operators</h3>
+	<p>We saw earlier that we can write <strong>var num = 1974;</strong> to store the number 1974 in memory. We could alternatively have written
+	   <strong>var num = 1900 + 74;</strong> to store this number. When JavaScript sees a mathematical expression, it does the math. As before, we can
+	   mix variables and numbers, or use only variables.	
+	</p>
+	<h4>Examples:</h4>
+	<ul>
+		<li><strong>var num = 1900;</strong><br>
+			<strong>alert(num + 74);</strong> <button class = "swtlbutton" onclick="chap5();">Sum</button>			
+		</li>
+		<li><strong>var num = 1900;</strong><br>
+			<strong>alert(num + num);</strong> <button class = "swtlbutton" onclick="chap5b();">Sum</button>			
+		</li>
+	</ul>
+	
+	<!-- Chapter 6 -->
+
+	<h3 class = "swtl">Chapter 6&mdash;Math Expressions: Unfamiliar Operators</h3>
+	<p>To increment a variable, we can write <strong>num = num + 1;</strong> however, a shorthand for this operation is <strong>num++;</strong>.
+	   We do need to be careful using this operator, though, because the literal tendencies of computers get in the way. If we wrote<br><br>
+	   <strong>var num = 1;</strong><br>
+	   <strong>var newNum = num++;</strong><br><br>
+	   we might assume that both variables are incremented. However, this is not the case, because the value of <strong>num</strong> was already
+	   stored in memory before the incrementation. To ensure both variables are incremented, put the incrementation operator <em>before</em> the variable.	
+	</p>
+	<h4>Examples:</h4>
+	<ul>
+		<li><strong>var num = 1;</strong><br>
+			<strong>var newNum = num++;</strong> <button class="swtlbutton" onclick="chap6();">Increment?</button>
+		</li>
+		<li><strong>var num = 1;</strong><br>
+			<strong>var newNum = ++num;</strong> <button class="swtlbutton" onclick="chap6b();">Increment</button>
+		</li>
+	</ul>
+	
+	
+	<!-- Chapter 7 -->
+	
+	<h3 class = "swtl" id="Ch7">Chapter 7&mdash;Math Expressions: Eliminating Ambiguity</h3>
+	<p>When an expression has more than two operands, the order of operations becomes very important. The expression <br><strong>2 + 2 * 4</strong> 
+	   evaluates differently depending on whether we multiply first or add first. JavaScript has precedence rules that state multiplication and 
+	   division are performed first, then addition and subtraction. It is better to specify the order of operations for clarity using parentheses.</p>
+	<h4>Examples:</h4>
+	<ul>
+		<li><strong>(2 + 2) * 4</strong> = <button class="swtlbutton" onclick="chap7();">One Answer</button> 
+		</li>
+		<li><strong>2 + (2 * 4)</strong> = <button class="swtlbutton" onclick="chap7b();">Different Answer</button>
+		</li>
+
+	</ul>	
+	
+	<!-- Chapter 8-->
+	
+	<h3 class = "swtl">Chapter 8&mdash;Concatenating Text Strings</h3>
+	<p>When we want to combine more than one string (or string variable) we <em>concatenate</em> them together using the <strong>+</strong> operator.	
+	</p>
+	<h4>Example:</h4>
+	Our function is: <br><br>
+	<strong>var message = "Hi, ";</strong><br>
+	<strong>var exclam = "!";</strong><br>
+	<strong>alert(message + "(Your name here)" + exclam);</strong><br><br>
+	<button class="swtlbutton" onclick="chap8();">Create a Greeting</button>
+	
+	<!-- Chapter 9-->				 
+		
+	<h3 class = "swtl">Chapter 9&mdash;Prompts</h3>
+	<p>When we want to ask the user for information, we use a <em>prompt box</em>. The <strong>prompt()</strong> function takes either one 
+	   or two arguments: <br><br>
+	   <strong>prompt(question, [default answer]);</strong><br><br>
+	   The user's response is a text string, even if the response is a number. As with alert boxes, the arguments can be strings or variables and
+	   the formal code is <br><br><strong>window.prompt();</strong>	
+	</p>
+	<h4>Examples:</h4>
+	<ul>
+		<li><strong>var question = prompt("Do you like dogs?", "Yes!");</strong><br><br>
+		    <button class="swtlbutton" onclick="chap9();">Take the Quiz</button><br><br>
+		</li>
+		<li><strong>var query = "Do you like cats?";<br>
+					var defaultAnswer = "But of course!";<br>
+					var question2 = prompt(query, defaultAnswer);</strong><br><br>
+			<button class="swtlbutton" onclick="chap9b();">Take the Quiz</button>
+		</li>
+	</ul>
+		
+	<!-- Chapter 10-->				 
+	
+	<h3 class = "swtl">Chapter 10&mdash;If Statements</h3>
+	<p>Sometimes we wish to conditionally output a response if a user submits a correct input. We accomplish this with an <em>if</em> statement.
+	   The user is prompted with a question, and if the user's answer evaluates to our condition, another statement is executed. Again, we can use
+	   strings or variables in our conditions.
+	</p>
+	<h4>Example:</h4>
+	<strong>var question = ("Is the sky blue?");<br>
+			if(question === "yes") {<br>
+			&nbsp;alert("Correct!");<br>
+			}</strong><br><br>
+	<button class="swtlbutton" onclick="chap10();">Take the Quiz</button><br><br>
+	<a href="swtl_11-20.html">Next &gt;&gt;</a>
+</main>
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | Fizz Buzz 3</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/>
+<script src="scripts/fizz_buzz.js"></script> 	
+</head>
+<body>    
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Campbell Ink Fizz Buzz 3</h2>
+	<h3 id="greeting">Welcome to Campbell Ink!</h3>
+	
+	<!-- Forms for user input -->
+			<form>
+  			<label for="first_name">First name:</label><br> 
+  			<input type="text" id="first_name" name="first_name" value="" placeholder="Enter your first name"><br>
+			<label for="middle_initial">Middle Initial:</label><br>
+			<input type="text" id="middle_initial" name="middle_initial" value="" placeholder="Enter your middle initial"><br>
+  			<label for="last_name">Last name:</label><br>
+  			<input type="text" id="last_name" name="last_name" value="" placeholder="Enter your last name"><br><br>
+  			<input class="submitButton" type="button" onclick="fizzbuzz3()" value="Submit">
+			</form> 
+	
+			<aside id="loop"></aside>
+</main>
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>	
+</body>
+</html>

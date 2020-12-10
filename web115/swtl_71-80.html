@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | SWTL 71-80</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/> 
+<script src="scripts/swtl_71-80.js"></script>	
+</head>
+<body>    
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Smarter Way to Learn Chapters 71-80</h2>
+	
+	<!-- Chapter 71 -->
+	
+	<h3 id="Chap71">Chapter 71&mdash;Objects: Methods</h3>
+	<p>Just as we attached variables to an object in <a href="swtl_61-70.html#Chap69" target="_blank">Chapter 69</a>, we can attached
+	   a <em>function</em> to an object. That function is then referred to as a <strong>method</strong> of that object.
+	</p>
+	Recall the table from <a href="swtl_61-70.html#Chap69" target="_blank">Chapter 69</a>:
+	<table class="ch32table">
+		<tr>
+			<th>Method</th>
+			<th>Example ( x = new Date(); )</th>
+			<th>Result</th>
+		</tr>
+		<tr>
+			<td>setFullYear()</td>
+			<td>x.setFullYear(2021)</td>
+			<td>Year of x is 2021</td>
+		</tr>
+		<tr>
+			<td>setMonth()</td>
+			<td>x.setMonth(0)</td>
+			<td>Month of x is January</td>
+		</tr>
+		<tr>
+			<td>setDate()</td>
+			<td>x.setDate(1)</td>
+			<td>Day of the month is 1</td>
+		</tr>
+		<tr>
+			<td>setHours()</td>
+			<td>x.setHours(0)</td>
+			<td>Midnight</td>
+		</tr>
+		<tr>
+			<td>setMinutes()</td>
+			<td>x.setMinutes(1)</td>
+			<td>One minute past the hour</td>
+		</tr>
+		<tr>
+			<td>setSeconds()</td>
+			<td>x.setSeconds(1)</td>
+			<td>One second past the minute</td>
+		</tr>
+		<tr>
+			<td>setMilliseconds()</td>
+			<td>x.setMilliseconds(1)</td>
+			<td>One ms past the second</td>
+		</tr>
+	</table>
+	We add the <strong>write</strong> property to the newObject definition and assign its value as a function to write HTML to the
+	page.
+	<pre>
+	var newObject = {
+		name: "setFullYear()",
+		example: "x.setFullYear()",
+		result: "Year of x is 2021",
+		write: function() {
+			var writeToPage = document.getElementById("write71");
+			writeToPage.innerHTML = "The name of the first method in the table is " + newObject.name + ".";
+		}
+	};
+	</pre>
+	and call the function within our onClick function like this:
+	<pre>
+	newObject.write();	
+	</pre>
+	<aside id="write71" class="write"></aside><br>
+	<button class = "swtlbutton" onclick="chap71()">See it in Action!</button>
+	
+	<!-- Chapter 72 -->
+	
+	<h3 class = "swtl">Chapter 72&mdash;Objects: Constructors</h3>
+	<p>Let's work again with the table last seen in <a href="#Chap71">Chapter 71</a>:
+	</p>
+	<table class="ch32table">
+		<tr>
+			<th>Method</th>
+			<th>Example ( x = new Date(); )</th>
+			<th>Result</th>
+		</tr>
+		<tr>
+			<td>setFullYear()</td>
+			<td>x.setFullYear(2021)</td>
+			<td>Year of x is 2021</td>
+		</tr>
+		<tr>
+			<td>setMonth()</td>
+			<td>x.setMonth(0)</td>
+			<td>Month of x is January</td>
+		</tr>
+		<tr>
+			<td>setDate()</td>
+			<td>x.setDate(1)</td>
+			<td>Day of the month is 1</td>
+		</tr>
+		<tr>
+			<td>setHours()</td>
+			<td>x.setHours(0)</td>
+			<td>Midnight</td>
+		</tr>
+		<tr>
+			<td>setMinutes()</td>
+			<td>x.setMinutes(1)</td>
+			<td>One minute past the hour</td>
+		</tr>
+		<tr>
+			<td>setSeconds()</td>
+			<td>x.setSeconds(1)</td>
+			<td>One second past the minute</td>
+		</tr>
+		<tr>
+			<td>setMilliseconds()</td>
+			<td>x.setMilliseconds(1)</td>
+			<td>One ms past the second</td>
+		</tr>
+	</table>
+	To describe the table fully as objects we <em>could</em> use the syntax as before:
+	<pre>
+	var newObject = {
+		name: "setFullYear()",
+		example: "x.setFullYear()",
+		result: "Year of x is 2021",
+		}
+	};	
+	</pre>
+	and repeat this object construction for each method. More efficient, however, is using a <strong>constructor function</strong>:
+	<pre>
+	function Method(name, example, result) {
+		this.name = name;
+		this.example = example;
+		this.result = result;
+	}
+	</pre>
+	Here is the code for using our <strong>Method</strong> constructor function to populate the table and query the table:
+	<pre>
+	var method1 = new Method("setFullYear()", "x.setFullYear(2021)", "Year of x is 2021");
+	var method2 = new Method("setMonth()", "x.setMonth(0)", "Month of x is January");
+	var method3 = new Method("setDate()", "x.setDate(1)", "Day of the month is 1");
+	var method4 = new Method("setHours()", "x.setHours(0)", "Midnight");
+	var method5 = new Method("setMinutes()", "x.setMinutes(1)", "One minute past the hour");
+	var method6 = new Method("setSeconds()", "x.setSeconds(1)", "One second past the minute");
+	var method7 = new Method("setMilliseconds()", "x.setMilliseconds(1)", "One ms past the second");
+	
+	var writeToPage = document.getElementById("write72");
+	writeToPage.innerHTML = "The last method in the list is " + method7.name + ".";
+	</pre>
+	<aside id="write72" class="write"></aside><br>
+	<button class = "swtlbutton" onclick="chap72()">See it in Action!</button>
+	
+	<!-- Chapter 73 -->
+	
+	<h3 class = "swtl">Chapter 73&mdash;Objects: Constructors for Methods</h3>
+	<p>In <a href="#Chap71">Chapter 71</a> we added a function to an object, creating a <strong>method</strong>. We can do the same with
+	   constructors, with a couple of minor differences.
+	</p>
+	<pre>
+	function Method(name, example, result) {
+		this.name = name;
+		this.example = example;
+		this.result = result;
+		this.write = function() {
+			var writeToPage = document.getElementById("write71");
+			writeToPage.innerHTML = "The name of the first method in the table is " + this.name + ".";
+		};
+	}
+	</pre>
+	A standalone method definition has the syntax functionName<strong>:</strong> function() { <br><br>
+	whereas within a constructor it has this syntax: <strong>this.</strong>functionName <strong>=</strong> function() {<br><br>
+	<button class = "swtlbutton" onclick="chap73()">See it in Action!</button>
+	
+	<!-- Chapter 74 -->
+	
+	<h3 class = "swtl">Chapter 74&mdash;Objects: Prototypes</h3>
+	<p>When we include a method in a constructor function, it duplicates the method for each object. This would be more efficient iframe
+	   we could allow all objects to share the single method. Luckily, we can! We use <strong>prototypes</strong>. We remove the method 
+	   from the constructor function and use this syntax:
+	</p>
+	<pre>
+	Method.prototype.write = function() {
+								alert("The name of the first method in the list is " + this.name);
+								};
+	};
+	</pre>
+	Now all objects created with the <strong>Method</strong> constructor will share one copy of the <strong>write</strong> method. Here's the code:
+	<pre>
+	function Method(name, example, result) {
+		this.name = name;
+		this.example = example;
+		this.result = result;
+	}
+	Method.prototype.write = function() {
+								alert("The name of the first method in the list is " + this.name);
+								};
+							 
+	var method1 = new Method("setFullYear()", "x.setFullYear(2021)", "Year of x is 2021");
+	var method2 = new Method("setMonth()", "x.setMonth(0)", "Month of x is January");
+	var method3 = new Method("setDate()", "x.setDate(1)", "Day of the month is 1");
+	var method4 = new Method("setHours()", "x.setHours(0)", "Midnight");
+	var method5 = new Method("setMinutes()", "x.setMinutes(1)", "One minute past the hour");
+	var method6 = new Method("setSeconds()", "x.setSeconds(1)", "One second past the minute");
+	var method7 = new Method("setMilliseconds()", "x.setMilliseconds(1)", "One ms past the second");
+
+	var writeToPage = document.getElementById("write74");
+	writeToPage.innerHTML = method1.write();	
+	</pre>
+	<button class = "swtlbutton" onclick="chap74()">See it in Action!</button><br><br>
+	In addition to prototype methods, we can assign prototype <strong>properties</strong>. We can give all objects created with
+	<strong>Method</strong> the property of <em>exists</em> and a value of <em>true</em> with this code:
+	<pre>
+	Method.prototype.exists = true:
+	</pre>
+	<button class = "swtlbutton" onclick="chap74a()">See it in Action!</button>
+	<aside id="write74" class="write"></aside>
+	
+	<!-- Chapter 75 -->
+	
+	<h3 class = "swtl">Chapter 75&mdash;Objects: Checking for Properties and Methods</h3>
+	<p>We saw in <a href="swtl_61-70.html#Chap70" target="_blank">Chapter 70</a> that we can use the <strong>in</strong> keyword to determine if an
+	   object has a particular property. Given that same object:
+	</p>
+	<pre>
+	var newObject = {
+		name: "setFullYear()",
+		example: "x.setFullYear()",
+		result: "Year of x is 2021"
+	}	
+	</pre>
+	We can use a loop to create an array containing a list of an object properties. First we assign an empty array to a variable.
+	Then we loop through the object, adding all of its properties to the array:
+	<pre>
+	var propList = [];
+	for (var i in newObject){
+		propList.push(i);
+	}
+	</pre>
+	See the list of properties of <strong>newObject</strong>: <button class = "swtlbutton" onclick="chap75()">What's on the List?</button><br><br>
+	<aside id="write75" class="write"></aside><br>
+	If a property or method was added to the object by inheritance it will be included in the list. To
+	keep such properties and methods out of the array we must use the <strong>hasOwnProperty</strong> keyword. Say we add another property,
+	<em>exists</em>, to <strong>newObject</strong>:<br><br>
+	See the list of properties of <strong>newObject</strong>: <button class = "swtlbutton" onclick="chap75a()">What's on the List?</button><br><br> 
+	<aside id="write75a" class="write"></aside><br>
+	We modify the loop like this:
+	<pre>
+	var propList = [];
+	for (var i in newObject) {
+		if (newObject.hasOwnProperty(i)) {
+			propList.push(i);
+		}
+	</pre>
+	See the list of properties of <strong>newObject</strong> now: <button class = "swtlbutton" onclick="chap75b()">What's on the List Now?</button><br>
+	<aside id="write75b" class="write"></aside>
+	<!-- Chapter 76 -->
+
+	<h3 class = "swtl" id="Chap76">Chapter 76&mdash;Browser Control: Getting and Setting the URL</h3>
+	<p>We have previously worked with the <strong>document</strong> object, which has dominion over all of an html page. We can also
+	   work directly with the browser by using the <strong>window</strong> object. Using the syntax <strong>window.location.[specifics]</strong>
+	   we can target elements of the browser window, such as the URL, hostname, pathname, and hash. Here's the relevant code:
+	</p>
+	<pre>
+	var theURL = window.location.href;
+	var theHost = window.location.hostname;
+	var thePath = window.location.pathname;
+	var theHash = window.location.hash;	
+	</pre>
+	<button class="swtlbutton center" onclick="chap76()">What's the URL?</button>
+	<aside id="write76" class="write"></aside><br>
+	<button class="swtlbutton center" onclick="chap76a()">What's the Hostname?</button>
+	<aside id="write76a" class="write"></aside><br>
+	<button class="swtlbutton center" onclick="chap76b()">What's the Pathname?</button>
+	<aside id="write76b" class="write"></aside><br>
+	Navigate to the hash for this chapter: <a href="#Chap76">Chapter 76</a>
+	<button class="swtlbutton center" onclick="chap76c()">What is the Hash?</button>
+	<aside id="write76c" class="write"></aside><br>
+	We can also direct the browser to go by assigning values to its objects:
+	<pre>
+	window.location.href="https://www.cpcc.edu/"; 
+	</pre>
+	Navigate to the CPCC Homepage: <button class="swtlbutton" onclick="chap76d()">Let's Go!</button><br><br>
+	To navigate to a different page or hash on the current site requires a little bit of gymnastics. We query the browser for the
+	domain name and concatenate it with the desired destination.
+	<pre>
+	var currentSite = window.location.hostname;
+	var destination = "http://" + currentSite + "/introduction.html";
+	window.location.href = destination;
+	</pre>
+	Click here to go to my Introduction page: 
+	<button class="swtlbutton" onclick="chap76e()">My Introduction Page</button>	
+	
+	<!-- Chapter 77 -->
+	
+	<h3 class = "swtl" id="Chap77">Chapter 77&mdash;Browser Control: Getting and Setting the URL Another Way</h3>
+	<p>In <a href="#Chap76">Chapter 76</a> we learned how to direct the browser window to a new page. We have two keywords other than
+	   <strong>href</strong> we can use to do this: <strong>assign</strong> and <strong>replace</strong>. When we use <strong>assign</strong>,
+	   the browser history is left intact. When we use <strong>replace</strong>, the page we are navigating away from does not make it 
+	   into the browser history. To reload the current page we have four options:
+	</p>
+	<ul>
+		<li>window.location.reload(true);&mdash;forces the browser to reload from the server,</li>
+		<li>window.location.reload(false);&mdash;forces the browser to reload from the cache,</li>
+		<li>window.location.reload();&mdash;also forces the browser to reload from the cache, or</li>
+		<li>window.location.href = window.location.href;&mdash;faster than the other options but we can't specify where the reload comes from.</li>
+	</ul>
+	Try the buttons below. Before clicking the button to go to Wikipedia, duplicate this page in your browser. Try to use the Back
+	button to return.<br><br>
+	Navigate to the CPCC Home page: <button class ="swtlbutton" onclick="chap77()">Assign!</button><br><br>
+	Navigate to the Wikipedia Home page: <button class ="swtlbutton" onclick="chap77a()">Replace!</button><br><br>
+	Reload the current page: <button class ="swtlbutton" onclick="chap77b()">Reload!</button>
+
+	
+	<!-- Chapter 78-->
+	
+	<h3 class = "swtl">Chapter 78&mdash;Browser Control: Forward and Reverse</h3>
+	<p>There also are JavaScript commands to make the browser navigate forward and back through the browser's history. The keywords
+	   are <strong>history.back</strong>, <strong>history.forward</strong>, and <strong>history.go</strong>.
+	</p>
+	<ul>
+		<li>history.back();&mdash;makes the browser navigate one URL <em>back</em> in its history,</li>
+		<li>history.forward();&mdash;makes the browser navigate one URL <em>forward</em> in its history, and</li>
+		<li>history.go(x);&mdash;makes the browser navigate forward <em>or</em> back <strong>x</strong> URLs. Negative numbers are used for <em>back</em></li>
+	</ul>
+	Copy this page's url, then browse to other pages to create a history. Paste the URL and return then navigate to another page, then use the back button
+	to return, and use the buttons to see the functionality.<br><br>
+
+	<button class ="swtlbutton center" onclick="chap78()">Back!</button>
+	<button class ="swtlbutton center" onclick="chap78a()">Forward!</button>
+	<button class ="swtlbutton center" onclick="chap78b()">Back 2!</button>
+	
+	<!-- Chapter 79-->				 
+		
+	<h3 class = "swtl" id="Chap79">Chapter 79&mdash;Browser Control: Filling the Window with Content</h3>
+	<p>Popup windows are annoying and can be security issues, but they do have legitimate uses so we'll need to learn to create them.
+	Here is the basic code to create one:
+	</p>
+	<pre>
+	var popup = window.open();
+	</pre>
+	The variable we've assigned the full-sized blank window to is referred to as the window's <strong><em>handle</em></strong>. Note also
+	that the browser decides whether the new window opens on top of the previous window, in a new tab or in a copy of the browser.<br>
+	Now that we have a blank window, we need to give it content. We can use <strong>document.write</strong>:
+	<pre>
+	var popup = window.open();
+	popup.document.write(content);
+	</pre>
+	Note that <em>content</em> in the above code can be the HTML enclosed in quotation marks or a variable that has had such HTML assigned to it.
+	We also can use the <strong>href</strong> keyword as we learned in <a href="Chap76">Chapter 76</a> or the <strong>assign</strong> keyword 
+	as we learned in <a href="#Chap77">Chapter 77</a>. Given the following code:
+	<pre>
+	var popup = window.open();
+	var content = "&lt;h1&gt;My Cute Cats!&lt;/h1&gt;&lt;img src='images/cats.jpg'&gt;";
+	popup.document.write(content);	
+	</pre>
+	Create a new window: <button class ="swtlbutton" onclick="chap79()">Create a Popup!</button>
+		
+	<!-- Chapter 80-->				 
+	
+	<h3 class = "swtl">Chapter 80&mdash;Browser Control: Controlling the Window's Size and Location</h3>
+	<p>In <a href="#Chap79">Chapter 79</a> we learned to create popup windows of full size with only one parameter&mdash;a URL.
+       What if we wanted a smaller window, and if we want it to pop up on a particular spot on the viewscreen? To do so, we need
+       to add more parameters to our <strong>window.open</strong> method. First, we add a name, which will always be the second
+       parameter. Then we can add a third parameter which will contain the size and location specifics. We'll modify our popup from
+       <a href="#Chap79">Chapter 79</a>:   
+	</p>
+	<pre>
+	var popup = window.open("", "newPopup", "width=500,left=50,top=50");
+	var content = "&lt;h1&gt;My Cute Cats!&lt;/h1&gt;&lt;img src='images/cats.jpg'&gt;";
+	popup.document.write(content)	
+	</pre>
+	Create a new window, offset from the left and top of the screen: <button class ="swtlbutton" onclick="chap80()">Create a Smaller Popup!</button><br><br>
+	<a href="swtl_61-70.html">&lt;&lt; Prev</a>&nbsp;
+	<a href="swtl_81-89.html">Next &gt;&gt;</a>
+</main>	
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>
+</body>
+</html>

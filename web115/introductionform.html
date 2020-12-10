@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | Introduction Form</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/>
+<script src="scripts/informationform.js"></script>		
+</head>
+<body>   
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>M15A&mdash;Introduction Form</h2>
+	<h3>Please Enter Your Name:</h3>
+	<form>
+		<label for="first_name">First name:</label><br> 
+			<input type="text" id="first_name" name="first_name" value="Gregory"><br>
+		<label for="middle_initial">Middle Initial:</label><br>
+			<input type="text" id="middle_initial" name="middle_initial" value="C"><br>
+		<label for="last_name">Last name:</label><br>
+			<input type="text" id="last_name" name="last_name" value="Campbell">
+	</form>
+	<h3>Please Submit A Picture:</h3>
+		<label for="pic">Enter the Path to Your Picture:</label><br>
+			<input type="text" id="pic" name="pic" value="images/greg_campbell-26-3.jpg"><br>
+		<label for="figcaption">Enter a Caption for Your Picture:</label><br>
+			<input type="text" id="figcaption" name="figcaption" value="Work Holiday party, 2013.">
+	<h3>Tell Us More About Yourself:</h3>
+		<label for="personal">Personal Background:</label><br>
+			<textarea id="personal" name="personal" rows="4" cols="120">I was born in Laurinburg, NC and moved to Charlotte when I was three years old. After graduating from college I lived with a friend in Philadelphia, PA for five years before returning to Charlotte in 2006.</textarea><br>
+		<label for="professional">Professional Background:</label><br>
+			<textarea id="professional" name="professional" rows="4" cols="120">The reason I moved to Philadelphia was to become a day trader, but my timing was not great: my first day trading was 9/10/2001. With the market turmoil and my inexperience in trading, I did not last long. I returned to restaurants as a server/bartender as I had supported myself in that industry during college. When I moved back to Charlotte I attempted to find work in another industry but couldn't, so I fell back into the familiar arms of the restaurant. While I am still a server, at Foxcroft Wine Company in SouthPark, I know that my days of working on my feet are numbered. This is why I began study at CPCC in Spring semester 2016.</textarea><br>
+		<label for="academic">Academic Background:</label><br>
+			<textarea id="academic" name="academic" rows="4" cols="120">I graduated from East Mecklenburg HS, then earned a BA in Chemistry from UNC-Chapel Hill. I knew before finishing that I didn't want a careeer in chemistry, but tuition was rising so fast (tripled during my college tenure) that I was forced to complete a degree I no longer wanted instead of switching to something else. I enrolled in my first class at CPCC in Spring 2016 and have since earned AAS Networking Technologies and AAS Information Assurance/Digital Forensics degrees</textarea><br>
+		<label for="platform">Primary Computer Platform:</label><br>
+			<textarea id="platform" name="platform" rows="2" cols="120">After completing CTI 130 in Summer 2016 I built my own PC. Windows 10. Sabretooth 990FX motherboard, AMD Radeon 8750 chip, 16 GB DDR3 RAM (getting old), 4 GB GE Force GTX 770 graphics card, for those interested.</textarea><br><br>
+		Courses I'm Taking, and Why:<br><br>
+		<label for="course1">Course 1</label><br>
+			<input type="text" id="course1" name="course1" value="WEB 115"><br><br>
+			<textarea id="course1why" name="course1why" rows="4" cols="120">I'm taking WEB 115 because I enjoyed taking WEB 110 in Summer School this year and want to learn more about Web Development. </textarea><br>
+		<label for="course2">Course 2</label><br>
+			<input type="text" id="course2" name="course2" value="WEB 120"><br><br>
+			<textarea id="course2why" name="course2why" rows="4" cols="120">I'm taking WEB 120 for the same reason as above.</textarea><br>
+		<label for="course1">Course 3</label><br>
+			<input type="text" id="course3" name="course3" value="CSC 143"><br><br>
+			<textarea id="course3why" name="course3why" rows="4" cols="120">This course is required for the Web Technologies AAS as well as other degrees at CPCC. Pay attention when registering for courses as many are required for multiple degrees and taking those could save you time and money.</textarea><br><br>
+		More Personal Details:<br><br>
+		<label for="remember">Something to Remember Me By:</label><br>
+			<textarea id="remember" name="remember" rows="4" cols="120">My family is quite musical, and even though I'm one of the less talented of the family, I play piano and guitar.</textarea><br>
+		<label for="share">I'd Also Like to Share:</label><br>
+			<textarea id="share" name="share" rows="4" cols="120">I spend too much time playing video games for a person of my age. Civilization 6 is my current favorite, and Rock Band and Guitar Hero are for obvious reasons perennial favorites.</textarea><br><br>
+  	Review your answers by clicking Submit:<br><br>
+	<input class="submitButton" type="button" onclick="infoForm()" value="Submit">
+	
+	<!-- User entries displayed below-->
+	<p id="userName"></p>
+	<p id="userPic"></p>
+	<p id="userCap"></p>
+	<p id="userPersonal"></p>
+	<p id="userProfessional"></p>
+	<p id="userAcademic"></p>
+	<p id="userPlatform"></p>
+	<p id="courses"></p>
+	<p id="userRemember"></p>
+	<p id="userShare"></p>
+</main>
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>		
+</body>
+</html>

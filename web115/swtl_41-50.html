@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | SWTL 41-50</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/> 
+<script src="scripts/swtl_41-50.js"></script>	
+</head>
+<body>    
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Smarter Way to Learn Chapters 41-50</h2>
+	
+	<!-- Chapter 41 -->
+	
+	<h3>Chapter 41&mdash;<em>while</em> Loops</h3>
+	<p><strong><em>While</em></strong> loops perform the same function as <strong>for</strong> loops but are structured differently. The limit onabort
+	   the loop is placed <em>above</em> the <strong>while</strong> keyword and the incrementer is placed <em>after</em> the statements executed during
+	   each iteration. Recall the loop from our function from <a href="swtl_21-30.html#Ch21">Chapter 21</a>:
+	</p>
+	<pre>
+		var cars = ["Ferrari", "Lamborghini", "Porsche", "MacLaren", "Pagani"];
+		for(var i=0; i&lt;=cars.length; i++) {
+			if(query===cars[i]) {
+				matchFound = true;
+				alert("It's on the list!");
+				break;
+			} 
+		}
+		if(matchFound===false) {
+			alert("Tis not on the list.");
+		}
+	</pre>
+	To use a <strong>while</strong> loop we rewrite the loop as follows:
+	<pre>
+		var cars = ["Ferrari", "Lamborghini", "Porsche", "MacLaren", "Pagani"];
+		var i=0;
+		while (i&lt;=cars.length) {
+			if(query===cars[i]) {
+				matchFound = true;
+				alert("It's on the list!");
+				break;
+			}
+			 i++;
+		}	
+	</pre>
+	See that the results are the same: <button class = "swtlbutton" onclick="chap41();">Is It on the List?</button><br><br>
+	
+	<!-- Chapter 42 -->
+	
+	<h3 class = "swtl">Chapter 42&mdash;<em>do...while</em> Loops</h3>
+	<p>The third type of loop is a <strong><em>do...while</em></strong> loop. It performs the same function as the others but is again structured
+	   differently. The counter is declared the same way as in the <em>while</em> loop, but the condition is placed immediately after the closing
+	   curly brace. The loop begins with the <strong>do</strong> keyword. Here is the <em>while</em> loop:
+	</p>
+	<pre>
+		var cars = ["Ferrari", "Lamborghini", "Porsche", "MacLaren", "Pagani"];
+		var i=0;
+		while (i&lt;=cars.length) {
+			if(query===cars[i]) {
+				matchFound = true;
+				alert("It's on the list!");
+				break;
+			}
+			i++;
+		}
+	</pre>
+	Here is that loop rewritten as a <em>do...while</em> loop:
+	<pre>
+		var cars = ["Ferrari", "Lamborghini", "Porsche", "MacLaren", "Pagani"];
+		var i=0;
+		do {
+			if(query===cars[i]) {
+				matchFound = true;
+				alert("It's on the list!");
+				break;
+			}
+			i++;
+		} while (i&lt;=cars.length);
+	</pre>
+		*** Note: the loop terminates with the semi-colon at the end of the <em>while</em> statement, not the closing curly brace. Also, the loop will
+		run at least once because the statement(s) come before the condition in the code.***<br><br>
+		See that the results are the same: <button class = "swtlbutton" onclick="chap42();">Is It on the List?</button><br><br>
+		Every loop can be written in any of the three styles. The type of loop used depends on the function:
+	<ul>
+		<li>If you know exactly how many times the loop will run, use a <strong>for</strong> loop.</li>
+		<li>If you don't know how many times the loop will run, use a <strong>while</strong> loop.</li>
+		<li>If you need to guarantee the loop runs at least once, use a <strong>do...while</strong> loop.</li>
+	</ul>
+	
+	<!-- Chapter 43 -->
+	
+	<h3 class = "swtl">Chapter 43&mdash;Placing Scripts</h3>
+	<p>Scripts can be embedded in HTML or placed in an external file. Like CSS, it is usually best to store scripts in an external file in order
+	   to compartmentalize the structure from the style and the functions. If using scripts inline, it's best to place them at the end of the body
+	   section so images and styling are sorted out without interference. Scripts are enclosed with &lt;script&gt;&lt;/script&gt; tags within HTML. The
+	   syntax for referencing an external .js file is:
+	</p>
+	<pre>
+		&lt;script src="filename.js"&gt;&lt;script&gt;
+	</pre>
+	To see the script file for this page, right-click the page and select "View Page Source" and then click on the link for swtl_41-50.js. 
+	
+	<!-- Chapter 44 -->
+	
+	<h3 class = "swtl">Chapter 44&mdash;Commenting</h3>
+	<p>Comments are used in coding to give context to sections of code. They make it easier to remember what you were doing when you revisit code
+	   written in the past and to understand your codee for other people reading it. There are two types of comments:
+	</p>
+	<ul>
+		<li>Single-line comments, which begin with // and end at the end of the line of code</li>
+		<li>Multiple-line comments, which begin with /* and end with */</li>
+	</ul>
+	For example,
+	<pre>
+		// This is a single-line comment.
+		
+		/*
+		   This is a multiple-line comment.
+		*/
+	</pre>
+	The browser ignores anything after // on a single line, and anything in between /* and */ over multiple lines.<br><br>
+	To see the comments in the script file for this page, right-click the page and select "View Page Source" and then click on the link for swtl_41-50.js.
+
+	<!-- Chapter 45 -->
+	
+	<h3 class = "swtl">Chapter 45&mdash;Events:link</h3>
+	<p>Inline event handling is a bit like inline CSS; we can use it, but it's suboptimal. Either way, you have to learn to crawl before you learn to walk.
+	   The first event we'll examine is clicking a <strong>link</strong>. Usually, when a link is clicked the browser loads a new page. In this case, clicking the link runs
+	   whatever JavaScript we want to run using the <strong>onClick</strong> keyword, whether it be to create an alert or prompt or run a function. Here's the code for the "link" below:
+	</p>
+	<pre>
+		&lt;a href="JavaScript:void(0)" onClick="alert('You clicked it!')"&gt;Click Here&lt;/a&gt;
+	</pre>
+	<a href="JavaScript:void(0)" onClick="alert('You clicked it!')">Click Here</a><br><br>
+	Here's code for a function saved in an external file that creates the same output, followed by the code for the call:
+	<pre>
+		function chap45(msg) {
+		alert(msg);
+		}
+		&lt;a href="JavaScript:void(0)" onClick="chap45('You clicked it!')"&gt;Click Here&lt;/a&gt;
+	</pre>
+	<a href="JavaScript:void(0)" onClick="alert('You clicked it!')">Try the Preferred Way</a><br><br>
+	*** Note that the text in the alert is enclosed with single quotation marks. This is necessary because the alert is enclosed by double quotation marks. ***
+	
+	<!-- Chapter 46 -->
+
+	<h3 class = "swtl">Chapter 46&mdash;Events:button</h3>
+	<p><strong>Buttons</strong> are another event handled by JavaScript. As with link events, when a button is clicked, an alert or prompt or function
+	   can be run. We've been doing this all along with the buttons you have pressed to demonstrate the concepts examined in each chapter. An image can
+	   be used as a button as well as inputs. We've been using &lt;button&gt;&lt;button&gt; tags but the following code is equivalent(the default size of
+	   the buttons is however different):
+	</p>
+	<pre>
+		&lt;input type="button" class="swtlbutton" value="Click" onclick="alert('You clicked it!');"&gt;
+		&lt;button class="swtlbutton" onclick="chap46();"&gt;Click&lt;/button&gt;
+	</pre>
+	See it in action:&nbsp; &lt;input&gt;: <input type="button" class="swtlbutton" value="Click" onclick="alert('You clicked it!');">&nbsp;&nbsp; vs. &nbsp;
+	&lt;button&gt;: <button class="swtlbutton" onclick="chap46();">Click</button>
+	
+	<!-- Chapter 47 -->
+	
+	<h3 class = "swtl" id="Ch47">Chapter 47&mdash;Events:mouse</h3>
+	<p>Another event we can use to create interaction with the page is the <em>mouseover</em>. Using the <strong>onMouseover</strong> keyword we can
+	  do many things when we hover over buttons/links/headings/images, including create alerts, run functions, change CSS, and more. Try mousing over the buttons below, described by this code:
+	</p>
+	<pre>
+		&lt;button class ="swtlbutton" onMouseover="alert('Are you looking at me?');"&gt;Alert!&lt;/button&gt;
+		&lt;button class ="swtlbutton" onMouseover="chap47();"&gt;Function!&lt;/button&gt;
+		&lt;button class ="swtlbutton" onMouseover="this.style.color='red';"&gt;Color Change!&lt;/button&gt;
+	</pre>
+	Try it: <button class ="swtlbutton" onMouseover="alert('Are you looking at me?');">Alert!</button><br><br>
+	Try it: <button class ="swtlbutton" onMouseover="chap47();">Function!</button><br><br>
+	Try it: <button class ="swtlbutton" onMouseover="this.style.color='red';">Color Change!</button><br><br>
+	If we want to revert or change the behavior when we move the mouse away from the button/link/heading/image, we use the <strong>onMouseout</strong> keyword:
+	<pre>
+		&lt;button class ="swtlbutton" onMouseover="this.style.color='red';" 
+			onMouseout="this.style.color='green';"&gt;Color Change!&lt;/button&gt;
+	</pre>
+	Try it: <button class ="swtlbutton" onMouseover="this.style.color='red';" onMouseout="this.style.color='green';">Color Change!</button><br><br>
+	<!-- Chapter 48-->
+	
+	<h3 class = "swtl">Chapter 48&mdash;Events:fields</h3>
+	<p>When we are working with events involving buttons/links/headings/images we use the keywords <strong>onMouseover</strong> and <strong>onMouseout</strong> to change
+	   behaviors. Fields use two different keywords to achieve the same results when the field is selected/deselected: <strong>onFocus</strong> and <strong>onBlur</strong>. Click in the field below and then
+	   out of the field to see <strong>onFocus</strong> and <strong>onBlur</strong> behavior programmed by the following code: 
+	</p>
+	<pre>
+		&lt;input type="text" size="20" value="Click Here" onFocus="this.style.backgroundColor='red';"
+											    onBlur="this.style.backgroundColor='green';"&gt;
+	</pre>
+	<input type="text" size="20" value="Click Here" onFocus="this.style.backgroundColor='red';" onBlur="this.style.backgroundColor='green';">
+	
+	<!-- Chapter 49-->				 
+		
+	<h3 class = "swtl">Chapter 49&mdash;Reading Field Values</h3>
+	<p>When we use forms, we create fields for users to enter information. Once they have done so (or not done so, as the case may be), we need
+	   a way to read the values they entered. We can do so using a combination of the <strong>onSubmit</strong> event handler and the 
+	   <strong>document.getElementById().value</strong> method. The code for a form is below, followed by the function to read the user input and
+	   write it back to the page.
+	</p>
+	<pre>
+	&lt;form&gt;
+  	&lt;label for="first_name"&gt;First name:&lt;/label&gt;
+  	&lt;input type="text" id="first_name" name="first_name" value="" placeholder="Enter your first name"&gt;
+  	&lt;label for="last_name"&gt;Last name:&lt;/label&gt;
+  	&lt;input type="text" id="last_name" name="last_name" value="" placeholder="Enter your last name"&gt;
+  	&lt;input class="submitButton" type="button" onclick="chap49()" value="Submit"&gt;
+	&lt;/form&gt; 
+	&lt;h3 id="greeting">&lt;/h3&gt;
+	
+	function chap49() {					
+		var first = document.getElementById("first_name").value;
+		var last  = document.getElementById("last_name").value;
+		document.getElementById("greeting").innerHTML = "Hello, " + first + " " +  last + "!";		
+}
+	</pre>	
+	<form>
+  	<label for="first_name">First name:</label><br> 
+  	<input type="text" id="first_name" name="first_name" value="" placeholder="Enter your first name"><br>
+  	<label for="last_name">Last name:</label><br>
+  	<input type="text" id="last_name" name="last_name" value="" placeholder="Enter your last name"><br><br>
+  	<input class="submitButton" type="button" onclick="chap49();" value="Submit">
+	</form> 
+	<aside id="greeting"></aside>
+		
+	<!-- Chapter 50-->				 
+	
+	<h3 class = "swtl">Chapter 50&mdash;Setting Field Values</h3>
+	<p>In addition to reading field values, we can also set field values. We do so using again the <strong>document.getElementById</strong> method.
+	Enter your first name in the field below and click the button.
+	</p>
+	<form>
+  	<label for="first_name">First name:</label><br> 
+  	<input type="text" id="fname" name="fname" value="" placeholder="Enter your first name"><br>
+  	<label for="answer">Did you enter a value?</label><br>
+  	<input type="text" id="answer" name="answer" placeholder=""><br><br>
+	</form> 
+	<button class ="swtlbutton" onClick="chap50();">Click Here!</button><br><br>
+
+	<a href="swtl_31-40.html">&lt;&lt; Prev</a>&nbsp;
+	<a href="swtl_51-60.html">Next &gt;&gt;</a>
+</main>	
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>
+</body>
+</html>

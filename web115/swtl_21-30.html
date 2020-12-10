@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | SWTL 21-30</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/> 
+<script src="scripts/swtl_21-30.js"></script>	
+</head>
+<body>    
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Smarter Way to Learn Chapters 21-30</h2>
+	
+	<!-- Chapter 21 -->
+	
+	<h3 id="Ch21">Chapter 21&mdash;Changing Case</h3>
+	<p>Recall the array <strong>cars</strong> from <a href="swtl_11-20.html#Ch17" target="_blank">Chapter 17</a>:<br><br>
+	cars = ["Ferrari", "Lamborghini", "Porsche", "MacLaren", "Pagani"];<br><br>
+	It's fairly likely that the user did not enter their string exactly as entered in the array. They may have entered "ferrari", which would not
+	create a match. They may have been cheeky and entered "FeRaRi" which also would not create a match. The simplest solution is to enter the
+	array using all lower case letters and use the string method <strong>toLowerCase()</strong>. This method translates the user's entry to all
+	lower case letters, allowing for a match even when the user didn't type in all lower case. There exists another method, <strong>toUpperCase()</strong>
+	, which converts every letter in a string to upper case, if so desired.<br><br>
+	Let's return to the function from <a href="swtl_11-20.html#ch19" target="_blank">Chapter 19</a>. To that code, we add <strong>query = query.toLowerCase();</strong>
+	and code the array in all lower case letters:
+	</p>
+	<pre>
+	var matchFound = false;
+	var query = prompt("Enter an exotic car brand", "Enter here");
+	query = query.toLowerCase();
+	var cars = ["ferrari", "lamborghini", "porsche", "maclaren", "pagani"];
+	for(var i=0; &lt;=4; i++) {
+		if(query===cars[i]) {
+			matchFound = true;
+			alert("It's on the list!");
+			break;
+		} 
+	}
+	if(matchFound===false) {
+		alert("Tis not on the list.");
+		}
+	</pre>
+	Try the program again, typing in mixed case: <button class = "swtlbutton" onclick="chap21();">Is It on the List?</button><br><br>
+	
+	
+	<!-- Chapter 22 -->
+	
+	<h3 class = "swtl">Chapter 22&mdash;Strings: Measuring Length and Extracting Parts</h3>
+	<p>The output of the program from Chapter 21 simply informed the user if the exotic car brand was on the list. What if we wanted to include the
+	   user's input in our alert in this way:<br><br>
+	   "(User input) is on the list."<br><br>
+	   Because the user's input is the first word of the sentence, it should be capitalized, but our array uses all lower-case and the <strong>toLowerCase()</strong>
+	    and <strong>toUpperCase()</strong> methods affect every character in a string. To solve this particular problem we recall our friend <strong>
+	   .slice()</strong> from <a href="swtl_11-20.html#Ch17" target="_blank">Chapter 17</a>. This method can operate on strings in the same way it
+	   operates on elements of an array. Just above the for statment in the code from Chapter 21 we add the following code:
+	</p>
+	   <pre>
+	   	var firstChar = query.slice(0, 1);			// slices the first character and stores it in a variable
+		var restOfChars = query.slice(1);			// slices the remainder of the string and stores it in another variable
+		firstChar = firstChar.toUpperCase();		// forces uppercase on the first character
+		restOfChars = restOfChars.toLowerCase();	// forces lowercase on the remainder
+		var firstCap = firstChar + restOfChars;		// concatenates the variables for our desired output
+	   </pre>
+	   and rewrite our alerts as:
+	   <pre>
+	   alert(firstCap + " is on the list!");
+	   
+	   alert(firstCap + " is not on the list.");
+	   </pre>
+	Try this variation on the program: <button class = "swtlbutton" onclick="chap22();">Is It on the List?</button><br><br>
+	
+	
+	<!-- Chapter 23 -->
+	
+	<h3 class = "swtl">Chapter 23&mdash;Strings: Finding Segments</h3>
+	<p>When we want to find a segment within a string JavaScript provides two methods: <strong>indexOf()</strong> and <strong>lastIndexOf()</strong>.
+	   IndexOf() finds the index number of the first instance of a segment within a string and lastIndexOf() finds the index number of the
+	   last instance of a segment within a string. Consider the following sentence:<br><br>
+	   the quick brown fox jumped over the lazy dog.<br><br>
+	   What is the index number of the first instance of "the"? <button class = "swtlbutton" onclick="chap23();">indexOf</button><br><br>
+	   What is the index number of the last instance of "the"? <button class = "swtlbutton" onclick="chap23a();">lastIndexOf</button><br><br>
+	   Once we have located the index of a segment, we can use the <strong>slice()</strong> method plus concatenation to replace text within a string.
+	   Notice the first letter of the sentence above is uncapitalized. We can search for the offending string and replace it with the following code:
+	</p>
+	   <pre>
+	   	var text = "the quick brown fox jumped over the lazy dog.";
+		var firstChar = text.indexOf("the");
+		text = text.slice(0, firstChar) + "The" + text.slice(firstChar + 3);
+		alert(text);
+	   </pre>
+	   Try it here: <button class = "swtlbutton" onclick="chap23b();">Capitalize!</button><br><br>
+	
+	
+	<!-- Chapter 24 -->
+	
+	<h3 class = "swtl">Chapter 24&mdash;Strings: Finding a Character at a Location</h3>
+	<p>Another way to find a character is to use the <strong>charAt</strong> method. The method returns a single character at the specified
+	   location. Using the sentence from the previous chapter, click the buttons to find the characters at the precise index numbers:
+	</p>
+	<pre>
+	var text = "the quick brown fox jumped over the lazy dog.";
+	</pre>
+	text.charAt(0) <button class = "swtlbutton" onclick="chap24();">charAt(0)</button>&nbsp;&nbsp;&nbsp;
+	text.charAt(14) <button class = "swtlbutton" onclick="chap24a();">charAt(14)</button>&nbsp;&nbsp;&nbsp;
+	text.charAt(30) <button class = "swtlbutton" onclick="chap24b();">charAt(30)</button>&nbsp;
+	
+
+	
+	<!-- Chapter 25 -->
+	
+	<h3 class = "swtl">Chapter 25&mdash;Strings: Replacing Characters</h3>
+	<p>We have previously examined ways to replace segments within strings, but they were a little bulky. JavaScript provides another method, 
+	   <strong>replace()</strong>, which is more compact. The syntax is:
+	</p>
+	<pre>
+	variable = variable.replace("thing to be replaced", "thing to replace it with");
+	</pre>
+	Let's return to our friend:
+	<pre>
+	var text = "the quick brown fox jumped over the lazy dog.";
+	</pre>
+	Say we want to replace "the" with "THE":
+	<button class = "swtlbutton" onclick="chap25();">Replace the First!</button><br><br>
+	What if we want to replace every instance? We simply replace the quotation marks with <strong>/thing to replace/g</strong>.
+	<pre>
+	var text = "the quick brown fox jumped over the lazy dog.";
+	alert(text.replace(/the/g, "THE"));
+	</pre>
+	Replace all instances of "the" with "THE": <button class = "swtlbutton" onclick="chap25a();">Replace them All!</button>
+	
+	
+	<!-- Chapter 26 -->
+
+	<h3 class = "swtl">Chapter 26&mdash;Rounding Numbers</h3>
+	<p> When displaying decimal numbers, JavaScript gives us some options in displaying them:
+	</p>
+	<ul>
+		<li>Math.round&mdash;rounds to the nearest integer</li>
+		<li>Math.ceil&mdash;rounds <em>up</em> to the nearest integer</li>
+		<li>Math.floor&mdash;rounds <em>down</em> to the nearest integer</li>
+	</ul>
+	See how it works:<br><br>
+	alert(Math.round(.49)); <button class="swtlbutton" onclick="chap26();">Round It!</button><br><br>
+	alert(Math.ceil(.49)); <button class="swtlbutton" onclick="chap26a();">Ceil(ing) It!</button><br><br>
+	alert(Math.floor(.99)); <button class="swtlbutton" onclick="chap26b();">Floor It!</button><br><br>
+	
+	
+	<!-- Chapter 27 -->
+	
+	<h3 class = "swtl">Chapter 27&mdash;Generating Random Numbers</h3>
+	<p>The process of generating random numbers is a little complicated, not least because we can't actually generate a true random number.
+	   The best we can do is pseudo-random, achieved by the following algorithm to randomize an integer:
+	</p>
+	<ul>
+		<li>var decimal = Math.random();&mdash;generates a number with 16 digits after the decimal</li>
+		<li>var closer = (decimal * [top of desired range]) + 1;&mdash;improves our chances of randomizing number(the math is hard)</li>
+		<li>var randomInt = Math.floor(closer)&mdash;chops off the remaining decimal</li>
+	</ul>
+	Let's generate a random integer between 1 and 10:
+	<pre>
+		var decimal = Math.random();
+		var closer = (decimal * 10) + 1;
+		var randomInt = Math.floor(closer);
+		alert(randomInt);
+	</pre>
+	<button class ="swtlbutton" onclick="chap27();">Randomize!</button><br><br>
+	Try it a few times to see!
+	
+	<!-- Chapter 28-->
+	
+	<h3 class = "swtl">Chapter 28&mdash;Converting Strings to Integers and Decimals</h3>
+	<p>When we use strings that are numbers, JavaScript knows to use them as numbers for mathematical operations except in one case: addition. 
+	   Because the <strong>+</strong> sign is also used for concatenation, JavaScript won't recognize numbers entered as strings as mathematical
+	   objects. To overcome this issue, JavaScript has two methods: 
+	</p>
+	<ul>
+		<li>parseInt()&mdash;converts a string to an integer, discarding entirely any decimals</li>
+		<li>parseFloat()&mdash;converts a string to an integer preserving any decimals</li>
+	</ul>
+	The following code examines this behavior. The code for the two functions is identical except for the use of parseInt() versus parseFloat():
+	<pre>
+	var string = "Enter a number with a decimal part:";
+	var defaultAnswer = "Enter number here";
+	var query = parseInt(prompt(string, defaultAnswer));
+	alert("The parseInt() function returns " + query);
+	alert("Add 1 to the parsed number: " + query + " + 1 = " + (query + 1));	
+	</pre>	
+	parseInt(); <button class ="swtlbutton" onclick="chap28();">Check and See!</button><br><br>
+	parseFloat(); <button class ="swtlbutton" onclick="chap28a();">Check and See!</button><br><br>
+	
+	<!-- Chapter 29-->				 
+		
+	<h3 class = "swtl">Chapter 29&mdash;Converting Strings to Numbers, Numbers to Strings</h3>
+	<p>As usual, JavaScript has one way to perform a task and then a simpler one. There is a method that will convert a string representing either an
+	   <strong> int</strong> or a <strong>float</strong> to a number that is identical: Number(). Let's modify the code from the previous chapter slightly:
+	</p>
+	<pre>
+	var string = "Enter a number with a decimal part:";
+	var defaultAnswer = "Enter number here";
+	var query = Number(prompt(string, defaultAnswer));
+	alert("The Number() function returns " + query);
+	alert("Add 1 to the parsed number: " + query + " + 1 = " + (query + 1));	
+	</pre>	
+	Number(); <button class ="swtlbutton" onclick="chap29();">Check and See!</button><br><br>
+	We can also use the <strong>toString()</strong> method to display a number as a string. Notice the similarity in the code but the difference in the output:
+	<pre>
+	var string = "Enter a number with a decimal part:";
+	var defaultAnswer = "Enter number here";
+	var query = Number(prompt(string, defaultAnswer));
+	var numAsString = query.toString();		// Assigns the result of the toString() method to a new variable
+	alert("The toString() function returns " + numAsString);
+	alert("Add 1 to the number: " + numAsString + " + 1 = " + (numAsString + 1));	
+	</pre>	
+	toString(); <button class ="swtlbutton" onclick="chap29a();">Check and See!</button><br><br>
+		
+	<!-- Chapter 30-->				 
+	
+	<h3 class = "swtl">Chapter 30&mdash;Controlling the Length of Decimals</h3>
+	<p>We control the displayed length of decimals using the <strong>toFixed()</strong> method. The number in parentheses gives the desired length.
+	   If we want 0 decimal places, leave the parentheses empty:
+	</p>
+	<pre>
+	var num = 5.45678;
+	</pre>
+	Round to 0 decimal places:<button class ="swtlbutton" onclick="chap30();">num.toFixed();</button><br><br>
+	Round to 2 decimal places:<button class ="swtlbutton" onclick="chap30a();">num.toFixed(2);</button><br><br>
+	Round to 3 decimal places:<button class ="swtlbutton" onclick="chap30b();">num.toFixed(3);</button><br><br>
+	Round to 4 decimal places:<button class ="swtlbutton" onclick="chap30c();">num.toFixed(4);</button><br><br>
+	<a href="swtl_11-20.html">&lt;&lt; Prev</a>&nbsp;
+	<a href="swtl_31-40.html">Next &gt;&gt;</a>
+</main>	
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>
+</body>
+</html>

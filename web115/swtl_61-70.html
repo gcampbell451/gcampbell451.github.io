@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | SWTL 61-70</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/> 
+<script src="scripts/swtl_61-70.js"></script>	
+</head>
+<body>    
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Smarter Way to Learn Chapters 61-70</h2>
+	
+	<!-- Chapter 61 -->
+	
+	<h3 id="Chap61">Chapter 61&mdash;The DOM: Junk Artifacts and nodeType</h3>
+	<p>If you examined the code for the function from <a href="swtl_51-60.html#Chap60" target="_blank">Chapter 60</a> you may have noticed that the
+	   index number in the function was [10], but there were only two images in the &lt;p&gt;. Why wasn't the index [1] as we wanted to target the 
+	   second &lt;img&gt; in the &lt;p&gt;? The answer is that many browsers interpret whitespace caused by tabs, spaces, and/or returns as text nodes.
+	   One (brute force) solution is to code the HTML like this:<br><br>
+	</p>
+	<pre>
+	&lt;p id="Ch61"
+	&gt;&lt;img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats" class="center"
+	&gt;&lt;img src="images/cats2.jpg" width="600" height="400" alt="picture of cute cats" class="center"
+	&gt;&lt;/p&gt;
+	</pre>
+	Browsers ignore any tabs, spaces, and/or returns <em>within</em> tags. You could also use a <strong>minifier</strong> program which would translate the same code
+	to:
+	<pre>
+	&lt;p id="Ch61"&gt;&lt;img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats"&gt;&lt;img src="images/cats2.jpg"
+	 width="600" height="400" alt="picture of cute cats"&gt;&lt;/p&gt;	
+	</pre>
+	This, however, is more difficult to read for humans. A more targeted approach would be to code HTMl conventionally and ask JavaScript to search
+	by <strong>nodeType</strong>. When the nodeType is an element node, JavaScript returns a value of 1. For text nodes, JavaScript returns a value of 3.
+	In the following code, element nodes are counted and the fifth element node is the picture around which we wish to create a border (&lt;br&gt; tags
+	are element nodes):
+	<pre>
+	&lt;aside id="Ch61"&gt;
+	&lt;img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats"&gt;&lt;br&gt;&lt;br&gt;
+	&lt;img src="images/cats2.jpg" width="600" height="400" alt="picture of cute cats&lt;br&gt;&lt;br&gt;
+	&lt;/aside&gt;
+	
+	var a = document.getElementById("Ch61");
+	var pCounter = 0;
+	for (var i = 0; i &lt; a.childNodes.length; i++) {
+		if (a.childNodes[i].nodeType === 1) {
+			pCounter++;
+		}
+		if (pCounter === 2) {
+				var imgs = a.childNodes[i];
+				imgs.style.border = "5px solid #99BADD";
+				break;
+		}
+	}	
+	</pre>
+	<aside id="Ch61">
+	<img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats" class="center">
+	<img src="images/cats2.jpg" width="600" height="400" alt="picture of cute cats" class="center"><br><br>
+	<button class = "swtlbutton center" onclick="chap61()">Make a Border!</button><br><br>
+	</aside>
+	
+	<!-- Chapter 62 -->
+	
+	<h3 class = "swtl" id="Chap62">Chapter 62&mdash;The DOM: More Ways to Target Elements</h3>
+	<p>In addition to targeting nodes by index numbers, we can target them using other keywords. For the first <strong>childNode</strong> in a <strong>
+	   parentNode</strong> we code <strong>parentNode.firstChild</strong>. For the last childNode we code <strong>parentNode.lastChild</strong>. If we have
+	   assigned a collection of elements to a variable we can navigate using <strong>variableName.nextSibling</strong> and <strong>varableName.previousSibling</strong>.
+	   Counting these siblings, though, can be tricky because of how browsers treat whitespace. If we want to use <strong>previousSibling</strong> and 
+	   <strong>nextSibling</strong> we should use one of the methods discussed in <a href="#Chap61">Chapter 61</a>.
+	</p>
+	Here's the code. The functions called by clicking the buttons differ only in the function name and the use of <em>firstChild</em> versus <em>lastChild</em>.<br><br>
+	HTML:
+	<pre>
+	&lt;aside id="Ch62"&gt;
+		&lt;img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats" class="center"&gt;
+		&lt;img src="images/cats2.jpg" width="600" height="400" alt="picture of cute cats" class="center"&gt;
+	&lt;/aside&gt;
+			
+	</pre>
+	JavaScript:
+	<pre>
+	var a = document.getElementById("Ch62");
+	var imgs = a.firstChild;
+	imgs.style.border = "5px solid #99BADD";	
+	</pre>
+	<aside id="Ch62"
+		><img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats" class="center"
+		><img src="images/cats2.jpg" width="600" height="400" alt="picture of cute cats" class="center"
+		></aside
+		><br>
+	<button class = "swtlbutton center" onclick="chap62()">FirstChild Border!</button><br><br>
+	<button class = "swtlbutton center" onclick="chap62a()">LastChild Border!</button>
+	
+	<!-- Chapter 63 -->
+	
+	<h3 class = "swtl">Chapter 63&mdash;The DOM: Getting a Target's Name</h3>
+	<p>We have previously worked with the keyword <strong>nodeType</strong> to determine whether the node in question is an element or text node.  There
+	   are other keywords we can use to get information about nodes: <strong>nodeName</strong> and <strong>nodeValue</strong>. If a node is an element node,
+	   its nodeName is a string that corresponds to the characters of the tag enclosed in <strong>&lt;&nbsp;&gt;</strong>:
+	</p>
+	<table class="ch32table" id="ch63table">
+		<tr>
+			<th>Tag</th>
+			<th>Node Name</th>
+		</tr>
+		<tr>
+			<td>&lt;p&gt; or &lt;P&gt;</td>
+			<td>P</td>
+		</tr>
+		<tr>
+			<td>&lt;div&gt; or &lt;DIV&gt;</td>
+			<td>DIV</td>
+		</tr>
+		<tr>
+			<td>&lt;span&gt; or &lt;SPAN&gt;</td>
+			<td>SPAN</td>
+		</tr>
+		<tr>
+			<td>&lt;img&gt; or &lt;IMG&gt;</td>
+			<td>IMG</td>
+		</tr>
+		<tr>
+			<td>&lt;a&gt; or &lt;A&gt;</td>
+			<td>A</td>
+		</tr>
+		<tr>
+			<td>&lt;em&gt; or &lt;EM&gt;</td>
+			<td>EM</td>
+		</tr>
+		<tr>
+			<td>&lt;table&gt; or &lt;TABLE&gt;</td>
+			<td>TABLE</td>
+		</tr>
+		<tr>
+			<td>&lt;li&gt; or &lt;LI&gt;</td>
+			<td>LI</td>
+		</tr>
+	</table>
+	If the node is a text node, the name of the node is always <strong>#text</strong>&mdash;<strong>in lower-case</strong>. <br><br>
+	Element nodes have names but no value. If assigned to a variable, the <strong>nodeValue</strong> of an element node is assigned <strong>null</strong>.<br><br>
+	The <strong>nodeValue</strong> of a text node is not the same as the <strong>innerHTML</strong> property. <strong>innerHTML</strong> is a property of an element
+	node. It includes <strong><em>all</em></strong> of the descendants of the element, while <strong>nodeValue</strong> contains only the text value of the targeted
+	text node.<br><br>
+	The table above has been assigned the id "ch63table."<br><br>
+	<button class = "swtlbutton center" onclick="chap63()">Get nodeName</button><br>
+	<aside id="write63" class="center write"></aside><br>
+	<button class = "swtlbutton center" onclick="chap63a()">Get nodeValue</button><br>
+	<aside id="write63a" class="center write"></aside>
+	
+	<!-- Chapter 64 -->
+	
+	<h3 class = "swtl">Chapter 64&mdash;The DOM: Counting Elements</h3>
+	<p>In <a href="swtl_51-60.html#Ch56" target="_blank">Chapter 53</a> we learned to target elements by their tag name. Once we have done so, we count the number of targeted
+	   elements with the <strong>length</strong> keyword.
+	</p>
+	The relevant code, after the aside in which the images are enclosed is assigned the id of "Ch64":
+	<pre>
+	var parentNode = document.getElementById("Ch64");
+	var numImgs = parentNode.childNodes.length;	
+	</pre>
+	<aside id="Ch64"
+		><img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats" class="center"
+		><img src="images/cats2.jpg" width="600" height="400" alt="picture of cute cats" class="center"
+		></aside><br>
+	<button class = "swtlbutton center" onclick="chap64()">How Many Pics of Cute Kitties?</button><br>
+	<aside id="write64" class="center write"></aside>
+	
+	<!-- Chapter 65 -->
+	
+	<h3 class = "swtl" id="Ch65">Chapter 65&mdash;The DOM: Attributes</h3>
+	<p>Throughout all of the HTML used to mark up these pages we have used <strong>attributes</strong>.  We have activated these attributes using keywords like
+	   <strong>href</strong>, or <strong>id</strong><strong>, or class</strong>, to name just a few. These are the <strong>names</strong> of attributes, and
+	   the <strong>values</strong> of those attributes are the bits contained withing the quotation marks on the other side of the assignment operator from the 
+	   <strong>names</strong> of the attributes.
+	</p>
+	For example, here is the markup for the following picture of cute kitties:
+	<pre>
+	&lt;img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats"&gt;	
+	</pre>
+	<img src="images/cats.jpg" id="Chap65" width="600" height="400" alt="picture of cute cats" class="center"><br><br>
+	<strong>Src</strong>, <strong>id</strong>, <strong>width</strong>, <strong>height</strong>, <strong>alt</strong>, and <strong>class</strong> are <strong>attributes</strong> of the &lt;img&gt;.<br><br>
+	<strong>"images/cats.jpg"</strong>, <strong>"Chap65"</strong>, <strong>"600"</strong>, <strong>"400"</strong>, <strong>"picture of cute cats"</strong>, and <strong>center</strong> are the 
+	<strong>values</strong> of the &lt;img&gt;'s <strong>attributes</strong>.<br><br>
+	We can use the keywords <strong>hasAttribute</strong> to see if an element has a particular attribute, <strong>getAttribute</strong> to discover the
+	value of an element's attribute, and <strong>setAttribute</strong> to change an element's attribute.<br><br>
+	For example, we could swap images like we did in <a href="swtl_51-60.html#Ch53" target="_blank">Chapter 53</a> using a different method:
+	<pre>
+	var target = document.getElementById("Ch65");
+	target.setAttribute("src", "images/cats2.jpg");	
+	</pre>
+	Try it again! &nbsp;<button class = "swtlbutton" onclick="chap65()">Swap It!</button>&nbsp;<button class = "swtlbutton" onclick="chap65a()">Swap It Back!</button>
+	
+	<!-- Chapter 66 -->
+
+	<h3 class = "swtl">Chapter 66&mdash;The DOM: Attribute Names and Values</h3>
+	<p>We have in previous chapters created a collection of elements by tag name with <strong>getElementsByTagName</strong> and then made a collection
+	   of the children of that element with <strong>childNodes</strong>. We can use the keyword <strong>attributes</strong> to make a colleciton of all of the
+	   attributes of an element. Once assigned to a variable, we can use <strong>length</strong> to find the number of attributes assigned to the element and
+	   We can then use <strong>nodeName</strong> and <strong>nodeValue</strong> to find the name and value, respectively, of the attributes of the element.
+	</p>
+	We target an image thusly:
+	<pre>
+	var numAttributes = document.getElementById("Ch66").attributes;	
+	</pre>
+	Now that we have an array of the image's attributes we can use <strong>nodeName</strong> and <strong>nodeValue</strong> to display information about them.<br><br>
+	Here is a now-familiar image. Press the buttons below to get information about its attributes.<br><br>
+	<img src="images/cats.jpg" id="Ch66" width="600" height="400" alt="picture of cute cats" class="center"><br><br>
+	<button class="swtlbutton center" onclick="chap66()">How Many Attributes?</button><br>
+	<aside id="write66" class="center write"></aside><br>
+	<button class="swtlbutton center" onclick="chap66a()">What Are They?</button><br>
+	<aside id="write66a" class="center write"></aside><br>
+	<button class="swtlbutton center" onclick="chap66b()">What Are Their Values?</button><br>
+	<aside id="write66b" class="center write"></aside><br>
+	<strong>***Note:</strong> the node names are retrieved in all lowercase, not the camelCase they are coded in.<strong>***</strong>
+	
+	<!-- Chapter 67 -->
+	
+	<h3 class = "swtl" id="Chap67">Chapter 67&mdash;The DOM: Adding Nodes</h3>
+	<p>The DOM hierarchy can be used to add element, attribute, and text nodes into the head or body sections of a document.
+	   To do so, we use the keywords <strong>createElement</strong>, <strong>setAttribute</strong>, <strong>createTextNode</strong>, 
+	   and <strong>appendChild</strong>. Say we wish to create a new &lt;p&gt; node. First, we create the node with <strong>createElement</strong>:
+	</p>
+	<pre>
+	var newNode = document.createElement("p");
+	</pre>
+	Now that we have created the new node, we can set its attributes with <strong>setAttribute</strong> as we did in <a href="#Ch65">Chapter 65</a>.
+	<pre>
+	newNode.setAttribute("id", "Ch67");
+	</pre>
+	This new &lt;p&gt; wouldn't be much good without some content, would it? We use <strong>createTextNode</strong>, assigning the 
+	copy to a variable:
+	<pre>
+	var newCopy = document.createTextNode("Aren't my cats adorable?");
+	</pre>
+	Now we need to add this content to the new &lt;p&gt; with <strong>appendChild</strong>:
+	<pre>
+	newNode.appendChild(newCopy);
+	</pre>
+	We'll see how to insert elements in the next chapter.
+	
+	<!-- Chapter 68-->
+	
+	<h3 class = "swtl">Chapter 68&mdash;The DOM: Inserting Nodes</h3>
+	<p>When we add nodes as in <a href="#Chap67">Chapter 67</a> we don't control where the node is appended&mdash;it's always placed
+	   at the end. To specify where a node is inserted, we use the keyword <strong>insertBefore</strong>. First, we target a child of the
+	   parent element with one of the techniques learned in Chapters <a href="swtl_51-60.html#Chap59" target="_blank">59</a>, <a href="swtl_51-60.html#Chap60" target="_blank">60</a>,
+	   <a href="#Chap61">61</a>, and <a href="#Chap61">62</a>. Then we use <strong>insertBefore</strong> to insert our new element just before
+	   that child element.
+	</p>
+	Here's the code for the first button below:
+	<pre>
+	var parentDiv = document.getElementById("Ch68");
+	var newPara = document.createElement("p");
+	var newText = document.createTextNode("But I happen to be right!");
+	newPara.appendChild(newText);
+	parentDiv.appendChild(newPara);	
+	</pre>
+	Here's the code for the second button below:
+	<pre>
+	var parentDiv = document.getElementById("Ch68");
+	var newImg = document.createElement("img");
+	newImg.setAttribute("src", "images/cats2.jpg");
+	newImg.setAttribute("width", "600");
+	newImg.setAttribute("class", "center");
+	para1 = parentDiv.firstChild;
+	parentDiv.insertBefore(newImg, para1);
+	</pre>
+	<div id="Ch68"
+		><p>You've seen pictures of my cats on these pages.</p
+		><p>Everyone thinks that their cats are the cutest.</p
+		></div>
+	<button class ="swtlbutton" onclick="chap68()">Append a &lt;p&gt;!</button><br><br>
+	Click below for proof!<br><br>
+	<button class ="swtlbutton" onclick="chap68a()">Insert an &lt;img&gt;!</button>
+	
+	<!-- Chapter 69-->				 
+		
+	<h3 class = "swtl" id="Chap69">Chapter 69&mdash;Objects</h3>
+	<p>Recall the table from <a href="swtl_31-40.html#Chap34" target="_blank">Chapter 34</a>:
+	</p>
+	<table class="ch32table">
+		<tr>
+			<th>Method</th>
+			<th>Example ( x = new Date(); )</th>
+			<th>Result</th>
+		</tr>
+		<tr>
+			<td>setFullYear()</td>
+			<td>x.setFullYear(2021)</td>
+			<td>Year of x is 2021</td>
+		</tr>
+		<tr>
+			<td>setMonth()</td>
+			<td>x.setMonth(0)</td>
+			<td>Month of x is January</td>
+		</tr>
+		<tr>
+			<td>setDate()</td>
+			<td>x.setDate(1)</td>
+			<td>Day of the month is 1</td>
+		</tr>
+		<tr>
+			<td>setHours()</td>
+			<td>x.setHours(0)</td>
+			<td>Midnight</td>
+		</tr>
+		<tr>
+			<td>setMinutes()</td>
+			<td>x.setMinutes(1)</td>
+			<td>One minute past the hour</td>
+		</tr>
+		<tr>
+			<td>setSeconds()</td>
+			<td>x.setSeconds(1)</td>
+			<td>One second past the minute</td>
+		</tr>
+		<tr>
+			<td>setMilliseconds()</td>
+			<td>x.setMilliseconds(1)</td>
+			<td>One ms past the second</td>
+		</tr>
+	</table>
+	If we want to work with the data in the cells we would need to assign the value in each cell to a variable and then manipulate
+	that variable in some way. A more efficient process would be to create an <strong>object</strong> with <strong>properties</strong>.
+	In the above table, each method would be an <strong>object</strong> and the method name, example, and result would all be that 
+	object's <strong>properties</strong>. To create this object we would use the following syntax:
+	<pre>
+	var newObject = {
+		name: "setFullYear()",
+		example: "x.setFullYear()",
+		result: "Year of x is 2021"
+	};
+	</pre>
+	Some items of note:
+	<ul>
+		<li>The syntax begins as with any variable definition, but instead of a value we use a curly brace pair</li>
+		<li>Each property is first named, then followed with a colon and then a value</li>
+		<li>Each property definition but the last ends with a comma, and</li>
+		<li>The closing curly bracket is followed by a semicolon.</li>
+	</ul>
+	Given the following code:
+	<pre>
+	var writeToPage = document.getElementById("write69");
+	writeToPage.innerHTML = "The name of the first method in the table is " + newObject.name + ".";
+	</pre>
+	Click the button below to see the output.<br><br>
+	<button class ="swtlbutton" onclick="chap69()">See it in Action!</button><br>
+	<aside id="write69" class="write"></aside>	
+	<!-- Chapter 70-->				 
+	
+	<h3 class = "swtl" id="Chap70">Chapter 70&mdash;Objects: Properties</h3>
+	<p>We assign an object's property values the same way we'd assign a value to any variable, for example:
+	</p>
+	<pre>
+	newObject.name = "setMonth()";
+	circle.radius = 3;
+	today.hasSale = true;
+	</pre>
+	Note that the objects above need not have already had the <strong>name</strong>, <strong>radius</strong>, and <strong>hasSale</strong>
+	properties previously defined. The above code would create those properties and set the assigned values. We could also create an
+	object with no properties by assigning empty curly braces, and we can create a property and assign its value at a later time as follows:
+	<pre>
+	var newObject = {};
+	newObject.size = undefined;
+	</pre>
+	<strong>***</strong>Note that <strong>undefined</strong> is a keyword, not a string.<strong>***</strong><br><br>
+	We can delete properties using the <strong>delete</strong> keyword, and check to see if a property exists using the <strong>in</strong>
+	keyword.
+	<pre>
+	delete newObject.size;
+	var propertyExists = "name" in newObject;
+	</pre>
+	Using the newObject object from <a href="#Chap69">Chapter 69</a> we can inquire if it has a particular property with the following code:
+	<pre>
+	var propertyExists = "name" in newObject;
+	var writeToPage = document.getElementById("write70");
+	if (propertyExists == true)
+		writeToPage.innerHTML = "The property 'name' does in fact exist in newObject.";	
+	</pre>
+	<button class ="swtlbutton" onclick="chap70()">See it in Action!</button>
+	<aside id="write70" class="write"></aside><br><br>
+	<a href="swtl_51-60.html">&lt;&lt; Prev</a>&nbsp;
+	<a href="swtl_71-80.html">Next &gt;&gt;</a>
+</main>	
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>
+</body>
+</html>

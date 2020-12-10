@@ -1,0 +1,341 @@
+header, main, nav, footer, section, article, figure, figcaption, aside { display: block; }
+* { box-sizing: border-box; }
+body  {  
+	/*	https://coolors.co/1f3c5c-0f7173-e7ecef-272932-d8a47f	color palette */
+    font-family: ariel, sans-serif;
+    color: #C0C0C0;
+    background-color: #372F31;		
+	margin-bottom: 20px;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 23px; 
+}
+header  {
+	height: 50px;
+	margin-bottom: 20px;
+	text-align: left;
+	color: #D08842;
+	background-color: #372F31;
+	font-family: Magneto, serif;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	font-size: 120%;
+}
+h1  {
+	color: #E9E3E6;
+}
+
+main  {
+	background-color: #372F31;
+	padding-left: 5px;	
+}
+h2  {
+	color: #D08842;
+	font-family: Georgia, serif;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-bottom: 3px solid #99BADD;
+	padding-bottom: 30px;
+}
+h3  {
+	color: #E9E3E6;;
+	font-family: Georgia, serif;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+nav  {
+	  overflow: hidden;  
+	  width: 100%;
+	  display: flex;
+	  justify-content: space-evenly;
+	  align-items: center;
+	  padding: 5px;
+	  display: flex;
+	  flex-wrap: wrap;
+}
+nav a  {
+	text-decoration: none;
+}
+a:link  {color: #E9E3E6; text-decoration: underline;}
+a:visited  {color: #99BADD; text-decoration: none;}
+a:hover  {color: #D08842; text-decoration: underline;}
+
+nav a:link  {color: #E9E3E6; text-decoration: underline;}
+nav a:visited  {color: #99BADD; text-decoration: none;}
+nav a:hover  {color: #D08842; text-decoration: underline;}
+
+pre  {
+	font-family: ariel, sans-serif;
+    color: #E9E3E6;
+	font-size: 105%;
+	padding-top: 15px;
+}
+figure  {
+	text-align: center;
+	font-style: italic;
+	font-size: 90%;
+	
+}
+p  {
+	padding-top: 15px;
+}
+ul  {
+	padding: 15px;
+}
+ul li  {
+	list-style-type: disc;
+}
+ol li  {
+	color: #E9E3E6;
+	margin-bottom: 1em;
+}
+dt  {
+	font-size: 110%;
+	font-weight: bold;
+	color: #E9E3E6;
+}
+
+strong {
+	color: #E9E3E6;
+}
+
+em {
+	color: #E9E3E6;
+}
+footer  {
+	text-align: center;
+	font-size: 90%;
+	color: #99BADD;
+	background-color: #372F31;
+	margin-top: 40px;
+	clear: both;
+	border-top: 3px solid #99BADD;
+	padding-top: 30px;
+}
+footer span  {
+	font-size: 110%;
+	font-style: italic;
+	color: #D08842;
+}
+.list-item  {
+	color: #E9E3E6;
+}
+/* These classes are for the brand page */
+.blackcoffee  {
+	color: #372F31;
+	font-size: 30px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #C0C0C0;
+}
+.platinum  {
+	color: #E9E3E6;
+	font-size: 30px;
+}
+.bronze  {
+	color: #D08842;
+	font-size: 30px;
+}
+.palecerulean  {
+	color: #99BADD;
+	font-size: 30px;
+}
+.silver  {
+	color: #C0C0C0;
+	font-size: 30px;
+}
+.magneto  {
+	font-size: 30px;
+	font-family: Magneto;
+}
+.georgia  {
+	font-size: 30px;
+	font-family: Georgia;
+}
+.arial  {
+	font-size: 30px;
+	font-family: arial;
+}
+
+
+/* These classes are for the Code Play assignment */
+.input  {
+	color: #99BADD;
+	font-size: 1.2em;
+	font-family: "Lucida Console", sans-serif; 
+}
+.output {
+	color: #D08842;
+	font-size: 1.2em;
+	font-family: Calibri, sans-serif;
+}
+.dots {
+	color: #C0C0C0;
+}
+
+
+/* These classes are for the validation buttons */
+.htmlbutton  {
+	color: #372F31;
+	background-color: #99BADD;
+	border: 1px solid #E9E3E6;
+	border-radius: 12px;
+	padding: 5px 5px;
+}
+.htmlbutton:hover  {
+	color: #99BADD;
+	background-color: #372F31;
+	border: 3px solid #E9E3E6;
+}
+.htmlbutton:active {
+	top: 2px;
+}
+.cssbutton  {
+	color: #372F31;
+	background-color: #D08842;
+	border: 1px solid #E9E3E6;
+	border-radius: 12px;
+	padding: 5px 12px;
+}
+.cssbutton:hover  {
+	color: #D08842;
+	background-color: #372F31;
+	border: 3px solid #E9E3E6;
+}
+.cssbutton:active  {
+	top: 2px;
+}
+
+/* This section is for Fizz Buzz assignments */
+#greeting  {
+	font-size: 2em;	
+}
+aside  {
+	margin-top: 20px;
+}
+label  {
+	color: #E9E3E6;
+}	
+input  {
+	font-size: 110%;
+	background-color: #99BADD;
+	border: 2px solid #D08842;
+	border-radius: 12px;
+}
+textarea {
+	background-color: #99BADD;
+	border: 2px solid #D08842;
+	border-radius: 12px;
+}
+input:focus  {
+	background-color: #99BADD;
+}
+.submitButton  {
+	border-radius: 12px;
+	padding: 5px 12px;
+}
+.submitButton:hover  {
+	color: #99BADD;
+	background-color: #372F31;
+}
+
+/* This section is for swtl */
+select  {
+	font-size: 110%;
+	background-color: #99BADD;
+	border: 2px solid #D08842;
+	border-radius: 12px;
+}
+
+.swtlbutton  {
+	color: #372F31;
+	background-color: #D08842;
+	border: 1px solid #E9E3E6;
+	border-radius: 12px;
+	padding: 5px 12px;
+}
+.swtlbutton:hover  {
+	color: #D08842;
+	background-color: #372F31;
+}
+.swtl  {
+	border-top: 3px solid #99BADD;
+	padding-top: 30px;
+}
+
+.ch32table  {
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border: 3px solid #D08842;
+	border-collapse: collapse;
+}
+
+.hidden {
+	display: none;
+}
+
+.blueborder {
+	border: 5px solid #99BADD;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.write  {
+	color: #E9E3E6;
+}
+
+#dom1 {
+	float: left;
+	margin: 10px 20px 10px 10px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+#dom2 {
+	float: left;
+	margin: 10px 20px 10px 10px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+#dom3 {
+	float: left;
+	margin: 10px 20px 10px 10px;
+	overflow: auto;
+	box-sizing: border-box;
+} 
+
+th, tr , td {
+	border: 1px solid #D08842;
+	padding: 5px;
+	text-align: center;
+}
+
+th {
+	color: #E9E3E6;
+	background-color: #99BADD;
+}
+#legal  {
+	float: left;
+	padding-left: 150px;
+	color: #99BADD;
+}
+#illegal  {
+	float: right;
+	padding-right: 150px;
+	color: #D08842;
+}
+	
+	
+	
+	

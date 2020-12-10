@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | SWTL 11-20</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/> 
+<script src="scripts/swtl_11-20.js"></script>	
+</head>
+<body>    
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Smarter Way to Learn Chapters 11-20</h2>
+	
+	<!-- Chapter 11 -->
+	
+	<h3>Chapter 11&mdash;Comparison Operators</h3>
+	<p>Often we need to compare two things. These items to compare could be variables, strings, numbers, expressions, or any combination
+	   of these. To do so,we use <strong>comparison operators</strong>.</p>
+	<p>When comparing strings, we use the comparison operator<strong> ===</strong>. This case-sensitive operator determines whether two strings or 
+	   the string values stored in memory for two variables are equal. T</p>
+	<h4>Example:</h4>
+	The code is:<br><br>
+	if (question1 === question1a) <br>
+	&nbsp;&nbsp;&nbsp;alert("The strings you entered are identical.");<br>
+	}<br><br>
+	<strong>Click the button to compare two strings:</strong>
+	<button class = "swtlbutton" onclick="chap11();">Compare</button><br><br>
+	If we use the comparison operator <strong>!==</strong> we check to see if two strings are not equal.<br><br> The following code differs from the 
+	previous only in using !==:
+	<button class = "swtlbutton" onclick="chap11a();">Compare</button><br><br>
+	There are other comparison operators you are likely familiar with:
+	<ul>
+		<li><strong> &gt;</strong> &nbsp; &nbsp;is greater than</li>
+		<li><strong> &lt;</strong> &nbsp; &nbsp;is less than</li>
+		<li><strong>&gt;=</strong>  &nbsp;is greater than or equal to</li>
+		<li><strong>&lt;=</strong>  &nbsp;is less than or equal to</li>
+	</ul>
+	Using comparison operators in an expression returns a <strong>boolean</strong> value.
+	
+	<!-- Chapter 12 -->
+	
+	<h3 class = "swtl">Chapter 12&mdash;<em>If...else</em> and <em>else if</em> Statements</h3>
+	<p>Up to this point, the <em>if</em> statements we have written have been binary&mdash;either the first condition was true and one statement
+	   executed or it was false and nothing happened. Sometimes we want to have different statements execute based on the boolean values of 
+	   condition evaluation. For this, we use <em>if...else</em> and <em>else if</em> statements.</p>
+	<h4>Example:</h4>
+		The code is:<br><br>
+	if (question1 === question1a) {<br>
+	&nbsp;&nbsp;&nbsp;alert("The strings you entered are identical.");<br>
+	} <strong>else</strong> {<br>
+	&nbsp;&nbsp;&nbsp;alert("The strings you entered are not identical")<br>
+	}<br><br>
+	<strong>Click the button to compare two strings:</strong>
+	<button class = "swtlbutton" onclick="chap12();">Compare</button><br><br>
+	We can check any number of conditions. After the if... statement, we can use <em>else if</em> to branch other conditions, using <em>else</em>
+	only at the final condition to check.
+	
+	<!-- Chapter 13 -->
+	
+	<h3 class = "swtl">Chapter 13&mdash;Testing Sets of Conditions</h3>
+	<p>The statements we examined in Chapter 12 tested for one condition only: true or false. What if we wanted to test two conditions in order
+	   for a statement to execute? We can use the operators <strong>&&</strong> and/or <strong>||</strong>. <strong>&&</strong> translates to 
+	   <strong>and</strong> and <strong>||</strong> translates to <strong>or</strong>.</p>
+	<h4>Example:</h4>
+	   <p>The code is:<br><br>
+	   if (question1 &lt; question1a && question1 &lt; 10) {<br>
+	   &nbsp;&nbsp;&nbsp;alert("The first number you entered is less than 10 and is smaller than the second.");<br>
+	   else if (question1 == question1a && question1 &lt; 10) {<br>
+		&nbsp;&nbsp;&nbsp;alert("The numbers you entered are identical and both are less than 10.");<br>
+	   } else if (question1 == question1a && question1 &gt; 10) {<br>
+		&nbsp;&nbsp;&nbsp;alert("The numbers you entered are identical and both are greater than 10.");<br>
+	   } else if (question1 == question1a && question1 == 10) {<br>
+	   &nbsp;&nbsp;&nbsp;alert("The numbers you entered identical and each is 10.");<br>
+	   } else {<br>
+	   &nbsp;&nbsp;&nbsp;alert("The first number you entered is greater than 10 and is larger than the second.");<br>
+	   }<br><br>
+	<strong>Click the button to compare two numbers:</strong>
+	<button class = "swtlbutton" onclick="chap13();">Compare</button></p><br><br>
+	When using the <strong>||</strong> operator, if any one of the conditions being tested returns true, the operation evaluates as true. Only 
+	when both conditions are false does the operation evaluate as false. We can combine any number of and and or conditions but we should remember
+	the lessons of <a href="swtl_1-10.html#Ch7" target="_blank">Chapter 7</a> and use parentheses to eliminate ambiguity.
+	
+	<!-- Chapter 14 -->
+	
+	<h3 class = "swtl">Chapter 14&mdash;<em>If</em> Statements Nested</h3>
+	<p>In a situation like the above code where we wish to test multiple conditions for truth, we can alternatively <em>nest</em> if statements.</p>
+		<h4>Example:</h4>
+		Say we have this code:
+		<pre>
+		if(num1%2=0 && num2%2=0 && num3%2=0) {
+		   alert("--output--");
+		   } else {
+		      alert("--other output--");
+		}
+		</pre>
+	    We could rewrite this as:
+		<pre>
+	   	if (num1 % 2 == 0){
+		   if (num2 % 2 == 0) {
+			  if (num3 % 2 == 0) {
+				alert("--output--");
+			  }
+		    }
+		} else {
+			alert("--other output--");
+		}
+		</pre>
+	<strong>Test the Program:</strong>
+	<button class = "swtlbutton" onclick="chap14();">Compare</button><br><br>
+	These nested statements can be useful but also quite tricky. Be careful with closing braces!
+	
+	<!-- Chapter 15 -->
+	
+	<h3 class = "swtl">Chapter 15&mdash;Arrays</h3>
+	<p>Another type of variable we can create is an <strong>array</strong>. An array, closed in square brackets, <strong>[ ]</strong>, can have
+	   multiple values assigned to it. Each value assigned to an array is also called an <strong>element</strong>.
+	</p>
+	<h4>Examples:</h4>
+	<ul>
+		<li><strong>var array1</strong> = [num1, num2, num3];</li>
+		<li><strong>var array2</strong> = ["Joe", 12, num4];</li>
+	</ul>
+	<p>Each element in an array is assigned a value called its <strong>index</strong>. We can reference elements directly by referencing the array
+	   by its index. Let's say our array is declared as follows:</p>
+	var array1 = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];<br><br>
+	Test this by entering an index number:	   
+	<button class = "swtlbutton" onclick="chap15();">Choose an Index</button><br><br>
+	
+	<strong>Important: the index value begins with 0, not 1!</strong>
+	
+	<!-- Chapter 16 -->
+
+	<h3 class = "swtl">Chapter 16&mdash;Arrays: Adding and Removing Elements</h3>
+	<p>Just as we can create an empty variable we can create an empty array with the following syntax:<br><br>
+	<strong>var colors = [ ];</strong><br><br>
+	We then can assign values to this array by assigning them to the array's indices:<br><br>
+	color[0] = "red";<br>color[1] = "orange";<br>color[2] = "yellow";<br>etc.<br><br>
+	If we refer to an index that does not already have a value assigned the value will be <strong>undefined</strong>. If we assign a value to
+	an index position that already contains a value, the previous value will be overwritten in memory. What if we wish to add or remove a value
+	to the end of the array? For that task we have the <strong>pop()</strong> and <strong>push()</strong> methods.<br><br>
+	For example, <strong>color.pop();</strong> removes the last element of the color array. We could store this value in a variable:<br><br>
+	var goByeBye = color.pop();<br><br>
+	If we wish to add an item to the end of our array we use <strong>push(<em>newElement</em>);</strong>:<br><br>
+	color.push("blue"); will add blue to the array we assigned values to earlier, in the last position.
+	</p>
+	<h4>Examples:</h4>
+	var array1 = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];&nbsp;&nbsp;
+	<button class="swtlbutton" onclick="chap16();">What's My Length?</button><br><br>
+	See the result of using array1.pop();
+	<button class="swtlbutton" onclick="chap16a();">Pop It!</button><br><br>
+	We stored the value of array1.pop(); in a variable in the last example. Click the button to add the contents of that variable to the end of the array:
+	<button class="swtlbutton" onclick="chap16b();">Push It Back!</button><br><br>
+	
+	<!-- Chapter 17 -->
+	
+	<h3 class = "swtl" id="Ch17">Chapter 17&mdash;Arrays: Removing and Inserting Elements</h3>
+	<p>In this chapter we learn four methods for removing and inserting elements:</p>
+	<ul>
+		<li><strong>shift();</strong>&mdash;removes the first element of an array</li>
+		<li><strong>unshift();</strong>&mdash;adds one or more elements to the beginning of an array</li>
+		<li><strong>splice();</strong>&mdash;inserts one or more element anywhere in an array; optional: remove one or more elements after the splice</li>
+		<li><strong>slice();</strong>&mdash;copies one or more <em>consecutive</em> elements in an array and put them in a new array</li>
+	</ul>
+
+	<h4>Examples:</h4>
+	Given this array: cars = ["Ferrari", "Lamborghini", "Porsche", "MacLaren", "Pagani"];<br><br>
+	Press the button to remove the first element and see the new array using <strong>cars.shift();</strong>: 
+	<button class ="swtlbutton" onclick="chap17();">Shift It!</button><br><br>
+	Press the button to add a new element to the cars array using <strong>cars.unshift("Aston Martin", "Lotus");</strong> and see the new array:
+	<button class ="swtlbutton" onclick="chap17a();">Unshift Them!</button><br><br>
+	Add "Aston Martin" and "Lotus" to the array beginning in the 2nd position and remove the first element after the splice using 
+	<strong>cars.splice(1, 1, "Aston Martin", "Lotus");</strong>
+	<button class ="swtlbutton" onclick="chap17b();">Splice Them!</button><br><br>
+	Copy the first two elements in our array to a new array and display its contents using <strong>var newCars = cars.slice(0, 2);</strong>:<br>
+	<button class ="swtlbutton" onclick="chap17c();">Slice Them!</button><br><br>
+	
+	<!-- Chapter 18-->
+	
+	<h3 class = "swtl">Chapter 18&mdash;<em>for</em> Loops</h3>
+	<p>Loops automate functions that would otherwise need tedious coding. Say we want to check if a car the user enters in a prompt is in
+	   our array from the previous chapter. We assign the user's entry to a variable and iterate through the array to see if it's there.
+	   The structure of this for loop is:<br><br>
+	   <pre>
+	   for(var i = 0; i &lt;= 4; i++) {
+		 if(carOnList === cars[i] {
+			alert("It's on the list!");
+		 }
+	   }
+	   </pre>
+	   Notes:
+	   <ul>
+		   <li>The variable <strong>i</strong> counts iterations. It can be initialized to any value, but if we want to begin at the beginning of the array,
+			it is assigned 0.</li>
+		   <li>The second statement in the parentheses after <em>for</em> defines a limit on the loop. In this case, once the index counter reaches
+		    4, the loop ends.</li>
+		   <li>The third statement tells the browser how to increment the counter. In this case, 1 is added to i after each iteration, but it could
+			 be decremented. It could be multiplied by a number. It's up to the need of the program.</li>
+	   </ul>
+	   Check to see if the car brand the user is prompted to enter is in the array from Chapter 17:
+	   <button class ="swtlbutton" onclick="chap18();">Check and See!</button><br><br>
+	
+	
+	<!-- Chapter 19-->				 
+		
+	<h3 class = "swtl" id="ch19">Chapter 19&mdash;<em>for</em> Loops: Flags, Booleans, Array Length, and Loopus Interruptus</h3>
+	<p>You may have noticed a problem with the loop used in Chapter 18&mdash;if you entered a car not in the array, nothing happened. The user
+       doesn't know if they did something wrong or if it was the function. To solve this issue we use a <strong>flag</strong>. A flag is a variable
+	   that begins with an assigned value and is then switched to another value if our conditions are met. Say we began the function with this statement:<br><br>
+	   <strong>var matchFound</strong> = false; <br><br>
+	   We then add a statement inside the loop that reassigns matchFound the value true if a match is found. 
+	   <pre>  
+	   for(var i=0; i&lt;=4; i++){
+	      if(carOnList===cars[i] {
+	      matchFound = true;
+	      alert("It's on the list!");
+	      break;
+	      }
+	   }
+	   </pre>
+	   Just below the loop structure we add another
+	   if statement:
+	   <pre>
+	   if(matchFound===false) {
+	   &nbsp;&nbsp;alert("It's not on the list.");
+	   </pre>
+	   Now, if the user enters a car not in the array, a message lets them know so. Try it:
+	   <button class ="swtlbutton" onclick="chap19();">Check and See!</button><br><br>
+	   If you were reading closely, you noticed a line in the loop that read <strong>break</strong>. This keyword is used to save computing cycles if
+	   the function finds a match early in the loop. In such a case, the break keyword halts the loop and lets the CPU get to the next instruction.<br><br>
+	   In our function we knew the exact number of elements in the array. What if we didn't? In that case, we would use the .length property of the array. We 
+	   could assign: <br><br>
+	   <strong>var numElements</strong> = cars.length<br><br>
+	   and change the loop exit condition to:<br><br>
+	   i &lt;= numElements;<br><br>
+	   This produces the same results.
+	
+		
+	<!-- Chapter 20-->				 
+	
+	<h3 class = "swtl">Chapter 20&mdash;<em>for</em> Loops Nested</h3>
+	<p>We can nest one loop inside another. When we do so, for each iteration of the outer loop, the inner loop runs a complete cycle of iterations.
+	   After the inner loop has completed its cycle, the outer loop increments and the inner loop starts over. This continues until the outer loop
+	   reaches its sentinel value. Let's examine this by creating a band name generator. We'll create three arrays: one for the first word of the band
+	   name, one for the second, and an empty array that will be filled with the results of our nested loop.<br><br>
+	   <pre>
+	   var fNames = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"];
+	   var lNames = ["Earth", "Wind", "Fire", "Water"];
+	   var bandNames = [];
+	   for(var i=0; i &lt; fNames.length; i++) {
+	     for(var j=0; j &lt; lNames.length; j++) {
+		   bandNames.push(fNames[i] + lNames[j]);
+		 }
+	   }
+	   alert(bandNames);
+	   </pre>
+	   See the results:
+	   <button class ="swtlbutton" onclick="chap20();">Gimme Some Names!</button><br><br>
+	<a href="swtl_1-10.html">&lt;&lt; Prev</a>&nbsp;
+	<a href="swtl_21-30.html">Next &gt;&gt;</a>	
+</main>	
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>	
+</body>
+</html>

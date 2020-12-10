@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | SWTL 81-89</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/> 
+<script src="scripts/swtl_81-89.js"></script>	
+</head>
+<body>    
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Smarter Way to Learn Chapters 81-89</h2>
+	
+	<!-- Chapter 81 -->
+	
+	<h3>Chapter 81&mdash;Browser Control: Testing for Popup Blockers</h3>
+	<p>Most browsers today have a popup blocker built-in. Often, JavaScript popups are tolerated by default, but we need to know
+	   for sure. We'll test the user's browser and ask them to disable the popup blocker if necessary. We do so by trying to open 
+	   a small test popup and then close it.
+	</p>
+	<pre>
+	var testPop = window.open("", "", "width=100,height=100");
+	if (testPop === null) {
+		alert("Please disable your popup blocker.");
+	}
+	testPop.close();	
+	</pre>
+	If the attempt succeeds, the <strong>testPop</strong> handle will have a value and the browser will skip the alert and move
+	on to the next instruction: close the testPop window. If the attempt fails, the handle will be null and the browser will display
+	the alert.<br><br>
+	Try it here: <button class = "swtlbutton" onclick="chap81()">Are Your Popups Blocked?</button>
+	
+	<!-- Chapter 82 -->
+	
+	<h3 class = "swtl" id="Chap82">Chapter 82&mdash;Form Validation: Text Fields</h3>
+	<p>When we try to gather information from forms, it is important that the field values are entered correctly by the user.
+	   If there are required fields, we must guarantee the user enters a value before the form can be submitted. Here's the code
+	   for the function that checks for a response from the user in the field with the ID of <strong>last_name</strong>:
+	</p>
+	<pre>
+	if (document.getElementById("last_name").value.length === 0) {
+		alert("Please enter your last name.");
+		return false;
+	}		
+	</pre>
+	Things to note:
+	<ul>
+		<li>When the Submit button is clicked, the function to check for a response runs.</li>
+		<li>If the value length is 0, the boolean <strong>false</strong> is returned, preventing the form from submission.</li>
+		<li>The above is the reason for the <strong>return</strong> keyword in the <strong>onSubmit</strong> property in the 
+		    opening &lt;form&gt; tag.</li>
+	</ul>
+	Try to submit the form without entering a value in the Last Name field:<br><br>
+	<form onSubmit="return chap82();">
+		<label for="first_name">First name:</label><br> 
+		<input type="text" id="first_name" name="first_name" value="" placeholder="Enter your first name"><br>
+		<label for="last_name">Last name:</label><br>
+		<input type="text" id="last_name" name="last_name" value="" placeholder="Enter your last name"><br><br>
+		<input class="submitButton" type="submit" value="Submit">
+	</form>
+	
+	<!-- Chapter 83 -->
+	
+	<h3 class = "swtl">Chapter 83&mdash;Form Validation: Drop-downs</h3>
+	<p>Validating drop-down fields is similar to validating text fields. The primary difference is that instead of using the <strong>
+	   value.length</strong> keywords to test the condition we use <strong>selectedIndex</strong>. Here's the code:
+	</p>
+	<pre>
+	var target = document.getElementById(selection);
+	if (target.selectedIndex === 0) {
+		alert("Please select a color");
+		return false;	
+	</pre>
+	There are a couple of differences between this function and the function from <a href="Chap82">Chapter 82:</a>
+	<ul>
+		<li>We use <strong>selectedIndex</strong>. No choice returns a value of 0, the other indices are 1-n, in order of the list of <strong>n</strong> choices.</li>
+		<li>We use a parameter for the element ID which allows the function to be used for multiple forms.</li>
+		<li>We must include the ID as an argument in the event handler, shown in the code snippet below:</li>
+	</ul>
+	<pre>
+	&lt;form onSubmit="return chap83('colors');"&gt;
+		&lt;select id="colors"&gt;	
+	</pre>
+	Try to Submit without selecting a color from the drop-down box below:<br><br>
+	<form onSubmit="return chap83('colors');">
+		<select id="colors">
+			<option value="" selected="selected">Select a color</option>
+			<option value="bronze">Bronze</option>
+			<option value="silver">Silver</option>
+			<option value="platinum">Platinum</option>
+			<option value="carblue">Carolina Blue</option>
+		</select>&nbsp;&nbsp;
+		<input type="submit" value="Submit">
+	</form>
+	
+	<!-- Chapter 84 -->
+	
+	<h3 class = "swtl">Chapter 84&mdash;Form Validation: Radio Buttons</h3>
+	<p>Validating forms that use radio buttons is analogous to validating drop-down forms. Here's the code for the form:
+	</p>
+	<pre>
+	&lt;form onSubmit="return chap84('colors')";&gt;
+		&lt;input type="radio" name="r84" value="bronze"&gt;Bronze
+		&lt;input type="radio" name="r84" value="silver"&gt;Silver
+		&lt;input type="radio" name="r84" value="platinum"&gt;Platinum
+		&lt;input type="radio" name="r84" value="carblue"&gt;Carolina Blue
+		&lt;input type="submit" value="Submit"&gt;
+	&lt;/form&gt;
+	</pre>
+	Notice that each input has the same name. We can use this with <strong>getElementsByName</strong> to make a collection of them.
+	Then we can loop through the collection and see if any of the elements have the value of <strong>true</strong> for the property 
+	<strong>checked</strong>. If so, the value of <strong>true</strong> is returned and the form can Submit. If not, an alert to the
+	user requires a choice and returning <strong>false</strong> prevents the form from Submission.
+	<pre>
+	var target = document.getElementsByName("r84");
+	for (var i = 0; i &lt; target.length; i++) {
+		if (target[i].checked) {
+			return true;
+		}
+	}
+	alert("Please select a color.");
+	return false;	
+	</pre>
+	Try to Submit without selecting a color from the list of radio buttons:<br><br>
+	<form onSubmit="return chap84('r84');">
+		<input type="radio" name="r84" value="bronze">Bronze<br>
+		<input type="radio" name="r84" value="silver">Silver<br>
+		<input type="radio" name="r84" value="platinum">Platinum<br>
+		<input type="radio" name="r84" value="carblue">Carolina Blue<br><br>
+		<input type="submit" value="Submit">
+	</form>
+	
+	<!-- Chapter 85 -->
+	
+	<h3 class = "swtl">Chapter 85&mdash;Form Validation: ZIP Codes</h3>
+	<p>When validating ZIP code fields there are two considerations other than whether the user has entered a value: the number of
+	   digits entered and whether all entries were numeric. To determine if the proper number of digits were entered we use <strong>
+	   value.length</strong>:
+	</p>
+	<pre>
+	var numChars = document.getElementById("zip").value.length;
+	if (numChars &lt; 5 || numChars &gt; 5) {
+		alert("Please enter a 5-digit code.");
+		return false;
+	}	
+	</pre>
+	To determine whether all entries were numeric, we add the following code, which loops through the user entry changing string
+	numbers to integers and checks if any entries are Not a Number(NaN):
+	<pre>
+	for (var i = 0; i &lt;=4; i++) {
+	var thisChar = parseInt(valueEntered[i]);
+		if(isNaN(thisChar)) {
+			alert("Please enter numbers only.");
+			return false;
+		}
+	}
+	</pre>
+	Try to enter ZIP codes with more or less than 5 digits or containing letters:<br><br>
+	<form onSubmit="return chap85();">
+		<label for="zip">Zip Code:</label><br> 
+		<input type="text" id="zip" name="zip" value="" placeholder="Enter ZIP"><br><br>
+		<input class="submitButton" type="submit" value="Submit">
+	</form>
+	<!-- Chapter 86 -->
+
+	<h3 class = "swtl" id="Ch86">Chapter 86&mdash;Form Validation: Email</h3>
+	<p>Validating Email addresses is a little trickier. There must be at least one character preceding the <strong>@</strong> for the 
+	   username. There must be at least one character between the <strong>@</strong> and the <strong>.</strong> for the domain name. Finally, 
+	   there must be at least two characters after the <strong>.</strong> for the top-level domain. Also, there cannot be any spaces.
+	   The code to test all of these conditions follows:
+	</p>
+	<pre>
+	var addrIsLegal = true;
+	var userEmail = document.getElementById("email").value;
+	if (userEmail.indexOf(" ") !== -1) {
+		addrIsLegal = false;
+	}
+	if (userEmail.indexOf("@") &lt; 1 || userEmail.indexOf("@") &gt; userEmail.length - 5) {
+		addrIsLegal = false;
+	}
+	if (userEmail.indexOf(".") - userEmail.indexOf("@") &lt; 2 || userEmail.indexOf(".") &gt; userEmail.length - 3) {
+		addrIsLegal = false;
+	}
+	if (addrIsLegal === false) {
+		alert("That is not a valid Email address.");
+		return false;
+	}	
+	</pre>
+	Try to enter an email address that violates any of these conditions:<br><br>
+	<form onSubmit="return chap86();">
+		<label for="email">Email:</label><br> 
+		<input type="text" id="email" name="email" value="" placeholder="Enter Email"><br><br>
+		<input class="submitButton" type="submit" value="Submit">
+	</form>
+	
+	<!-- Chapter 87 -->
+	
+	<h3 class = "swtl" id="Ch87">Chapter 87&mdash;Exceptions: Try and Catch</h3>
+	<p>Nobody's perfect, so error can creep into our code. <strong>Try</strong> and <strong>catch</strong> are keywords used to 
+	   help us find these mistakes. Examine the following code:
+	</p>
+	<pre>
+	try {
+		aler("This is an intentional mistake!");
+	}
+	catch(error) {
+		alert(error);
+	}
+	</pre>
+	The code is wrapped in a <strong>try</strong> block. If there is an error in the code, it causes a JavaScript error which is
+	then passed to the <strong>catch</strong> block. The alert then displays that error. This functionality is most useful in
+	finding undefined variables. It can't spot omitted parentheses, quotation marks, etc.<br><br>
+	See it in action: <button class ="swtlbutton" onClick="chap87()">Run the Bad Code!</button>
+	
+	<!-- Chapter 88-->
+	
+	<h3 class = "swtl">Chapter 88&mdash;Exceptions: Throw</h3>
+	<p>We saw in <a href="#Ch87">Chapter 87</a> that <strong>try</strong> and <strong>catch</strong> are used to find errors in
+	   our code, but they return generic error messages. We can define our own errors in the <strong>try...catch</strong> pair 
+	   by using the keyword <strong>throw</strong>. <strong>Throw</strong> is placed in the try block and passes a defined string
+	   to the catch block. Given the following code:
+	</p>
+	<pre>
+	try {
+		var word = document.getElementById("bigWord").value;
+		if (word.length &lt; 8) {
+			throw "Please enter a longer word.";
+		}
+	}
+	catch(err) {
+		alert(err);		
+	}	
+	</pre>
+	
+	Try entering a word shorter than 8 letters:<br><br>
+	<form onSubmit="return chap88();">
+		<label for="bigWord">Big Word:</label><br> 
+		<input type="text" id="bigWord" name="bigWord" value="" placeholder="Enter a 8+ letter word"><br><br>
+		<input class="submitButton" type="submit" value="Submit">
+	</form>
+	
+	<!-- Chapter 89-->				 
+		
+	<h3 class = "swtl">Chapter 89&mdash;Handling Events within JavaScript</h3>
+	<p>The buttons used so far used the <strong>onClick</strong> method. This is not considered best practice as the JavaScript
+	   ideally is separate from the HTML. The button from <a href="#Ch87">Chapter 87</a> was coded as follows:
+	</p>
+	<pre>
+	&lt;button class ="swtlbutton" onClick="chap87()"&gt;Run the Bad Code!&lt;/button&gt;
+	</pre>
+	We remove <strong>onClick</strong> and in its place put an ID. In the JavaScript, we target the element by ID and use the following
+	syntax to call the function:
+	<pre>
+	var button1 = document.getElementById("ch89");
+	button1.onclick = chap89;	
+	</pre>
+	Things of note: unlike inline event handling
+	<ul>
+		<li>the event name is in all lower case,</li>
+		<li>the function isn't enclosed in quotes, and</li>
+		<li>there are no parentheses after the function name.</li>
+	</ul>
+	See it in action: <button class ="swtlbutton" id="ch89">Run the Bad Code!</button><br><br>
+	<a href="swtl_71-80.html">&lt;&lt; Prev</a>&nbsp;
+</main>	
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | SWTL 51-60</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/> 
+<script src="scripts/swtl_51-60.js"></script>	
+</head>
+<body>    
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Smarter Way to Learn Chapters 51-60</h2>
+	
+	<!-- Chapter 51 -->
+	
+	<h3>Chapter 51&mdash;Reading and Setting Paragraph Text</h3>
+	<p>Sometimes we may wish to conserve screen space unless the user wishes to see the full content. This happens often in web articles where
+	   the editor may wish to show the first paragraph only of an article and leave it up to the reader to "Click to see full article."
+	</p>
+	For example: 
+	<p id="chap51">
+	I, Gregory C. Campbell, agree to abide by the terms in my Fall 2020 WEB115 Web Markup and Scripting class with my instructor, D.I. von Briesen.
+	<a href="javascript:void(0);" onClick="chap51();">Click for more</a>
+	</p>
+
+	<!-- Chapter 52 -->
+	
+	<h3 class = "swtl" id="Ch52">Chapter 52&mdash;Manipulating Images and Text</h3>
+	<p>The <strong>document.getElementById</strong> method has many uses. We can use it to change images or text. We do this by using <strong>
+	   .className</strong> after the Id for the element we wish to target. Say we have a class named "hidden" that has a property of display:none.
+	   We can hide an image or text by changing the class using this method. Here's the code inside the function:
+	</p>
+	<pre>
+	document.getElementById("chap52").className = "hidden";
+	</pre>
+	<img src="images/cats.jpg" id="chap52" width="600" height="400" alt="picture of cute cats" class="center"><br>
+	Hide the picture by clicking below:<br><br>
+	<button class = "swtlbutton" onclick="chap52()">Why Would You Want to Hide This?</button><br><br>
+	If we want to add a class to an image or text instead of replacing the class, we do so by using += instead of =. <br><br>
+	<strong>***When we do so, we add a space to the right of the first quotation mark before the class name we wish to add.***</strong>
+	
+	<!-- Chapter 53 -->
+	
+	<h3 class = "swtl" id="Ch53">Chapter 53&mdash;Swapping Images</h3>
+	<p>In <a href="swtl_41-50.html#Ch47" target="_blank">Chapter 47</a> we used mouseover to create an alert. We could have swapped images out instead with the 
+	   following code:
+	</p>
+	<pre>	&lt;img src="before-pic.jpg" onMouseover="src='after-pic.jpg'"&gt;</pre>
+	We can also call a function to do this for us:
+	<pre>	&lt;img src="images/cats.jpg" id="chap53" onMouseover="chap53(id, 'images/cats2.jpg');"&gt;</pre>
+	<pre>	function chap53() {
+				document.getElementById("chap53").src = "images/cats2.jpg";
+	}
+	</pre>
+	Or we could pass in the element id and the name of the image to swap as arguments, as in the below example:
+	<pre>
+	&lt;img src="images/cats.jpg" id="chap53" onMouseover="chap53(id, 'images/cats2.jpg');" onMouseout="chap53(id, 'images/cats.jpg');" class="center"&gt;
+	</pre>
+	<pre>
+	function chap53(eId, newPic) {
+		document.getElementById(eId).src = newPic;
+	}
+	</pre>
+	<img src="images/cats.jpg" id="chap53" onMouseover="chap53(id, 'images/cats2.jpg');" onMouseout="chap53(id, 'images/cats.jpg');" width="600" height="400" alt="picture of cute cats" class="center"><br>
+	
+	<!-- Chapter 54 -->
+	
+	<h3 class = "swtl">Chapter 54&mdash;Swapping Images and Setting Classes</h3>
+	<p>Recall the functions from the previous chapter, where we accessed an element by its Id and replaced it. A more common approach is to assign
+	   the element to a variable. We can then combine the variable with .<strong>src</strong> to complete the function. MouseOver the picture. Here's the code:
+	</p>
+	<pre>
+	function chap54(eId, newPic) {
+		var a = document.getElementById(eId);
+		a.src = newPic;
+	}
+	</pre>
+	<img src="images/cats.jpg" id="chap54" onMouseover="chap54(id, 'images/cats2.jpg');" onMouseout="chap54(id, 'images/cats.jpg');" width="600" height="400" alt="picture of cute cats" class="center"><br><br>
+	We can use this functionality to do many things, among them change/add classes to elements stored in variables with <strong>.className</strong>
+	as in <a href="#Ch52">Chapter 52</a>.
+	
+	<!-- Chapter 55 -->
+	
+	<h3 class = "swtl">Chapter 55&mdash;Setting Styles</h3>
+	<p>Another way to alter the presentation of elements is by setting styles. We do so using the following syntax:
+	</p>
+	<pre>
+		document.getElementById("id").style.[stylename] = "[value]";
+	</pre>
+	For example, the following code adds a solid Carolina blue border on mouseOver of the picture below:
+	<pre>
+	function chap55() {
+		document.getElementById("chap55").style.border = "2px solid #99BADD";
+	}	
+	</pre>
+	<img src="images/cats.jpg" id="chap55" onMouseover="chap55();" width="600" height="400" alt="picture of cute cats" class="center"><br><br>
+	
+	<!-- Chapter 56 -->
+
+	<h3 class = "swtl" id="Ch56">Chapter 56&mdash;Target All Elements by Tag Name</h3>
+	<p>The method <strong>getElementById()</strong> has a cousin: <strong>getElementsByTagName()</strong>. Instead of accessing or storing a single
+	   element by its ID, we can access or store all elements in a document by their tag name. We can then use familiar properties to change their display.
+	   The code:
+	</p>
+	<pre>
+	var h3 = document.getElementsByTagName("h3");
+	for (var i = 0; i &lt; h3.length; i++) {
+		h3[i].style.fontSize = "3em";
+	}	
+	</pre>
+	<button class="swtlbutton" onclick="chap56()">Make Them Big!</button><br><br>
+	
+	<!-- Chapter 57 -->
+	
+	<h3 class = "swtl" id="Chap57">Chapter 57&mdash;Target Some Elements by Tag Name</h3>
+	<p id="Ch57">We can target all the types of one element within another. If we want to target the images within a paragraph, we target it by its id.
+	   Once we have selected a paragraph, we can create an array of all of a particular element within that paragraph.<br> <br>
+	<img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats" class="center">
+	<img src="images/cats2.jpg" width="600" height="400" alt="picture of cute cats" class="center"><br>
+	There are two images within the above &lt;p&gt; tags. The following code assigns them to a variable, <strong>imgs</strong>. We then access the
+	image at index 1 and create a border around it.
+	</p>
+	<pre>
+	var a = document.getElementById("Ch57");
+	var imgs = a.getElementsByTagName("img");
+	imgs[1].style.border = "5px solid #99BADD";
+	</pre>
+	<button class ="swtlbutton" onclick="chap57()">Build that Wall!(JK!)</button><br><br>
+	
+	<!-- Chapter 58-->
+	
+	<h3 class = "swtl">Chapter 58&mdash;The DOM</h3>
+	<p>The <strong>DOM</strong>, or <strong>Document Object Model</strong> is an organizational chart created by the browser. Everything in the HTML5
+	   code of a page is accounted for in this Model. The Model has a hierarchy: the top(first) level is the <em>document</em>, which we have accessed
+	   using <strong>document.getElementById</strong>, for example. The second level is the HTML, and the third level is made up of the head and body
+	   of the page. Below is a chart showing these relationships:<br><br>
+	<img src="images/dom1.png" id="dom1" alt="picture of dom"><br><br><br><br><br><br>
+	Each of the boxes in the chart are referred to as <strong>nodes</strong>. At the top level is the <strong>document</strong> node. The HTML, head,
+	body, title, and p nodes are referred to as <strong>element</strong> nodes. At the bottom level the content within the title and p nodes are referred
+	to as <strong>text</strong> nodes.
+	</p><br style="clear: left;">
+	
+	<!-- Chapter 59-->				 
+		
+	<h3 class = "swtl" id="Chap59">Chapter 59&mdash;The DOM: Parents and Children</h3>
+	<p>Now that we have segmented the elements of a page into nodes, we need a way to designate the nodes. The nomenclature we use is <strong>parent</strong>
+	   and <strong>children</strong> nodes. Parent nodes enclose child nodes. Returning to the hierarchy in the chart from the previous chapter:<br><br>
+	<img src="images/dom2.png" id="dom2" alt="picture of dom"><br><br><br><br><br><br>
+	The document node is the parent of the html node. The head and body nodes are children of the html nodes. We refer to them, unsurprisingly, as siblings. 
+	Every node enclosed by another node is the child of that node.
+	
+	</p><br style="clear: left;">
+		
+	<!-- Chapter 60-->				 
+	
+	<h3 class = "swtl" id="Chap60">Chapter 60&mdash;The DOM: Finding Children</h3>
+	<p>So, now that we have a new way of identifying elements, we need a way to target them. For this, we use the keyword <strong>childNodes</strong>, 
+	followed by an array index. We can start with the document node:<br><br>
+	<img src="images/dom2.png" alt="picture of dom" class="center"><br><br>
+	To target the text element child of the 2nd child of the &lt;div&gt; we code:
+	</p>
+	<pre>
+		var txt = document.childNodes[0].childNodes[1].childNodes[0].childNodes[1].innerHTML;
+	</pre>
+	Each use of <strong>childNodes</strong> navigates down one level in the hierarchy and moves to the sibling indicated by the index number.
+	<p id="Ch60">
+	Recall the images from <a href="#Chap57">Chapter 57</a>. We can use the same function, modified as follows:<br><br>
+	<img src="images/cats.jpg" width="600" height="400" alt="picture of cute cats" class="center">
+	<img src="images/cats2.jpg" width="600" height="400" alt="picture of cute cats" class="center">
+	</p>
+	<pre>
+		var a = document.getElementById("Ch60");
+		var imgs = a.childNodes[8];
+		imgs.style.border = "5px solid #99BADD";
+	</pre>
+	<button class ="swtlbutton" onclick="chap60()">Make a Border!</button><br><br>	
+	<a href="swtl_41-50.html">&lt;&lt; Prev</a>&nbsp;
+	<a href="swtl_61-70.html">Next &gt;&gt;</a>
+</main>	
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>
+</body>
+</html>

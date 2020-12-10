@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | Fizz Buzz 4</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/>
+<script src="scripts/fizz_buzz.js"></script> 	
+</head>
+<body>    
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Campbell Ink Fizz Buzz 4</h2>
+	<h3 id="greeting">Welcome to Campbell Ink!</h3>
+	
+	<p>Hello! Below is a form you can use to test the divisibility of any three numbers you choose. Enter your name in the first
+	   three fields, how high you would like to count in the fourth, and three numbers/words in the subsequent fields. Clicking "Submit"
+	   at the bottom of the page will test each number as the count begins from 1 to the number you choose. If the number(s) is(are) divisible by
+	   the count index, the associated word(s) you chose will display. For example, if you choose <strong>2</strong> as your <strong>First Number</strong> and
+	   <strong>blue</strong> as your <strong>First Word</strong>, <strong>blue</strong> will print after every even number in your count. If the 
+	   count index is not divisible by any of the three numbers you enter, the <strong>Default Word</strong> will be printed.</p>
+	<!-- Forms for user input -->
+			<form>
+  			<label for="first_name">First name:</label><br> 
+				<input type="text" id="first_name" name="first_name" value="" placeholder="Enter your first name"><br>
+			<label for="middle_initial">Middle Initial:</label><br>
+				<input type="text" id="middle_initial" name="middle_initial" value="" placeholder="Enter your middle initial"><br>
+  			<label for="last_name">Last name:</label><br>
+				<input type="text" id="last_name" name="last_name" value="" placeholder="Enter your last name"><br>
+			<label for="count">How High Do You Want To Count?</label><br>
+				<input type="text" id="count" name="count" value="125"><br>
+			<label for="number1">First Number To Test:</label><br>
+				<input type="text" id="number1" name="number1" value="3"><br>
+			<label for="word1">First Word To Print:</label><br>
+				<input type="text" id="word1" name="word1" value="Solve"><br>
+			<label for="number2">Second Number To Test:</label><br>
+				<input type="text" id="number2" name="number2" value="5"><br>
+			<label for="word2">Second Word To Print:</label><br>
+				<input type="text" id="word2" name="word2" value="Problems"><br>
+			<label for="number3">Third Number To Test:</label><br>
+				<input type="text" id="number3" name="number3" value="7"><br>
+			<label for="word3">Third Word To Print:</label><br>
+				<input type="text" id="word3" name="word3" value="Quickly"><br>
+			<label for="word4">Default Word:</label><br>
+				<input type="text" id="word4" name="word4" value="Nope"><br><br>
+  			<input class="submitButton" type="button" onclick="fizzbuzz4()" value="Submit">
+			</form> 
+	
+			<aside id="loop"></aside>
+</main>
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>	
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | SWTL 31-40</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css"/> 
+<script src="scripts/swtl_31-40.js"></script>	
+</head>
+<body>   
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Smarter Way to Learn Chapters 31-40</h2>
+	
+	<!-- Chapter 31 -->
+	
+	<h3>Chapter 31&mdash;Getting the Current Date and Time</h3>
+	<p>To get the current date and time, JavaScript creates a date object with the <strong>Date()</strong> method. It gets this information from
+	   the current system time, so the method is only as accurate as the system settings. This object is not a string so string methods will not
+	   operate upon it unless we convert it using the <strong>toString()</strong> method.
+	</p>
+	<pre>
+	var dateTime = new Date();
+	alert(dateTime);
+	</pre>
+	What time is it? <button class = "swtlbutton" onclick="chap31();">Time to Get Ill!</button><br><br>
+	To extract the day of the week, we use the <strong>getDay()</strong> method. This returns the day of the week as an index of an array, 0
+	representing Sunday through 6 representing Saturday. To convert this index to a string, a little code is necessary:
+	<pre>
+	var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	var today = new Date();
+	var date = today.getDay();
+	var todaysName = days[date];
+	alert("The day of the week is " + todaysName + ".");	
+	</pre>
+	What is the day of the week? <button class = "swtlbutton" onclick="chap31a();">What is Today?</button>
+	
+	<!-- Chapter 32 -->
+	
+	<h3 class = "swtl">Chapter 32&mdash;Extracting Parts of the Date and Time</h3>
+	<p>JavaScript gives many more methods for extracting parts of the Date object:
+	</p>
+	<table class="ch32table">
+		<tr>
+			<th>Method</th>
+			<th>Extracts</th>
+			<th>Range</th>
+			<th>Example</th>
+		</tr>
+		<tr>
+			<td>getDay()</td>
+			<td>day of week</td>
+			<td>0-6</td>
+			<td>6 is Saturday</td>
+		</tr>
+		<tr>
+			<td>getMonth()</td>
+			<td>month</td>
+			<td>0-11</td>
+			<td>11 is December</td>
+		</tr>
+		<tr>
+			<td>getDate()</td>
+			<td>day of month</td>
+			<td>1-31</td>
+			<td>15 is 15th of month</td>
+		</tr>
+		<tr>
+			<td>getFullYear()</td>
+			<td>year in 4 digits</td>
+			<td>0000-9999</td>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<td>getHours</td>
+			<td>hour</td>
+			<td>0-23</td>
+			<td>23 is 11pm</td>
+		</tr>
+		<tr>
+			<td>getMinutes()</td>
+			<td>minute</td>
+			<td>0-59</td>
+			<td>59 is 59th minute</td>
+		</tr>
+		<tr>
+			<td>getSeconds</td>
+			<td>second</td>
+			<td>0-59</td>
+			<td>59 is 59th second</td>
+		</tr>
+		<tr>
+			<td>getMilliseconds()</td>
+			<td>millisecond</td>
+			<td>0-999</td>
+			<td>999 is last ms</td>
+		</tr>
+		<tr>
+			<td>getTime()</td>
+			<td>ms since 1/1/1970</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<strong>*** Note:</strong> the range for the getDate() method begins with 1, not 0!<strong> ***</strong><br><br>
+	What is the day of the week? <button class = "swtlbutton" onclick="chap31a();">What is Today?</button><br><br>
+	What month is it? <button class = "swtlbutton" onclick="chap32();">Is it January?</button><br><br>
+	What is the day of the month? <button class = "swtlbutton" onclick="chap32a();">What is the Date?</button><br><br>
+	What is the year? <button class = "swtlbutton" onclick="chap32b();">My God, is it STILL 2020?</button><br><br>
+	What is the current hour? <button class = "swtlbutton" onclick="chap32c();">What is the Hour?</button><br><br>
+	What is the current minute? <button class = "swtlbutton" onclick="chap32d();">What is the Minute?</button><br><br>
+	What is the current second? <button class = "swtlbutton" onclick="chap32e();">What is the Second?</button><br><br>
+	What is the current millisecond? <button class = "swtlbutton" onclick="chap32f();">What is the Msecond?</button><br><br>
+	How many milliseconds since 1/1/1970? <button class = "swtlbutton" onclick="chap32g();">It's a big number!</button><br><br>
+	
+	<!-- Chapter 33 -->
+	
+	<h3 class = "swtl">Chapter 33&mdash;Specifying a Date and Time</h3>
+	<p>This chapter deals with calculating the amount of time between a reference date and another date. The strategy is to use the
+	   <strong>getTime()</strong> method for both dates and subtract them. This leaves the number of milliseconds between the two dates,
+	   and we can multiply by whatever conversion factor we want to get the desired unit for the interval. Let's find out how many days
+	   between today and the end of this year. We use a specific notation for the date:
+	</p>
+	<pre>
+	var today = new Date();							// Create a date object for today.
+	var endOfYear = new Date("December 31, 2020");  	// Note the naming convention on the date. This must be followed exactly.
+	var msToday = today.getTime();					// Get ms since 1/1/1970 for today.
+	var msEndOfYear = endOfYear.getTime();			// Get ms since 1/1/1970 for the end of this year.
+	var msDiff = msEndOfYear - msToday;				// Calculate the difference.
+	var days = msDiff / (1000 * 60 * 60 * 24);			// Converts ms into days.
+	days = Math.floor(days);							// This rounds the above calculation down to an integer.
+	</pre>
+	Try it here: <button class = "swtlbutton" onclick="chap33();">When Will it End?!</button><br><br>
+	If we want to specify the time as well, we do so in hh:mm:ss format inside the quotation marks:
+	<pre>
+	var endOfYear = new Date("December 31, 2020 23:59:59");
+	</pre>
+	<!-- Chapter 34 -->
+	
+	<h3 class = "swtl" id="Chap34">Chapter 34&mdash;Changing Elements of a Date and Time</h3>
+	<p>Once we have created a Date object, we can change individual elements of the object as in the following table:
+	</p>
+	<table class="ch32table">
+		<tr>
+			<th>Method</th>
+			<th>Example ( x = new Date(); )</th>
+			<th>Result</th>
+		</tr>
+		<tr>
+			<td>setFullYear()</td>
+			<td>x.setFullYear(2021)</td>
+			<td>Year of x is 2021</td>
+		</tr>
+		<tr>
+			<td>setMonth()</td>
+			<td>x.setMonth(0)</td>
+			<td>Month of x is January</td>
+		</tr>
+		<tr>
+			<td>setDate()</td>
+			<td>x.setDate(1)</td>
+			<td>Day of the month is 1</td>
+		</tr>
+		<tr>
+			<td>setHours()</td>
+			<td>x.setHours(0)</td>
+			<td>Midnight</td>
+		</tr>
+		<tr>
+			<td>setMinutes()</td>
+			<td>x.setMinutes(1)</td>
+			<td>One minute past the hour</td>
+		</tr>
+		<tr>
+			<td>setSeconds()</td>
+			<td>x.setSeconds(1)</td>
+			<td>One second past the minute</td>
+		</tr>
+		<tr>
+			<td>setMilliseconds()</td>
+			<td>x.setMilliseconds(1)</td>
+			<td>One ms past the second</td>
+		</tr>
+	</table>
+	These methods change the individual elements without changing any other element. Say we have the following code:
+	<pre>
+	var today = new Date();				// Create a Date object.
+	today.setFullYear(2021);				// Change the year of the object.
+	todaysYear = today.getFullYear();		// Extract the new year of the object.
+	</pre>
+	See it in action: <button class = "swtlbutton" onclick="chap34();">Let's Do the Time Warp Now!</button><br><br>
+
+	<!-- Chapter 35 -->
+	
+	<h3 class = "swtl">Chapter 35&mdash;Functions</h3>
+	<p>Functions are blocks of code that we can reuse in multiple places. Functions simplify code overall because we can call them once
+	   they are defined instead of rewriting the code each time. Yes, we could copy/paste code, but this would make the code more tedious
+	   to read and would require more storage space.
+	</p>
+	This has been happening in the background every time you have clicked a button on these pages. The button simply calls the function, which
+	is stored in a JavaScript file. For example, the code from the previous chapter was displayed as this:
+	<pre>
+	var today = new Date();				// Create a Date object.
+	today.setFullYear(2021);				// Change the year of the object.
+	todaysYear = today.getFullYear();		// Extract the new year of the object.
+	</pre>
+	This code was simply wrapped in a function call in the separate file. In that file, it looks like this:
+	<pre>
+	function chap34() {
+		var today = new Date();				// Create a Date object.
+		today.setFullYear(2021);				// Change the year of the object.
+		todaysYear = today.getFullYear();		// Extract the new year of the object.
+	}	
+	</pre>	
+	The <strong>function</strong> keyword denotes the beginning of the function. The name of this function is <strong>chap34()</strong>. Functions
+	names follow the same rules as variable names. The parenthesis either enclose parameters or are empty if the function does not receive them.
+	Once called, the statements inside the curly braces are executed in order. When the ending curly
+	brace is reached, the next line of code following it is executed. Functions are called in code like this:
+	<pre>
+	chap34();
+	</pre>
+	They can also be used in events (such as button clicks, as we have used them in these pages) like this:
+	<pre>
+		&lt;button class="swtlbutton" onclick="chap34();"&gt;Let's Do the Time Warp Now!&lt;/button&gt;
+	</pre>
+	
+	<!-- Chapter 36 -->
+
+	<h3 class = "swtl">Chapter 36&mdash;Functions: Passing Them Data</h3>
+	<p>All of the functions we have used to this point have had no arguments. That is, we have not passed any data into the functions. If we
+	   wish to pass data into a function we do so with <strong>parameters</strong>. These parameters can be strings, numbers, or variables and
+	   are listed, separated by commas, within the parentheses in the function statement:
+	</p>
+	<pre>
+	function functionName(parameter1, parameter2,....) {
+	     statements;
+	}
+	</pre>
+	When calling the function, we pass <strong>arguments</strong> into the function. The arguments are passed into the function according to 
+	the order they are listed.
+	<pre>
+	functionName(argument1, argument2,...);
+	</pre>
+	This function passes arguments entered by the user into an internal function that sums the numbers:
+	<pre>
+	function chap36() {
+		var userNum1 = "Enter a number";
+		var defaultAnswer1 = "Enter number here";
+		var userNum2 = "Enter another number";
+		var defaultAnswer2 = "Enter number here";
+		var num1 = parseInt(prompt(userNum1, defaultAnswer1));
+		var num2 = parseInt(prompt(userNum2, defaultAnswer2));
+		function sum(num1, num2) {
+			var sum = num1 + num2;	
+			alert("The sum of " + num1 + " and " + num2 + " is " + sum + ".");
+		}
+		sum(num1, num2);
+	}
+	</pre>
+	Try it: <button class="swtlbutton" onclick="chap36(1, 2);">What is the Sum?</button><br><br>
+	
+	<!-- Chapter 37 -->
+	
+	<h3 class = "swtl">Chapter 37&mdash;Functions: Passing Data Back from Them</h3>
+	<p>We can also pass data back from functions using the <strong>return</strong> keyword. This passes back a <strong><em>single</em></strong> value
+	   from the function. We capture this value with a variable and use it as we wish. Using the code from the previous chapter, we alter the interior
+	   function as follows:
+	</p>
+	<pre>
+	function sum(num1, num2) {
+		return num1 + num2;			// Use return keyword to return the sum
+	}
+	var total = sum(num1, num2);			// Capture the returned value of the sum function
+	alert("The sum of " + num1 + " and " + num2 + " is " + total + ".");
+	</pre>
+	*** Note that we no longer need to call <strong>sum</strong>. Its returned value was passed to <strong>chap37()</strong> when we assigned it to <strong>total </strong>.***<br><br>
+	Try it: <button class ="swtlbutton" onclick="chap37();">What is the Sum?</button><br><br>
+	
+	<!-- Chapter 38-->
+	
+	<h3 class = "swtl">Chapter 38&mdash;Functions: Local Vs. Global Variables</h3>
+	<p>Local and global variables differ in their <strong>scope</strong>. Scope refers to where the variable
+	   can be seen by the code. A global variable is declared in the main code whereas a local variable is declared
+	   within a function. This local variable cannot be seen outside the function and has no meaning except inside 
+	   the function. For example:
+	</p>
+	<pre>
+	function chap38() {
+		var global = "Global Scope";
+		function chap38a() {
+			var local = "Local Scope";
+		}
+		alert(local);
+	}
+	</pre>
+	Because local is declared inside the inner function it has no meaning to the outer function. <br><br>
+	See the result of calling the function: <button class ="swtlbutton" onclick="chap38();">What Will Print?</button><br><br>
+	The answer: nothing! We tried to print a string the code can't access. Now we code the same function, changing the variable printed in the alert:
+	<pre>
+	function chap38b() {
+		var global = "Global Scope";
+		function chap38a() {
+			var local = "Local Scope";
+		}
+		alert(global);
+	}
+	</pre>
+	What will happen now? <button class ="swtlbutton" onclick="chap38b();">What Will Print?</button>
+	<!-- Chapter 39-->				 
+		
+	<h3 class = "swtl">Chapter 39&mdash;<em>Switch</em> Statements: How to Start Them</h3>
+	<p><strong>Switch</strong> statements are an alternative to <strong>if</strong> statements when we need to 
+	   test multiple conditions. An important difference is we cannot use inequalities in the conditions. The
+	   general structure is:
+	</p>
+	<pre>
+	switch(variable) {
+	case [condition]:
+	  statement;
+	  break;
+	}
+	</pre>
+	The <strong>break</strong> keyword exits the switch if the condition is met; otherwise the switch moves to
+	the next condition to test. Here is a specific example:
+	<pre>
+	switch(num) {
+	case 1:
+	  alert("You chose the number one.");
+	  break;
+	case 2:
+	  alert("You chose the number two.");
+	  break;
+	case 3:
+	  alert("You chose the number three.");
+	  break;
+	case 4:
+	  alert("You chose the number four.");
+	  break;
+	}
+	</pre>
+	Try it: <button class ="swtlbutton" onclick="chap39();">Which Did You Pick?</button><br><br>
+		
+	<!-- Chapter 40-->				 
+	
+	<h3 class = "swtl">Chapter 40&mdash;<em>Switch</em> Statements: How to Complete Them</h3>
+	<p>Let's return to the switch from the previous chapter. The <strong>break</strong> keyword was important
+	  because JavaScript would continue to execute the statements in the switch without its use, even if the
+	  conditions were matched. See what happens when we remove them:
+	</p>
+	What will happen?  <button class ="swtlbutton" onclick="chap40();">No Breaks!</button><br><br>
+	There is another thing to consider: what if none of the conditions match? To cover this possibility we use
+	the <strong>default</strong> keyword in this way:
+	<pre>
+	...
+	case n:
+	  statement;
+	  break;
+	default:
+	  statement;
+	}
+	</pre>
+	See how this works by intentionally entering a number outside of the requested range.<br><br>
+	What will happen?  <button class ="swtlbutton" onclick="chap40a();">You Cheeky Monkey!</button><br><br>
+	<a href="swtl_21-30.html">&lt;&lt; Prev</a>&nbsp;
+	<a href="swtl_41-50.html">Next &gt;&gt;</a>
+</main>	
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>
+</body>
+</html>
