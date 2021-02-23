@@ -1,0 +1,351 @@
+header, main, nav, footer, section, article, figure, figcaption, aside { display: block; }
+* { box-sizing: border-box; }
+body  {  
+	/*	https://coolors.co/1f3c5c-0f7173-e7ecef-272932-d8a47f	color palette */
+    font-family: ariel, sans-serif;
+    color: #041e42;
+    background-color: #7f9695;		
+	margin-bottom: 20px;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 23px; 
+}
+header  {
+	height: 50px;
+	margin-bottom: 20px;
+	text-align: left;
+	color: #041e42;
+	background-color: #7f9695;
+	font-family: Magneto, serif;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	font-size: 120%;
+}
+h1  {
+	color: #041e42;
+}
+main  {
+	background-color: #7f9695;
+	padding-left: 5px;	
+}
+h2  {
+	color: #003594;
+	font-family: Georgia, serif;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-bottom: 3px solid #99BADD;
+	padding-bottom: 30px;
+}
+h3  {
+	color: #E9E3E6;;
+	font-family: Georgia, serif;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+h4  {
+	color: #003594;
+	font-family: Georgia, serif;
+}
+nav  {
+	  overflow: hidden;  
+	  width: 100%;
+	  display: flex;
+	  justify-content: space-evenly;
+	  align-items: center;
+	  padding: 5px;
+	  display: flex;
+	  flex-wrap: wrap;
+}
+nav a  {
+	text-decoration: none;
+}
+a:link  {color: #E9E3E6; text-decoration: underline;}
+a:visited  {color: #003594; text-decoration: none;}
+a:hover  {color: #041e42; text-decoration: underline;}
+
+nav a:link  {color: #E9E3E6; text-decoration: underline;}
+nav a:visited  {color: #003594; text-decoration: none;}
+nav a:hover  {color: #041e42; text-decoration: underline;}
+
+pre  {
+	font-family: ariel, sans-serif;
+    color: #E9E3E6;
+	font-size: 105%;
+	padding-top: 15px;
+}
+figure  {
+	text-align: center;
+	font-style: italic;
+	font-size: 90%;
+	
+}
+p  {
+	padding-top: 15px;
+}
+ul  {
+	padding: 15px;
+}
+ul li  {
+	list-style-type: disc;
+}
+ol li  {
+	color: #003594;
+	margin-bottom: 1em;
+}
+dt  {
+	font-size: 110%;
+	font-weight: bold;
+	color: #003594;
+}
+dd  {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+strong {
+	color: #E9E3E6;
+}
+
+em {
+	color: #E9E3E6;
+}
+footer  {
+	text-align: center;
+	font-size: 90%;
+	color: #041e42;
+	background-color: #7f9695;
+	margin-top: 40px;
+	clear: both;
+	border-top: 3px solid #99BADD;
+	padding-top: 30px;
+}
+footer span  {
+	font-size: 110%;
+	font-style: italic;
+	color: #003594;
+}
+.list-item  {
+	color: #003594;
+}
+/* These classes are for the brand page */
+.silvergreen  {
+	color: #7f9695;
+	font-size: 30px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #041e42;
+}
+.platinum  {
+	color: #E9E3E6;
+	font-size: 30px;
+}
+.cowboyblue  {
+	color: #041e42;
+	font-size: 30px;
+}
+.palecerulean  {
+	color: #99BADD;
+	font-size: 30px;
+}
+.blue  {
+	color: #003594;
+	font-size: 30px;
+}
+.magneto  {
+	font-size: 30px;
+	font-family: Magneto;
+	color: #E9E3E6;
+}
+.georgia  {
+	font-size: 30px;
+	font-family: Georgia;
+	color: #E9E3E6;
+}
+.arial  {
+	font-size: 30px;
+	font-family: arial;
+	color: #E9E3E6;
+}
+
+
+/* These classes are for the Code Play assignment */
+.input  {
+	color: #99BADD;
+	font-size: 1.2em;
+	font-family: "Lucida Console", sans-serif; 
+}
+.output {
+	color: #003594;
+	font-size: 1.2em;
+	font-family: Calibri, sans-serif;
+}
+.dots {
+	color: #7f9695;
+}
+
+
+/* These classes are for the validation buttons */
+.htmlbutton  {
+	color: #7f9695;
+	background-color: #041e42;
+	border: 1px solid #E9E3E6;
+	border-radius: 12px;
+	padding: 5px 5px;
+}
+.htmlbutton:hover  {
+	color: #041e42;
+	background-color: #7f9695;
+	border: 1px solid #E9E3E6;
+}
+.htmlbutton:active {
+	top: 2px;
+}
+.cssbutton  {
+	color: #7f9695;
+	background-color: #003594;
+	border: 1px solid #E9E3E6;
+	border-radius: 12px;
+	padding: 5px 12px;
+}
+.cssbutton:hover  {
+	color: #003594;
+	background-color: #7f9695;
+	border: 1px solid #E9E3E6;
+}
+.cssbutton:active  {
+	top: 2px;
+}
+
+/* This section is for Fizz Buzz assignments */
+#greeting  {
+	font-size: 2em;	
+}
+aside  {
+	margin-top: 20px;
+}
+label  {
+	color: #E9E3E6;
+}	
+input  {
+	font-size: 110%;
+	background-color: #99BADD;
+	border: 2px solid #003594;
+	border-radius: 12px;
+}
+textarea {
+	background-color: #99BADD;
+	border: 2px solid #003594;
+	border-radius: 12px;
+}
+input:focus  {
+	background-color: #99BADD;
+}
+.submitButton  {
+	border-radius: 12px;
+	padding: 5px 12px;
+}
+.submitButton:hover  {
+	color: #99BADD;
+	background-color: #7f9695;
+}
+
+/* This section is for swtl */
+select  {
+	font-size: 110%;
+	background-color: #99BADD;
+	border: 2px solid #003594;
+	border-radius: 12px;
+}
+
+.swtlbutton  {
+	color: #7f9695;
+	background-color: #003594;
+	border: 1px solid #E9E3E6;
+	border-radius: 12px;
+	padding: 5px 12px;
+}
+.swtlbutton:hover  {
+	color: #003594;
+	background-color: #7f9695;
+}
+.swtl  {
+	border-top: 3px solid #99BADD;
+	padding-top: 30px;
+}
+
+.ch32table  {
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border: 3px solid #003594;
+	border-collapse: collapse;
+}
+
+.hidden {
+	display: none;
+}
+
+.blueborder {
+	border: 5px solid #99BADD;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.write  {
+	color: #E9E3E6;
+}
+
+#dom1 {
+	float: left;
+	margin: 10px 20px 10px 10px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+#dom2 {
+	float: left;
+	margin: 10px 20px 10px 10px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+#dom3 {
+	float: left;
+	margin: 10px 20px 10px 10px;
+	overflow: auto;
+	box-sizing: border-box;
+} 
+
+th, tr , td {
+	border: 1px solid #003594;
+	padding: 5px;
+	text-align: center;
+}
+
+th {
+	color: #E9E3E6;
+	background-color: #99BADD;
+}
+#legal  {
+	float: left;
+	padding-left: 150px;
+	color: #99BADD;
+}
+#illegal  {
+	float: right;
+	padding-right: 150px;
+	color: #003594;
+}
+	
+	
+	
+	
