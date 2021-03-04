@@ -12,7 +12,7 @@ body  {
 	line-height: 23px; 
 }
 header  {
-	height: 50px;
+	height: 80px;
 	margin-bottom: 20px;
 	text-align: left;
 	color: #041e42;
@@ -20,7 +20,7 @@ header  {
 	font-family: Magneto, serif;
 	padding-left: 10px;
 	padding-bottom: 20px;
-	font-size: 120%;
+	font-size: 150%;
 }
 h1  {
 	color: #041e42;
