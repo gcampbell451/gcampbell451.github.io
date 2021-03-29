@@ -345,7 +345,29 @@ th {
 	padding-right: 150px;
 	color: #003594;
 }
-	
+
+/* This section is for the Jordan tribute page*/
+.center_jordan {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1000px;
+}
+figcaption {
+  text-align: center;
+  margin-top: 10px;
+}
+#tribute-link {
+  text-align: center;
+  color: red;
+}
+#tribute-info {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}	
 	
 	
 	
