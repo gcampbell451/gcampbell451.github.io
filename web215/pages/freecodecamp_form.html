@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = "en">
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Campbell Ink | FreeCodeCamp Form</title>
+<link rel="stylesheet" type="text/css" href="styles/default215.css"/>	
+</head>
+<body class="form">
+<main>
+  <div data-include="components/header.html"></div>
+  <div data-include="components/nav.html"></div>
+    <h2 id="title" class="form">Campbell Ink Site Design</h2>
+    <p id="description">Answer the questions below to allow us to build your site!</p>
+  </body>
+  <div id="form_div">
+    <form id="survey-form">
+      <label for="name" id="name-label">Name</label><br>
+      <input type="text" id="name" name="name" required="required" size="30" placeholder="Enter Your Name"><br>
+      <label for="email" id="email-label">E-mail</label><br>
+      <input type="email" id="email" name="email" required="required" size="30" placeholder="Enter Your E-mail"><br>
+      <label for="number" id="number-label">Phone</label><br>
+      <input type="number" id="number" name="number" required="required" size="30" placeholder="Enter Your Number" min="1" max="9999999999"><br><br>
+      <label id="dropdown">What is the main purpose of your site?</label><br>
+      <select id="dropdown">
+        <option value="Personal">Personal</option>
+        <option value="Commercial">Commercial</option></select><br><br>
+      Do you have an existing site?<br>
+      <input type="radio" id="yes" name="existing" value="yes">
+      <label for="yes">Yes</label><br>
+      <input type="radio" id="no" name="existing" value="no">
+      <label for="no">No</label><br><br>
+      What do you consider the most important elements for your site?<br>
+      <input type="checkbox" id="element1" name="element1" value="Design">
+      <label for="element1">Visual design</label><br>
+      <input type="checkbox" id="element2" name="element2" value="Cost">
+      <label for="element2">Cost of building site</label><br>
+      <input type="checkbox" id="element3" name="element3" value="Integration">
+      <label for="element3">E-commerce integration</label><br>
+      <input type="checkbox" id="element4" name="element4" value="SEO">
+      <label for="element4">SEO optimization</label><br><br>
+      Do you have any additional questions or comments to add?
+      <textarea name="comments" cols=30 rows=5>Questions/Comments?</textarea><br><br>
+      <button type="submit" id="submit" class="htmlbutton">Submit</button>
+    </form>
+  </div>
+</main>
+  <div data-include="components/footer.html"></div>
+  <script src="scripts/include.js"></script>
+</body>
+</html>
