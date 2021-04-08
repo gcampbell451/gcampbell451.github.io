@@ -1,5 +1,10 @@
 header, main, nav, footer, section, article, figure, figcaption, aside { display: block; }
 * { box-sizing: border-box; }
+@media screen and (max-width: 600px) {
+  img {
+    display: none;
+  }
+}
 body  {  
 	/*	https://coolors.co/1f3c5c-0f7173-e7ecef-272932-d8a47f	color palette */
     font-family: ariel, sans-serif;
@@ -193,14 +198,17 @@ footer span  {
 	border: 1px solid #E9E3E6;
 	border-radius: 12px;
 	padding: 5px 5px;
+	width: 100px;
 }
 .htmlbutton:hover  {
 	color: #041e42;
 	background-color: #7f9695;
 	border: 1px solid #E9E3E6;
+	width: 100px;
 }
 .htmlbutton:active {
 	top: 2px;
+	width: 100px;
 }
 .cssbutton  {
 	color: #7f9695;
@@ -208,14 +216,17 @@ footer span  {
 	border: 1px solid #E9E3E6;
 	border-radius: 12px;
 	padding: 5px 12px;
+	width: 100px;
 }
 .cssbutton:hover  {
 	color: #003594;
 	background-color: #7f9695;
 	border: 1px solid #E9E3E6;
+	width: 100px;
 }
 .cssbutton:active  {
 	top: 2px;
+	width: 100px;
 }
 
 /* This section is for Fizz Buzz assignments */
@@ -265,10 +276,12 @@ select  {
 	border: 1px solid #E9E3E6;
 	border-radius: 12px;
 	padding: 5px 12px;
+	width: 100px;
 }
 .swtlbutton:hover  {
 	color: #003594;
 	background-color: #7f9695;
+	width: 100px;
 }
 .swtl  {
 	border-top: 3px solid #99BADD;
@@ -368,6 +381,75 @@ figcaption {
   margin-right: auto;
   margin-top: 30px;
 }	
-	
-	
+
+/* This section is for the FreeCodeCamp form*/
+body.form {
+  background-color: #7f9695;
+  color: #041e42;
+  line-height: 1.5;
+}
+
+h1.form {
+  color: #003594;
+  text-align: center;
+}
+input {
+  background-color: #e9e3e6;
+  color: #041e42;
+}
+textarea {
+  background-color: #e9e3e6;
+  color: #041e42;
+}
+select {
+  background-color: #e9e3e6;
+  color: #041e42;
+}
+#description {
+  color: #e9e3e6;
+  text-align: center;
+}
+#form_div {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* This section is for the FreeCodeCamp Landing Page*/
+header.header  {
+  position: fixed;
+	height: 100px;
+  width: 100%;
+  top: 0;
+  left: 0;
+	margin-bottom: 20px;
+	text-align: left;
+	color: #041e42;
+	background-color: #7f9695;
+	font-family: Magneto, serif;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	font-size: 200%;
+  line-height: 30px;
+}
+li {
+  list-style-type: none;
+}
+.nav-link {
+    font-family: ariel, sans-serif;
+    color: #041e42;
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#form {
+  position: fixed;
+  bottom: 0;  
+}
+#video {
+  position: relative;
+  left: 500px;
+  top: 500px;
+}
+
 	
