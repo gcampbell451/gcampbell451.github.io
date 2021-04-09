@@ -431,7 +431,7 @@ select {
 	padding-bottom: 20px;
 	font-size: 200%;
   line-height: 30px;
-}*/
+}
 li.landing {
   list-style-type: none;
 }
@@ -441,7 +441,7 @@ li.landing {
     display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
+}*/
 #form {
   position: fixed;
   bottom: 0;  
