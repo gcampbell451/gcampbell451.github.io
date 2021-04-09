@@ -416,7 +416,7 @@ select {
 }
 
 /* This section is for the FreeCodeCamp Landing Page*/
-header.header  {
+/*header.header  {
   position: fixed;
 	height: 100px;
   width: 100%;
@@ -431,7 +431,7 @@ header.header  {
 	padding-bottom: 20px;
 	font-size: 200%;
   line-height: 30px;
-}
+}*/
 li.landing {
   list-style-type: none;
 }
