@@ -415,41 +415,6 @@ select {
   margin-right: auto;
 }
 
-/* This section is for the FreeCodeCamp Landing Page*/
-/*header.header  {
-  position: fixed;
-	height: 100px;
-  width: 100%;
-  top: 0;
-  left: 0;
-	margin-bottom: 20px;
-	text-align: left;
-	color: #041e42;
-	background-color: #7f9695;
-	font-family: Magneto, serif;
-	padding-left: 10px;
-	padding-bottom: 20px;
-	font-size: 200%;
-  line-height: 30px;
-}
-li.landing {
-  list-style-type: none;
-}
-.nav-link {
-    font-family: ariel, sans-serif;
-    color: #041e42;
-    display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}*/
-#form {
-  position: fixed;
-  bottom: 0;  
-}
-#video {
-  position: relative;
-  left: 500px;
-  top: 500px;
-}
+
 
 	
