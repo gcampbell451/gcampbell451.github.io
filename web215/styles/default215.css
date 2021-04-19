@@ -77,9 +77,11 @@ nav a:hover  {color: #041e42; text-decoration: underline;}
 
 pre  {
 	font-family: ariel, sans-serif;
-    color: #E9E3E6;
 	font-size: 105%;
-	padding-top: 15px;
+	padding-top: 20px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 figure  {
 	text-align: center;
@@ -99,6 +101,11 @@ ul li  {
 ol li  {
 	color: #003594;
 	margin-bottom: 1em;
+}
+ol li.code_play {
+	margin-bottom: -1px;
+	border: 2px solid #e9e3e6;
+	padding-left: 10px;
 }
 dt  {
 	font-size: 110%;
@@ -135,6 +142,7 @@ footer span  {
 .list-item  {
 	color: #003594;
 }
+
 /* These classes are for the brand page */
 .silvergreen  {
 	color: #7f9695;
