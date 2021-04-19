@@ -177,17 +177,17 @@ footer span  {
 
 /* These classes are for the Code Play assignment */
 .input  {
-	color: #99BADD;
+	color: #003594;
 	font-size: 1.2em;
 	font-family: "Lucida Console", sans-serif; 
 }
 .output {
-	color: #003594;
+	color: #041e42;
 	font-size: 1.2em;
 	font-family: Calibri, sans-serif;
 }
 .dots {
-	color: #7f9695;
+	color: #99BADD;
 }
 
 
@@ -415,6 +415,19 @@ select {
   margin-right: auto;
 }
 
-
-
-	
+/* This section is for the FreeCodeCamp TechDoc*/
+#navbar {
+  position: fixed;
+}
+.main-section {
+  margin-left: 15%;
+}
+section {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.section_header {
+  color: #003594;
+  font-size: 110%;
+  font-weight: bold;
+}
