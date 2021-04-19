@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<title>Campbell Ink | Code Play 215</title>
+<link rel="stylesheet" type="text/css" href="styles/default215.css"/> 	
+</head>
+<body>   
+<main>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>WEB 215 Code Play</h2>
+	<h3 class = "input">Input<span class = "dots">&nbsp;|&nbsp;</span><span class = "output">Output</span></h3>
+	<ol>
+		<li><pre class = "input">
+		Math.acos(Math.PI)</pre>
+		<pre class = "output">
+		NaN</pre></li>
+		<li><pre class = "input">
+		Math.acos(20);</pre>
+		<pre class = "output">
+		NaN</pre></li>
+		<li><pre class = "input">
+		Math.acos(.01)</pre>
+		<pre class = "output">
+		1.5607961601207294</pre></li>
+		<li><pre class = "input">
+		Math.acos(1)</pre>
+		<pre class = "output">
+		0</pre></li>
+		<li><pre class = "input">
+		Math.acos(0)</pre>
+		<pre class = "output">
+		1.5707963267948966</pre></li>
+		<li><pre class = "input">
+		Math.acos(-1)</pre>
+		<pre class = "output">
+		3.141592653589793</pre></li>
+		<li><pre class = "input">
+		hello</pre>
+		<pre class = "output">
+		VM1305:1 Uncaught ReferenceError: hello is not defined at <anonymous>:1:1 (anonymous) @ VM1305:1</pre></li>
+		<li><pre class = "input">
+		var total = prompt('enter a number: ');
+		total++;
+		console.log(total);</pre>
+		<pre class = "output">
+		5</pre></li>
+		<li><pre class = "input">
+		var cars1 = ["Ferrari", "Lamboghini", "Aston Martin"];
+		var cars2 = ["Mercedes-Benz", "Fiat", "Audi"];
+		cars1.concat(cars2);</pre>
+		<pre class = "output">
+		(6) ["Ferrari", "Lamboghini", "Aston Martin", "Mercedes-Benz", "Fiat", "Audi"]</pre></li>
+		<li><pre class = "input">
+		cars1.length</pre>
+		<pre class = "output">
+		3</pre></li>
+		<li><pre class = "input">
+		cars1.concat(cars2).length</pre>
+		<pre class = "output">
+		6</pre></li>
+		<li><pre class = "input">
+		for (i=0, i &lt; cars1.length, i++){
+		  console.log(cars1);
+		}</pre>
+		<pre class = "output">
+		VM2393:1 Uncaught SyntaxError: Unexpected token ')'</pre></li>
+		<li><pre class = "input">
+		for (let i = 0; i &lt; 5; ++i) {
+		  console.log(i);}</pre>
+		  <pre class = "output">
+		0
+		1
+		2
+		3
+		4</pre></li>
+		<li><pre class = "input">
+		for (r=0; r &lt; cars1.length; r++){
+		  console.log(cars1[r]);
+		}</pre><pre class = "output">
+		Ferrari
+		Lamboghini
+		Aston Martin</pre></li>
+		<li><pre class = "input">
+		cars1.pop</pre>
+		<pre class = "output">
+		ƒ pop() { [native code] }</pre></li>
+		<li><pre class = "input">
+		cars1.pop();</pre>
+		<pre class = "output">
+		"Aston Martin"</pre></li>
+		<li><pre class = "input">
+		for (i=0; i &lt; cars1.length; i++){
+		cars1.pop();
+		}</pre>
+		<pre class = "output">
+		"Lamboghini"</pre></li>
+		<li><pre class = "input">
+		console.log(cars1);</pre>
+		<pre class = "output">
+		["Ferrari"]</pre></li>
+		<li><pre class = "input">
+		cars1.push("Lamborghini");</pre>
+		<pre class = "output">
+		2</pre></li>
+		<li><pre class = "input">
+		cars1.push("Aston Martin");</pre>
+		<pre class = "output">
+		3</pre></li>
+		<li><pre class = "input">
+		cars1.forEach(listCars);
+		function listCars(name) {
+		  console.log(name);
+		}</pre>
+		<pre class = "output">
+		Ferrari
+		Lamboghini
+		Aston Martin</pre></li>
+		<li><pre class = "input">
+		var text = "";
+		for (i = 0; i &lt; cars1.length; i++){
+		  text += cars[i];
+		}</pre>
+		<pre class = "output">
+		VM3690:3 Uncaught ReferenceError: cars is not defined at <anonymous>:3:11(anonymous) @ VM3690:3</pre></li>
+		<li><pre class = "input">
+		var text = "";
+		for (i = 0; i &lt; cars1.length; i++){
+		  text += cars1[i];
+		}</pre>
+		<pre class = "output">
+		"FerrariLamboghiniAston Martin"</pre></li>
+		<li><pre class = "input">
+		var text = "";
+		for (i = 0; i <&lt; cars1.length; i++){
+		  text += cars1[i] + &lt;br&gt;;
+		}</pre>
+		<pre class = "output">
+		VM3709:3 Uncaught SyntaxError: Unexpected token '<'</pre></li>
+		<li><pre class = "input">
+		var text = "";
+		for (i = 0; i &lt; cars1.length; i++){
+		  text += cars1[i] + "&lt;br&gt;";
+		 }</pre>
+		 <pre class = "output">
+		 "Ferrari&lt;br&gt;Lamboghini&lt;br&gt;Aston Martin&lt;br&gt;"</pre></li>
+		<li><pre class = "input">
+		var text = "";
+		for (i = 0; i &lt; cars1.length; i++){
+		  text += cars1[i] + "\n";
+		}</pre>
+		<pre class = "output">
+		"Ferrari
+		Lamboghini
+		Aston Martin
+		"</pre></li>
+		<li><pre class = "input">
+		if (Boolean(100 > 99){
+		  console.log("true");
+		}</pre>
+		<pre class = "output">
+		VM2861:1 Uncaught SyntaxError: Unexpected token '{'</pre></li>
+		<li><pre class = "input">
+		if (Boolean(100 > 99)){
+		  console.log("true");
+		}</pre>
+		<pre class = "output">
+		true</pre></li>
+		<li><pre class = "input">
+		var sentence = "The quick brown fox jumped over the lazy dog.";
+		sentence.charAt(10);</pre>
+		<pre class = "output">
+		"b"</pre></li>
+		<li><pre class = "input">
+		sentence.charCodeAt(10);</pre>
+		<pre class = "output">
+		98</pre></li>
+		<li><pre class = "input">
+		sentence.endsWith(".");</pre>
+		<pre class = "output">
+		true</pre></li>
+		<li><pre class = "input">
+		sentence.includes("cat")</pre>
+		<pre class = "output">
+		false</pre></li>
+		<li><pre class = "input">
+		sentence.indexOf("e");</pre>
+		<pre class = "output">
+		2</pre></li>
+		<li><pre class = "input">
+		sentence.lastIndexOf("e");</pre>
+		<pre class = "output">
+		34</pre></li>
+		<li><pre class = "input">
+		sentence.match(row);</pre>
+		<pre class = "output">
+		VM5343:1 Uncaught ReferenceError: row is not defined at <anonymous>:1:16 (anonymous) @ VM5343:1</pre></li>
+		<li><pre class = "input">
+		var match = sentence.match(/row/);
+		console.log(match);</pre>
+		<pre class = "output">
+		["row", index: 11, input: "The quick browm fox jumped over the lazy dog.", groups: undefined]</pre></li>
+		<li><pre class = "input">
+		console.log(sentence.match(/ump/));</pre>
+		<pre class = "output">
+		["ump", index: 21, input: "The quick browm fox jumped over the lazy dog.", groups: undefined]</pre></li>
+		<li><pre class = "input">
+		Boolean(sentence.match(/ump/));</pre>
+		<pre class = "output">
+		true</pre></li>
+		<li><pre class = "input">
+		var num1 = "77";
+		var num2 = "33";
+		console.log(num1 + num2);
+		</pre></li>
+		<pre class="output">
+		7733</pre></li>
+		<li><pre class = "input">
+		console.log(parseInt(num1) + parseInt(num2));</pre>
+		<pre class = "output">
+		110</pre></li>
+		<li><pre class = "input">
+		console.log(String(parseInt(num1) + parseInt(num2)));</pre>
+		<pre class = "output">
+		110</pre></li>
+		<li><pre class = "input">
+		typeof(String(parseInt(num1) + parseInt(num2)));</pre>
+		<pre class = "output">
+		"string"</pre></li>
+		<li><pre class = "input">
+		sentence.replace("dog", "DOG");
+		Boolean(sentence.match(/dog/));</pre>
+		<pre class = "output">
+		true</pre></li>
+		<li><pre class = "input">
+		console.log(sentence);</pre>
+		<pre class = "output">
+		The quick browm fox jumped over the lazy dog.</pre></li>
+		<li><pre class = "input">
+		sentence.replace("dog", "cat");
+		Boolean(sentence.match(/dog/));</pre>
+		<pre class = "output">
+		true</pre></li>
+		<li><pre class = "input">
+		console.log(sentence);</pre>
+		<pre class = "output">
+		The quick browm fox jumped over the lazy dog.</pre></li>
+		<li><pre class = "input">
+		sentence.replace("dog", "cat");</pre>
+		<pre class = "output">
+		"The quick browm fox jumped over the lazy cat."</pre></li>
+		<li><pre class = "input">
+		arrow = () => num1 + num2;
+		arrow();</pre>
+		<pre class = "output">
+		"7733"</pre></li>
+		<li><pre class = "input">
+		arrow = () => parseInt(num1 + num2);
+		console.log(typeof(arrow()));</pre>
+		<pre class = "output">
+		number</pre></li>
+		<li><pre class = "input">
+		console.log(arrow());</pre>
+		<pre class = "output">
+		7733</pre></li>
+		<li><pre class = "input">
+		arrow2 = () => parseInt(num1) + parseInt(num2);
+		console.log(typeof(arrow2()));
+		console.log(arrow2());</pre>
+		<pre class = "output">
+		number
+		110</pre></li>
+	</ol>
+</main>
+<div data-include="components/footer.html"></div>
+<script src="scripts/include.js"></script>	
+</body>
+</html>
