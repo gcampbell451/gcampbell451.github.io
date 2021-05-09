@@ -14,7 +14,13 @@ body  {
 	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
-	line-height: 23px; 
+	line-height: 23px;	
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+	display: none;
 }
 header  {
 	height: 80px;
@@ -91,6 +97,8 @@ figure  {
 }
 p  {
 	padding-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
 }
 ul  {
 	padding: 15px;
@@ -438,4 +446,34 @@ section {
   color: #003594;
   font-size: 110%;
   font-weight: bold;
+}
+/* This section is for adding Magneto font to web app*/
+@font-face {
+font-family: "Magneto";
+src: url("css/fonts/Magneto.eot");
+src:
+url("css/fonts/Magneto.woff") format("woff"),
+url("css/fonts/Magneto.otf") format("opentype"),
+url("css/fonts/Magneto.svg#filename") format("svg");
+}
+/* This section is for the everythinghtml page*/
+.top {
+	font-size: 75%;
+}
+dialog {
+	background-color: #7f9695;
+	border: 1px solid #99badd;
+}
+#myDiv {
+	border: 3px solid #99badd;
+	background-color: #e9e3e6;
+	text-align: center;
+}
+.hx {
+	color: #003594;
+	font-family: Georgia, serif;
+	text-align: center;
+}
+.span {
+	color: red;
 }
