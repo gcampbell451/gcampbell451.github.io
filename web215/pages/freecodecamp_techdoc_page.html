@@ -1,0 +1,64 @@
+<main id="main-doc">
+    <nav id="navbar"><header>HTML Tags</header>
+      <li><a class="nav-link" href="#<!DOCTYPE>">&lt;!DOCTYPE&gt;</a></li>
+      <li><a class="nav-link" href="#<html>">&lt;html&gt;</a></li>
+      <li><a class="nav-link" href="#<head>">&lt;head&gt;</a>
+      <li><a class="nav-link" href="#<meta>">&lt;meta&gt;</a></li>
+      <li><a class="nav-link" href="#<title>">&lt;title&gt;</a></li>
+      <li><a class="nav-link" href="#<body>">&lt;body&gt;</a></li>
+      
+    </nav>
+     <h2>HTML Technical Documentation</h2>
+    <section class="main-section" id="<!DOCTYPE>">
+      <header class="section_header">&lt;!DOCTYPE&gt;</header>
+      <p>Every HTML document must begin with a &lt;!DOCTYPE&gt; declaration. It tells the browser what type of document it will display. This is the declaration in HTML 5:</p>
+      <code>&lt;!DOCTYPE html&gt;</code><br><p>Some items of note:</p>
+      <ul>
+        <li>The &lt;!DOCTYPE&gt; declaration is <em>not</em> case-sensitive. </li>
+        <li>For HTML 4.01, use: &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</li>
+        <li>For XHTML 1.1, use: &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</li>
+        <ul>
+    </section>
+    <section class="main-section" id="<html>">
+      <header class="section_header">&lt;html&gt;</header>
+      <p>The &lt;html&gt; tag encloses all HTML elements except for the &lt;!DOCTYPE&gt; tag. The tags look like this in the code:</p>
+      <code>&lt;html&gt;<em>everything else but the doctype tag</em><br>
+        /&lt;html&gt;
+      </code>
+      <p>NOTE: To assist browsers and search engines, always include the <em>lang</em> attribute inside the leading &lt;html&gt; tag.</p>
+    </section>
+    <section class="main-section" id="<head>">
+      <header class="section_header">&lt;head&gt;</header>
+      <p>The &lt;head&gt; tag is used to hold metadata about the page. It lies between the &lt;html&gt; tag and the &lt;body&gt; tag. This tag is very simple:</p>
+      <code>
+        &lt;head&gt;<em>elements</em><br>
+        &lt;/head&gt;
+      </code>
+      <p>The elements that can go inside the &lt;head&gt; element are:</p>
+      <ul>
+        <li>&lt;title&gt;&mdash;required </li>
+        <li>&lt;style&gt;</li>
+        <li>&lt;base&gt;</li>
+        <li>&lt;link&gt;</li>
+        <li>&lt;meta&gt;</li>
+        <li>&lt;script&gt;</li>
+        <li>&lt;noscript&gt;</li>
+      </ul>
+    </section>
+    <section class="main-section" id="<meta>">
+      <header class="section_header">&lt;meta&gt;</header>
+      <p>The &lt;meta&gt; tag defines metadata, or data about data, and belongs inside the &lt;head&gt; element. Metadata tells browsers how to display content and provides keywords to search engines. For example, the <em>name</em> attribute for this tag can and should be used to set the user's viewport using the <em>viewport</em> value:</p>
+      <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+    </section>
+    <section class="main-section" id="<title>">
+      <header class="section_header">&lt;title&gt;</header>
+      <p>The &lt;title&gt; tage is <em>required</em> in all HTML documents. It performs multiple functions: it defines the title of the document, which is displayed in the browser toolbar; it is the default name of the page when bookmarked; and it is the source of the title used for the page in search-engine results. There can be only one &lt;title&gt; tag per page.</p>
+      <p>It's important to choose the page title wisely. Search engines use the title to order the results of page searches. Spellcheck, people!</p>
+      <p>If you reached this page through FreeCodeCamp, the &lt;title&gt; tag looks like this:</p>
+      <code>&lt;title&gt;A Pen by Gregory Campbell&lt;/title&gt;</code>
+    </section>
+    <section class="main-section" id="<body>">
+      <header class="section_header">&lt;body&gt;</header>
+      <p>The &lt;body&gt; tag contains the content displayed on the page. All of the information contained before the body tag is the metadata. The body has the data. There can be only one &lt;body&gt; per page.</p>
+    </section>
+  </main>
