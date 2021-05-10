@@ -477,3 +477,41 @@ dialog {
 .span {
 	color: red;
 }
+/* This section is for the spritesheet*/
+.sprites li {
+	list-style: none;
+	margin: 20px;
+}
+.sprites li a {
+	background: url(../images/ink_sprites.png) no-repeat; 
+	text-decoration: none;
+	display: block;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	padding-left: 200px;
+}
+.sprites li a.one {
+	background-position: 0 0;
+	width: 208px;
+	height: 128px;
+}
+.sprites li a.another {
+	background-position: -416px 0;
+	width: 128px;
+	height: 128px;
+}
+.sprites li a.our {
+	background-position: -214px -4px;
+	width: 85px;
+	height: 123px;
+}
+.another {
+	background: url('imgs/ink_sprites.png') no-repeat -303px 0;
+	width: 128px;
+	height: 128px;
+}
+.our {
+	background: url('imgs/ink_sprites.png') no-repeat -214px -4px;
+	width: 85px;
+	height: 123px;
+}
