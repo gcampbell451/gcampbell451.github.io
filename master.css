@@ -1,0 +1,420 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+/*
+Table of Contents
+1. CSS Variables/Brand Colors
+2. Header/Nav
+3. Components
+4. Elements
+5. Media Queries
+
+*/
+
+
+/* 1. CSS Variables/Brand Colors/Fonts */
+:root {
+    --bgcolor: rgb(127, 150, 149);
+    --color1: #041e42; 
+    --color2: #003594;
+    --color3: #E9E3E6;
+    --tarheel: #99BADD;
+    --logofontfam: "Brush Script MT", serif;
+    --textfontfam: arial, sans-serif;
+    --hnfontfam: Georgia, serif;
+}
+
+/* 2. Header/Nav */
+
+header  {
+    margin-top: 20px;
+    background-color: var(--bgcolor);
+    display: grid;
+    grid-template-columns: 1fr auto minmax(300px, 1fr) 1fr;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    opacity: .85;
+}
+
+.logo {
+    font-family: var(--logofontfam);
+    color: var(--color1);
+    margin: 0;
+    grid-column: 2 / 3;
+    font-size: 4em;
+
+}
+/* The nav-toggle selectors define the drop-down menu for links*/
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: var(--color3);
+    height: 2px;
+    width: 3em;
+    border-radius: 2px;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+   content: ''; 
+   position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 16px;
+}
+
+.nav-toggle-label span::after {
+    top: 16px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--bgcolor);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    font-size: .3rem;
+
+}
+
+nav a {
+    color: var(--color1);
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+}
+
+nav a:hover {
+    color: var(--color2);
+}
+
+/* The .nav-toggle:checked selectors change display based on if toggle is checked*/
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* 3. Components */
+/* These classes are for the validation buttons */
+.htmlbutton  {
+	color: var(--bgcolor);
+	background-color: var(--color1);
+	border: 1px solid var(--color3);
+	border-radius: 12px;
+	padding: 5px 5px;
+}
+
+.htmlbutton:hover  {
+	color: var(--color1);
+	background-color: var(--bgcolor);
+	border: 1px solid var(--color3);
+}
+
+.cssbutton  {
+	color: var(--bgcolor);
+	background-color: var(--color2);
+	border: 1px solid var(--color3);
+	border-radius: 12px;
+	padding: 5px 12px;
+}
+
+.cssbutton:hover  {
+	color: var(--color2);
+	background-color: var(--bgcolor);
+	border: 1px solid var(--color3);
+}
+
+/* 4. Elements*/
+
+body  {  
+    font-family: var(--textfontfam);
+    color: var(--color1);
+    background-color: var(--bgcolor);
+    height: 100vh;
+    display: grid;		
+	margin: 0;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 23px;
+    /* Remove the scrollbar for Chrome*/	
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+/* Remove the scrollbar for Firefox*/
+body::-webkit-scrollbar {
+	display: none;
+}
+
+h1  {
+	color: var(--color1);
+}
+
+main  {
+	background-color: var(--bgcolor);
+	padding-left: 5px;	
+}
+
+h2  {
+	color: var(--color2);
+	font-family: var(--hnfontfam);
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-bottom: 3px solid var(--tarheel);
+	padding-bottom: 30px;
+}
+
+h3  {
+	color: var(--color3);
+	font-family: var(--hnfontfam);
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+h4  {
+	color: var(--color2);
+	font-family: var(--hnfontfam);
+}
+
+pre  {
+	font-family: var(--textfontfam);
+	font-size: 105%;
+	padding-top: 20px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+figure  {
+	text-align: center;
+	font-style: italic;
+	font-size: 90%;	
+}
+
+p  {
+	padding-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+dt  {
+	font-size: 110%;
+	font-weight: bold;
+	color: var(--color2);
+}
+dd  {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+strong {
+	color: var(--color3);
+}
+
+em {
+	color: var(--color3);
+}
+
+footer  {
+	text-align: center;
+	font-size: 90%;
+	color: var(--color1);
+	background-color: var(--bgcolor);
+	margin-top: 40px;
+	clear: both;
+	border-top: 3px solid var(--tarheel);
+	padding-top: 30px;
+}
+footer span  {
+	font-size: 110%;
+	font-style: italic;
+	color: var(--color2);
+}
+
+footer a {
+    color: var(--color2)
+}
+
+.list-item  {
+	color: var(--color2);
+}
+
+/* This section is for adding Magneto font to web app*/
+@font-face {
+font-family: "Magneto";
+src: url("css/fonts/Magneto.eot");
+src:
+url("css/fonts/Magneto.woff") format("woff"),
+url("css/fonts/Magneto.otf") format("opentype"),
+url("css/fonts/Magneto.svg#filename") format("svg");
+}
+
+/* 5. Media Queries*/
+
+/* Iphone X/XS iOS 12 */
+@media screen and (max-width: 375px) {
+    body  {  
+        font-family: var(--textfontfam);
+        color: var(--color1);
+        background-color: var(--bgcolor);
+        height: 100vh;
+        display: grid;		
+        margin: 0;
+        line-height: 23px;	
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .intro {
+        padding-top: 90px;
+    }
+}
+
+/* Ipad*/
+@media screen and (min-width: 700px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+       grid-column: 1 / 2;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 2 / 4;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    nav li {
+        margin-left: 1.5em;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        opacity: 1;
+    }
+    .intro {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+       grid-column: 1 / 2;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 2 / 4;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+        justify-content: space-between;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: var(--tarheel);
+        position: absolute;
+        bottom: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        
+        transition: transform ease-in-out 250ms;
+
+    }
+
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+    .intro {
+        padding-top: 90px;
+    }
+}
