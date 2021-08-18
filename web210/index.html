@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campbell Ink | Table of Contents</title>
+<link rel="stylesheet" type="text/css" href="styles/master.css"/>
+</head>
+<body>
+<div data-include="components/header.html"></div>
+<div data-include="components/nav.html"></div>
+	<h2>Table of Contents</h2>
+	<ol>
+		<li class="toc_li">
+			<a href="" onclick="load_home(event, 'pages/introduction.html')">Introduction</a>
+		</li>
+		<li class="toc_li">
+			<a href="" onclick="load_home(event, 'pages/contract.html')">Contract</a>
+		</li>
+	</ol>
+<div id="page-loader"></div>
+<div data-include="components/footer.html"></div>
+<script src="scripts/dynamic_load.js"></script>
+<script src="scripts/include.js"></script>   	
+</body>
+</html>
