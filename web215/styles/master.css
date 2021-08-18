@@ -162,6 +162,9 @@ nav a:hover {
 
 /* 4. Elements*/
 
+.toc_top {
+    margin-top: 60px;
+}
 body  {  
     font-family: var(--textfontfam);
     color: var(--color1);
