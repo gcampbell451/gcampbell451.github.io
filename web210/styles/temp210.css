@@ -16,9 +16,9 @@ Table of Contents
 
 /* 1. CSS Variables/Brand Colors/Fonts */
 :root {
-    --bgcolor: hsl(177, 10%, 54%);
+    --bgcolor: hsl(45, 35%, 43%);
     --color1: hsl(215, 89%, 14%); 
-    --color2: hsl(219, 100%, 29%);
+    --color2: hsl(215, 89%, 24%);
     --color3: hsl(330, 12%, 90%);
     --tarheel: hsl(211, 50%, 73%);
     --logofontfam: Magneto, serif;;
@@ -31,14 +31,64 @@ Table of Contents
 header  {
     background-color: var(--bgcolor);
     font-family: var(--logofontfam);
-    font-size: 1em;
+    font-size: 2em;
     height: max-content;
-    border-bottom: 3px solid var(--tarheel);
 }
 
 .logo {
     font-family: var(--logofontfam);
     color: var(--color1);
+}
+
+nav {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+nav a {
+	text-decoration: none;
+	position: relative;
+}
+
+nav ul li {
+	color: var(--color2);
+}
+
+a:link  {
+	color: var(--color2); 
+	text-decoration: underline;
+}
+
+a:visited  {color: var(--color1); 
+	text-decoration: none;
+}
+
+a:hover,
+a:focus  {
+	color: var(--color3); 
+	text-decoration: underline;
+}
+
+nav a:link  {
+	color: var(--color2); 
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+nav a:visited  {
+	color: var(--color1); 
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus  {
+	text-decoration: underline;
+
+}
+
+.nav_div {
+	height: 2em;
 }
 
 /* 3. Components */
@@ -52,7 +102,8 @@ header  {
 	padding: 5px 5px;
 }
 
-.htmlbutton:hover  {
+.htmlbutton:hover,
+.htmlbutton:focus  {
 	color: var(--color1);
 	background-color: var(--bgcolor);
 	border: 1px solid var(--color3);
@@ -66,7 +117,8 @@ header  {
 	padding: 5px 12px;
 }
 
-.cssbutton:hover  {
+.cssbutton:hover,
+.cssbutton:focus  {
 	color: var(--color2);
 	background-color: var(--bgcolor);
 	border: 1px solid var(--color3);
@@ -101,7 +153,6 @@ body::-webkit-scrollbar {
 
 h1  {
 	color: var(--color1);
-	text-align: center;
 }
 
 main  {
@@ -131,7 +182,7 @@ footer  {
 	background-color: var(--bgcolor);
 	margin-top: 40px;
 	clear: both;
-	border-top: 3px solid var(--tarheel);
+	border-top: 3px solid var(--color3);
 	padding-top: 30px;
 }
 footer span  {
@@ -140,5 +191,28 @@ footer span  {
 	color: #003594;
 }
 
+.toc_li  {
+    line-height: 1.5em;
+}
+
+.toc_li a {
+    text-decoration: none;
+    color: var(--color1);
+    margin: .5em;
+}
+
+.toc_li a:hover,
+.toc_li a:focus {
+    background-color: var(--tarheel);
+    padding: .3em;
+    border: 1px solid var(--color1);
+    border-radius: 10px;
+}
+
+#toc_h2 {
+	margin-top: 1em;
+	border-top: 3px solid var(--color3);
+	padding: 1em;
+}
 /* 5. Media Queries*/
 
