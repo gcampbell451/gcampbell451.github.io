@@ -175,6 +175,10 @@ figcaption  {
 	text-align: center;
 }
 
+.list-item {
+	list-style-type: none;
+}
+
 footer  {
 	text-align: center;
 	font-size: 90%;
