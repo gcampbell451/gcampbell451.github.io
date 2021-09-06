@@ -30,7 +30,6 @@ Table of Contents
 
 header  {
     background-color: var(--bgcolor);
-    font-family: var(--logofontfam);
     font-size: 2em;
     height: max-content;
 }
@@ -154,7 +153,6 @@ body::-webkit-scrollbar {
 h1  {
 	color: var(--color1);
 }
-
 .space_h1 {
 	padding-top: 1em;
 }
@@ -166,6 +164,14 @@ h2 {
 .space_h2 {
 	padding-top: 1em;
 	padding-bottom: 1em;
+}
+
+h3 {
+	color: var(--color3);
+}
+
+h4 {
+	color: var(--color2);
 }
 
 main  {
@@ -235,5 +241,49 @@ footer span  {
 	border-top: 3px solid var(--color3);
 	padding: 1em;
 }
+
+dd {
+	padding: 1em 0;
+}
+/* These classes are for the brand page */
+.sand  {
+	color: var(--bgcolor);
+	font-size: 2em;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: var(--color1);
+}
+.platinum  {
+	color: var(--color3);
+	font-size: 2em;
+}
+.cowboyblue  {
+	color: var(--color1);
+	font-size: 2em;
+}
+.palecerulean  {
+	color: var(--tarheel);
+	font-size: 2em;
+}
+.blue  {
+	color: var(--color2);
+	font-size: 2em;
+}
+.magneto  {
+	font-size: 2em;
+	font-family: var(--logofontfam);
+	color: var(--color3);
+}
+.georgia  {
+	font-size: 2em;
+	font-family: var(--hnfontfam);
+	color: var(--color3);
+}
+.arial  {
+	font-size: 2em;
+	font-family: var(--textfontfam);
+	color: var(--color3);
+}
+
+
 /* 5. Media Queries*/
 
