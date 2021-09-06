@@ -176,6 +176,10 @@ figcaption  {
 }
 
 .list-item {
+	color: var(--color2);
+}
+
+.no_bullet {
 	list-style-type: none;
 }
 
