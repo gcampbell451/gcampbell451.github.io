@@ -215,7 +215,7 @@ footer  {
 footer span  {
 	font-size: 110%;
 	font-style: italic;
-	color: #003594;
+	color: var(--color2);
 }
 
 .toc_li  {
