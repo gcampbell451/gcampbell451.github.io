@@ -215,7 +215,7 @@ footer  {
 footer span  {
 	font-size: 110%;
 	font-style: italic;
-	color: var(--color2);
+	color: #003594;
 }
 
 .toc_li  {
@@ -245,6 +245,8 @@ footer span  {
 dd {
 	padding: 1em 0;
 }
+
+
 /* These classes are for the brand page */
 .sand  {
 	color: var(--bgcolor);
@@ -284,6 +286,22 @@ dd {
 	color: var(--color3);
 }
 
+
+/* These classes are for the webflow pics page*/
+
+.webflow_pics {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 1em;
+}
+
+.webflow_picture {
+	display: flex;
+	align-items: stretch;
+	justify-items: stretch;
+
+}
 
 /* 5. Media Queries*/
 
