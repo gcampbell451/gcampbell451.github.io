@@ -207,10 +207,11 @@ footer  {
 	font-size: 90%;
 	color: var(--color1);
 	background-color: var(--bgcolor);
-	margin-top: 40px;
+	margin-top: 2.5em;
 	clear: both;
 	border-top: 3px solid var(--color3);
-	padding-top: 30px;
+	padding-top: 2em;
+	padding-bottom: 1em;
 }
 footer span  {
 	font-size: 110%;
