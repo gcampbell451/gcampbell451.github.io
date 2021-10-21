@@ -237,7 +237,7 @@ footer span  {
 }
 
 #toc_h2 {
-	margin-top: 1em;
+	margin-top: 2em;
 	border-top: 3px solid var(--color3);
 	padding: 1em;
 }
