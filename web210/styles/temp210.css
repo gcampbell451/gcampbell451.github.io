@@ -94,9 +94,11 @@ nav a::before {
 	transition: transform ease-in-out 150ms;
 }
 
-nav a:hover::before
-nav a:focus::before {
+nav a:hover::before, 
+nav a:focus::before
+ {
 	transform: scale(1,1);
+	outline: none;
 }
 
 .nav_div {
