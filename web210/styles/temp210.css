@@ -21,9 +21,9 @@ Table of Contents
     --color2: hsl(215, 89%, 24%);
     --color3: hsl(330, 12%, 90%);
     --tarheel: hsl(211, 50%, 73%);
-    --logofontfam: Magneto, serif;;
-    --textfontfam: arial, sans-serif;
-    --hnfontfam: Georgia, serif;
+    --logofontfam: Magneto, serif;
+    --textfontfam: Georgia, serif;
+    --hnfontfam: arial, sans-serif;
 }
 
 /* 2. Header/Nav */
