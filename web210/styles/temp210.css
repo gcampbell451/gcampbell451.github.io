@@ -168,6 +168,7 @@ body::-webkit-scrollbar {
 
 h1  {
 	color: var(--color1);
+	font-family: var(--hnfontfam);
 }
 .space_h1 {
 	padding-top: 1em;
@@ -175,6 +176,7 @@ h1  {
 
 h2 {
 	color: var(--color2);
+	font-family: var(--hnfontfam);
 }
 
 .space_h2 {
@@ -184,10 +186,12 @@ h2 {
 
 h3 {
 	color: var(--color3);
+	font-family: var(--hnfontfam);
 }
 
 h4 {
 	color: var(--color2);
+	font-family: var(--hnfontfam);
 }
 
 main  {
