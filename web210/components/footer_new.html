@@ -5,4 +5,8 @@
     <a href = "https://validator.w3.org/check?uri=" id = "validation_link_html">validate html</a> **
     <a href = "https://jigsaw.w3.org/css-validator/check/referer?uri=" id = "validation_link_css">validate css</a>
     <br><br><a href="#">Back To Top</a>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
 </footer>
