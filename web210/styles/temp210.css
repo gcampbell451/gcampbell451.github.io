@@ -341,5 +341,30 @@ dd {
 
 }
 
-/* 5. Media Queries*/
+.webflow21 {
+	text-decoration: none;
+	position: relative;
+}
 
+.webflow_21_day_pics {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 1em;
+}
+
+
+.webflow21div {
+	width: max-content;
+	display: flex;
+	height: 4em;
+}
+
+.webflow21:hover,
+.webflow21:focus {
+	background-color: var(--tarheel);
+    padding: .3em;
+    border: 1px solid var(--color1);
+    border-radius: 10px;
+}
+/* 5. Media Queries*/
