@@ -30,7 +30,7 @@ Table of Contents
 
 header  {
     background-color: var(--bgcolor);
-    font-size: 2em;
+    font-size: 1.5em;
     height: max-content;
 }
 
@@ -232,6 +232,10 @@ footer  {
 	border-top: 3px solid var(--color3);
 	padding-top: 2em;
 	padding-bottom: 1em;
+}
+
+footer span {
+	color: var(--tarheel);
 }
 
 header span  {
