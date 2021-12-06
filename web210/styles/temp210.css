@@ -115,6 +115,7 @@ nav a:focus::before
 	border: 1px solid var(--color3);
 	border-radius: 12px;
 	padding: 5px 5px;
+	box-shadow: 5px 5px 8px #292727;
 }
 
 .htmlbutton:hover,
@@ -130,6 +131,7 @@ nav a:focus::before
 	border: 1px solid var(--color3);
 	border-radius: 12px;
 	padding: 5px 12px;
+	box-shadow: 5px 5px 8px #292727;
 }
 
 .cssbutton:hover,
