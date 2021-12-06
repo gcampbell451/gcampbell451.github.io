@@ -227,7 +227,7 @@ figcaption  {
 footer  {
 	text-align: center;
 	font-size: 90%;
-	color: var(--color3);
+	color: var(--color1);
 	background-color: var(--bgcolor);
 	margin-top: 2.5em;
 	clear: both;
@@ -236,7 +236,7 @@ footer  {
 	padding-bottom: 1em;
 }
 
-footer span {
+footer span a{
 	color: var(--tarheel);
 }
 
