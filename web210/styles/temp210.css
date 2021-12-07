@@ -226,7 +226,7 @@ figcaption  {
 
 footer  {
 	text-align: center;
-	font-size: 90%;
+	font-size: .9em;
 	color: var(--color1);
 	background-color: var(--bgcolor);
 	margin-top: 2.5em;
@@ -236,6 +236,7 @@ footer  {
 	padding-bottom: 1em;
 }
 
+footer span,
 footer span a{
 	color: var(--tarheel);
 }
@@ -244,7 +245,7 @@ header span  {
 	display: inline;
 	font-size: .5em;
 	font-style: italic;
-	color: #003594;
+	color: var(--color2);
 }
 
 .toc_li  {
@@ -373,4 +374,5 @@ dd {
     border: 1px solid var(--color1);
     border-radius: 10px;
 }
+
 /* 5. Media Queries*/
