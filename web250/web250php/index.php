@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<title>Axes, Et Cetera | Home</title>
+	<title>Axes, Et Cetera | Table of Contents</title>
 	<link rel = "stylesheet" type = "text/css" href = "styles/default.css" />
 </head>
 <body>
