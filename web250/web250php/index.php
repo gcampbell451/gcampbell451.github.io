@@ -14,17 +14,18 @@
     <p class="tagline center">One man's trash is another man's Trea$ure!</p>
 </header>
 <!-- dynamic content goes here -->
-<ol>
-		<li class="toc_li">
-		<a href = "?p=contents/introduction250.php">Introduction</a> 
-		</li>
-		<li class="toc_li">
-		<a href = "?p=contents/contract250.php">Course Contract</a>
-		</li>
-		<li class="toc_li">
-			<a href="?p=contents/brand250.php">Brand Page</a>
-		</li>
-	</ol>
+    <h2 class="center">Table of Contents</h2>    
+    <ol>
+        <li class="toc_li">
+        <a href = "?p=contents/introduction250.php">Introduction</a> 
+        </li>
+        <li class="toc_li">
+        <a href = "?p=contents/contract250.php">Course Contract</a>
+        </li>
+        <li class="toc_li">
+            <a href="?p=contents/brand250.php">Brand Page</a>
+        </li>
+    </ol>
 <?php
 	$sPage = $_GET["p"];
 	//echo ("You picked the page: " . $sPage); 
