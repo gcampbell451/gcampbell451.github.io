@@ -26,7 +26,7 @@
 			<a href="?p=contents/brand.php">Brand Page</a>
 		</li>
         <li class="toc_li">
-			<a href="?p=contents/samscars/samsusedcars.html">Brand Page</a>
+			<a href="?p=contents/samscars/samsusedcars.html">Sam's Used Cars</a>
 		</li>
 	</ol>
 <?php
