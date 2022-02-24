@@ -1,0 +1,346 @@
+*, *::before, *::after { box-sizing: border-box; }
+html {
+    font-size: 18px;
+}
+
+/*
+Table of Contents
+1. CSS Variables/Brand Colors
+2. Header/Nav
+3. Components
+4. Elements
+5. Media Queries
+
+*/
+
+
+/* 1. CSS Variables/Brand Colors/Fonts */
+:root {
+    --bgcolor: hsl(233, 12%, 56%);
+    --color1: hsl(149, 57%, 10%); 
+    --color2: hsl(149, 57%, 20%);
+    --color3: hsl(330, 12%, 90%);
+    --accent: hsl(101, 78%, 41%);
+    --logofontfam: "Copperplate Gothic", serif;
+    --textfontfam: "Lucida Bright", Georgia, serif;
+    --hnfontfam: "Trebuchet MS", sans-serif;
+}
+
+/* 2. Header/Nav/Footer */
+
+header  {
+    font-size: 1.5em;
+    height: max-content;
+	margin-bottom: 1em;
+}
+
+.logo {
+    font-family: var(--logofontfam);
+    color: var(--color1);
+	display: inline-block;
+	padding-top: .4em;
+	padding-right: .5em;
+	padding-left: .25em;
+
+}
+
+.tagline {
+	font-style: italic;
+	font-size: 1.5rem;
+	border-bottom: 3px solid var(--color3);
+	padding-bottom: 1.5em;
+	color: var(--color2);
+}
+
+nav {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	margin-bottom: 1em;
+    font-family: var(--hnfontfam);
+}
+
+nav a {
+	text-decoration: none;
+	position: relative;
+}
+
+nav ul li {
+	color: var(--color2);
+}
+
+a:link  {
+	color: var(--color2); 
+	text-decoration: none;
+}
+
+a:visited  {color: var(--color1); 
+	text-decoration: none;
+}
+
+a:hover,
+a:focus  {
+	color: var(--color3); 
+	text-decoration: underline;
+}
+
+nav a:link  {
+	color: var(--color2); 
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+nav a:visited  {
+	color: var(--color1); 
+	text-decoration: none;
+}
+
+nav a::before {
+	content: '';
+	background: var(--accent);
+	display: block;
+	position: absolute;
+	top: 105%;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	transform: scale(0,1);
+	transition: transform ease-in-out 150ms;
+}
+
+nav a:hover::before, 
+nav a:focus::before
+ {
+	transform: scale(1,1);
+	outline: none;
+}
+
+.nav_div {
+	height: 2em;
+}
+
+footer  {
+	text-align: center;
+	font-size: .9em;
+	color: var(--color1);
+	margin-top: 2.5em;
+	margin-bottom: 1em;
+	clear: both;
+	border-top: 3px solid var(--color3);
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+footer a{
+	text-decoration: none;
+}
+
+
+/* 3. Components */
+
+/* These classes are for the validation , back to top buttons */
+.htmlbutton  {
+	color: var(--color3);
+	border: 1px solid var(--color1);
+	border-radius: 12px;
+	padding: .33em .75em;
+	box-shadow: 5px 5px 8px hsl(0, 3%, 16%);
+}
+
+.htmlbutton:hover,
+.htmlbutton:focus  {
+	color: var(--color3);
+	background-color: var(--color1);
+	border: 1px solid var(--color3);
+}
+
+.cssbutton  {
+	color: var(--color2);
+	border: 1px solid var(--color2);
+	border-radius: 12px;
+	padding: .33em .75em;
+	box-shadow: 5px 5px 8px hsl(0, 3%, 16%);
+}
+
+.cssbutton:hover,
+.cssbutton:focus  {
+	color: var(--color3);
+	background-color: var(--color2);
+	border: 1px solid var(--color3);
+}
+
+.htmlbutton:active,
+.cssbutton:active  {
+    position: relative;
+    top: 3px;
+}
+
+.back_to_top {
+    background-color: var(--accent);
+	color: var(--accent);
+	padding: .33em .75em;
+	border-radius: 12px;
+	border: 1px solid var(--color3);
+	text-decoration: none;
+    box-shadow: 5px 5px 8px hsl(0, 3%, 16%);
+}
+
+.back_to_top:hover,
+.back_to_top:focus {
+	color: var(--color3);
+	border: 1px solid var(--color3);
+    
+}
+.buttons {
+	margin-top: -.5em;
+	margin-bottom: 1em;
+}
+
+/* 4. Elements*/
+
+body  {  
+    font-family: var(--textfontfam);
+    color: var(--color1);
+    background-color: var(--bgcolor);
+    background-image: url("../images/melamine-wood-003.png");
+	margin: 0;
+	width: 55%;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.5em;
+    /* Remove the scrollbar for Chrome*/	
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+/* Remove the scrollbar for Firefox*/
+body::-webkit-scrollbar {
+	display: none;
+}
+h1  {
+	color: var(--color1);
+	font-family: var(--hnfontfam);
+}
+.space_h1 {
+	padding-top: 1em;
+}
+
+h2 {
+	color: var(--color2);
+	font-family: var(--hnfontfam);
+}
+
+.space_h2 {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+h3 {
+	color: var(--color3);
+	font-family: var(--hnfontfam);
+}
+
+h4 {
+	color: var(--color2);
+	font-family: var(--hnfontfam);
+}
+
+figcaption  {
+	text-align: center;
+	font-style: italic;
+	font-size: 90%;	
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.list-item {
+	color: var(--color2);
+}
+
+.no_bullet {
+	list-style-type: none;
+}
+
+.toc_li  {
+    line-height: 1.5em;
+}
+
+.toc_li a {
+    text-decoration: none;
+    color: var(--color1);
+    margin: .5em;
+}
+
+.toc_li a:hover,
+.toc_li a:focus {
+    background-color: var(--accent);
+    padding: .3em;
+    border: 1px solid var(--color1);
+    border-radius: 10px;
+}
+
+#toc_h2 {
+	margin-top: 2em;
+	border-top: 3px solid var(--color3);
+	padding: 1em;
+}
+
+dd {
+	padding: 1em 0;
+}
+
+/* These classes are for the brand page */
+.melamine {
+    font-size: 1.75em;
+}
+.roman_silver  {
+	color: var(--bgcolor);
+	font-size: 1.775em;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: var(--color1);
+}
+.platinum  {
+	color: var(--color3);
+	font-size: 1.75em;
+}
+.british_racing_green  {
+	color: var(--color1);
+	font-size: 1.75em;
+}
+.kelly_green  {
+	color: var(--accent);
+	font-size: 1.75em;
+}
+.green  {
+	color: var(--color2);
+	font-size: 1.75em;
+}
+.copperplate_gothic  {
+	font-size: 1.75em;
+	font-family: var(--logofontfam);
+	color: var(--color3);
+}
+.lucida_bright  {
+	font-size: 1.75em;
+	font-family: var(--textfontfam);
+	color: var(--color3);
+}
+.trebuchet  {
+	font-size: 1.75em;
+	font-family: var(--hnfontfam);
+	color: var(--color3);
+}
+.brand_box {
+    background-color: hsl(233, 12%, 56%);
+    padding: 1.7em;
+    margin-top: 1em;
+	box-shadow: 5px 5px 8px hsl(0, 3%, 16%);
+}
+
+/* 5. Media Queries*/
