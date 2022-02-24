@@ -25,6 +25,9 @@
 		<li class="toc_li">
 			<a href="?p=contents/brand.php">Brand Page</a>
 		</li>
+        <li class="toc_li">
+			<a href="?p=contents/samscars/samsusedcars.html">Brand Page</a>
+		</li>
 	</ol>
 <?php
 	$sPage = $_GET["p"];
