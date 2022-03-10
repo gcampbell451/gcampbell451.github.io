@@ -12,12 +12,14 @@
     </div>
     <h1 class="logo">Axes, Et cetera</h1>
     <p class="tagline center">One man's trash is another man's Trea$ure!</p>
-    <nav>
-            <a href = "?p=contents/introduction.php">Introduction</a> 
-			<a href = "?p=contents/contract.php">Course Contract</a>
-			<a href = "?p=contents/brand.php">Brand Page</a>
-			<a href = "?p=contents/samscars/samsusedcars.html">Sam's Used Cars</a>
-		</nav>
+	<div id="headernav">
+            <nav>
+				<a href = "?p=contents/introduction.php">Introduction</a> |
+                <a href = "?p=contents/contract.php">Course Contract</a> |
+                <a href = "?p=contents/brand.php">Brand Page</a> |
+                <a href = "?p=contents/samscars/samsusedcars.html">Sam's Used Cars</a>
+		    </nav>
+        </div>
 </header>
 <!-- dynamic content goes here -->
 <h2 class="center">Table of Contents</h2>
