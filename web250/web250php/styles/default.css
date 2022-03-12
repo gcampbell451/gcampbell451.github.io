@@ -119,6 +119,16 @@ nav a:focus::before
 	height: 2em;
 }
 
+#headernav {
+	text-align: center;
+	font-size: .9rem;
+	color: var(--color1);
+	clear: both;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+
 footer  {
 	text-align: center;
 	font-size: .9em;
@@ -132,6 +142,7 @@ footer  {
 footer a{
 	text-decoration: none;
 }
+
 
 
 /* 3. Components */
