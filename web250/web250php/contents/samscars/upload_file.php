@@ -36,7 +36,7 @@ if(move_uploaded_file($_FILES['file']['tmp_name'], $target_path)) {
   $file_name =  $_FILES["file"]["name"];
   $query = "INSERT INTO images (VIN, ImageFile) VALUES ('$vin', '$file_name')";
   echo $query."<br>\n";
-   echo  "<a href='AddImage.php?VIN=";
+   echo  "<a href='contents/samscars/AddImage.php?VIN=";
    echo $vin;
    echo "'>Add another image for this car </a></p>\n";
 /* Try to insert the new car into the database */

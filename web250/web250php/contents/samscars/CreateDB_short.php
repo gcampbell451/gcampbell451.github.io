@@ -4,7 +4,7 @@
  * Demonstrates how to create a database, create a table, and insert records.
  */
 
-$mysqli = new mysqli('localhost', 'root', '' );
+$mysqli = new mysqli('mysql.tarheeltitles.com', 'web2502022', 'Database250!', 'samsusedcars' );
 
 
    if (!$mysqli) { 

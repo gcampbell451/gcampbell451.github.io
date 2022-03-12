@@ -81,10 +81,10 @@ $class ="odd";  // Keep track of whether a row was even or odd, so we can style 
 // Loop through all the rows returned by the query, creating a table row for each
 while ($result_ar = mysqli_fetch_assoc($result)) {
     echo "<tr class=\"$class\">";
-    echo "<td><a href='viewcar.php?VIN=".$result_ar['VIN']."'>" . $result_ar['Make'] . "</a></td>";
+    echo "<td><a href='contents/samscars/viewcar.php?VIN=".$result_ar['VIN']."'>" . $result_ar['Make'] . "</a></td>";
     echo "<td>" . $result_ar['Model'] . "</td>";
        echo "<td>" . $result_ar['ASKING_PRICE'] . "</td>";
-        echo "<td><a href='FormEdit.php?VIN=".$result_ar['VIN']."'>Edit</a>  <a href='deletecar.php?VIN=".$result_ar['VIN']."'>Delete</a></td>";
+        echo "<td><a href='contents/samscars/FormEdit.php?VIN=".$result_ar['VIN']."'>Edit</a>  <a href='contents/samscars/deletecar.php?VIN=".$result_ar['VIN']."'>Delete</a></td>";
    echo "</tr>\n";
    
    // If the last row was even, make the next one odd and vice-versa
