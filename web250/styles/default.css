@@ -20,7 +20,7 @@ Table of Contents
     --color1: hsl(149, 57%, 10%); 
     --color2: hsl(149, 57%, 20%);
     --color3: hsl(330, 12%, 90%);
-    --accent: hsl(101, 78%, 41%);
+    --accent: hsl(149, 57%, 50%);
     --logofontfam: "Copperplate Gothic", serif;
     --textfontfam: "Lucida Bright", Georgia, serif;
     --hnfontfam: "Trebuchet MS", sans-serif;
@@ -128,20 +128,21 @@ nav a:focus::before
 	padding-bottom: 1em;
 }
 
+
 footer  {
 	text-align: center;
 	font-size: .9em;
 	color: var(--color1);
 	margin-top: 2.5em;
-	margin-bottom: 1em;
 	clear: both;
 	border-top: 3px solid var(--color3);
 	padding-top: 2em;
-	padding-bottom: 2em;
+	padding-bottom: 1em;
 }
 footer a{
 	text-decoration: none;
 }
+
 
 
 /* 3. Components */
@@ -351,5 +352,34 @@ dd {
     margin-top: 1em;
 	box-shadow: 5px 5px 8px hsl(0, 3%, 16%);
 }
+
+/* Classes for the Forms page*/
+.m6_forms {
+	border-top: 3px solid var(--color3);
+	margin-top: 10px;
+	padding-top: 1em;
+}
+
+.submitbutton  {
+	background-color: var(--color1);
+	color: var(--color3);
+	border: 1px solid var(--color1);
+	border-radius: 12px;
+	padding: .33em .75em;
+	box-shadow: 5px 5px 8px hsl(0, 3%, 16%);
+}
+
+.submitbutton:hover,
+.submitbutton:focus  {
+	color: var(--color3);
+	background-color: var(--color2);
+	border: 1px solid var(--color3);
+}
+
+.label_entry {
+	background-color: var(--accent);
+	border-radius: 12px;
+}
+
 
 /* 5. Media Queries*/
