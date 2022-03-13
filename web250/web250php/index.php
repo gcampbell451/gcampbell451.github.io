@@ -17,7 +17,8 @@
 				<a href = "?p=contents/introduction.php">Introduction</a> |
                 <a href = "?p=contents/contract.php">Course Contract</a> |
                 <a href = "?p=contents/brand.php">Brand Page</a> |
-                <a href = "?p=contents/samscars/samsusedcars.html">Sam's Used Cars</a>
+                <a href = "?p=contents/samscars/samsusedcars.html">Sam's Used Cars</a> |
+                <a href="?p=contents/m6_forms.php">M6 Forms</a>
 		    </nav>
         </div>
 </header>
@@ -36,6 +37,9 @@
         <li class="toc_li">
 			<a href="?p=contents/samscars/samsusedcars.html">Sam's Used Cars</a>
 		</li>
+        <li class="toc_li">
+            <a href="?p=contents/m6_forms.php">One Form, Two Forms, Red Forms, Green Forms, Two Results, One Page</a>
+        </li>
 	</ol>
 <?php
 	$sPage = $_GET["p"];

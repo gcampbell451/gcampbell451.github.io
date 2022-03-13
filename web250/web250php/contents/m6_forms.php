@@ -13,11 +13,13 @@
 		<!-- PHP that outputs the form results -->
 
 		<?php 
+			$outputString = "Your name is ";
 			if (isset($_POST["submit1"])) { 
 				$first = $_POST["first"]; 
+				$outputString = $outputString . $first . " ";
 				$last = $_POST["last"]; 
-				echo "Your name is ". $first  . " " . $last . ".\n\n"; 
-				echo "";				 	  
+				$outputString = $outputString . $last;
+				echo $outputString; 				 	  
 			} 
 		?> 
 
@@ -36,10 +38,13 @@
 		<!-- PHP that outputs the form results -->
 
 		<?php 
+			$outputString2 = "You wish to buy/sell a ";
 			if (isset($_POST["submit2"])) { 
 				$instrument = $_POST["post_instrument"]; 
+				$outputString2 = $outputString2 . $instrument . " for $";
 				$price = $_POST["post_price"]; 
-				echo "You want to buy/sell a " . $instrument . " for $" . $price . "."; 				 	  
+				$outputString2 = $outputString2 . $price . ".";
+				echo $outputString2; 				 	  
 			} 
 		?>
 
@@ -58,10 +63,13 @@
 		<!-- PHP that outputs the form results -->
 
 		<?php 
-			if (isset($_GET["submit2"])) { 
-				$instrument = $_GET["get_instrument"]; 
-				$price = $_GET["get_price"]; 
-				echo "You want to buy/sell a " . $instrument . " for $" . $price . "."; 				 	  
+			$outputString3 = "You wish to buy/sell a ";
+			if (isset($_GET["submit3"])) { 
+				$instrument = $_GET["post_instrument"]; 
+				$outputString3 = $outputString3 . $instrument . " for $";
+				$price = $_GET["post_price"]; 
+				$outputString3 = $outputString3 . $price . ".";
+				echo $outputString3; 				 	  
 			} 
 		?>
 
