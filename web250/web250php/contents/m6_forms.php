@@ -1,27 +1,31 @@
 <main>
+	<?php 
+	// define variables and set to empty values
+	$first = $last = "";
+	?>
 <div class="brand_box">
-    <h2>One Form, Two Forms, Red Forms, Green Forms, Two Results, One Page</h2>
+    <h2 class="center">One Form, Two Forms, Red Forms, Green Forms, Two Results, One Page</h2>
     <div class="m6_forms">
 	<form action="" method="post" >
 		<label for="first" >First name:</label>
-		<input type="text" name="first" class="label_entry"><br><br>
+		<input type="text" name="first" class="label_entry" value="<?php echo $first;?>"><br><br>
 		<label for="last">Last name:</label>
-		<input type="text" name="last" class="label_entry"><br><br>
+		<input type="text" name="last" class="label_entry"  value="<?php echo $last;?>"><br><br>
 		<input type="submit" name = "submit1" value="Submit" class="submitbutton"><br><br>
 	</form>
 				
 		<!-- PHP that outputs the form results -->
-
+		
 		<?php 
 			$outputString = "Your name is ";
 			if (isset($_POST["submit1"])) { 
 				$first = $_POST["first"]; 
 				$outputString = $outputString . $first . " ";
 				$last = $_POST["last"]; 
-				$outputString = $outputString . $last;
+				$outputString = $outputString . $last . ".";
 				echo $outputString; 				 	  
 			} 
-		?> 
+		?>
 
 	</div>
 	
