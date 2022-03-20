@@ -411,7 +411,6 @@ input[type=range] {
 	width: 100%;
 	height: 12px;
 	cursor: pointer;
-	animate: 0.2s;
 	box-shadow: 1px 1px 1px #2a2828;
 	background: var(--color2);
 	border-radius: 1px;
@@ -435,7 +434,6 @@ input[type=range] {
 	width: 100%;
 	height: 12px;
 	cursor: pointer;
-	animate: 0.2s;
 	box-shadow: 1px 1px 1px #002200;
 	background: var(--color2);
 	border-radius: 1px;
@@ -454,7 +452,6 @@ input[type=range] {
 	width: 100%;
 	height: 12px;
 	cursor: pointer;
-	animate: 0.2s;
 	background: transparent;
 	border-color: transparent;
 	color: transparent;
