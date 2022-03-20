@@ -86,11 +86,11 @@
         <!-- text input type -->
         <p>Log in:</p>
 		<label for="username" >Username:</label>
-		<input type="text" name="username" class="label_entry" value="<?php echo $username;?>" required><br><br>
+		<input type="text" name="username" class="label_entry" required><br><br>
 
         <!-- password input type -->
 		<label for="password">Password:</label>
-		<input type="password" name="password" class="label_entry" value="<?php echo $password;?>" required><br><br><hr>
+		<input type="password" name="password" class="label_entry" required><br><br><hr>
 
         <!-- radio input type -->
         <p>Do you wish to buy or sell an instrument?</p>
@@ -134,7 +134,7 @@
         <!-- file input type -->
         <p>If you are returning or exchanging an instrument, please upload your receipt below to facilitate processing.</p>
         <label for="file">Select a file to upload:</label><br>
-        <input type="file" id="file" name="file" class="label_entry" value="<?php echo $file;?>"><br><br><hr>
+        <input type="file" id="file" name="file" class="label_entry"><br><br><hr>
 
         <!-- hidden input type -->
         <input type="hidden" id="custId" name="custId" value="1234">
@@ -164,7 +164,7 @@
 
         <!-- range input type -->
         <label for="happy">How much have you enjoyed your experience on our site, on a scale of 1-10?</label>
-        <input type="range" id="happy" name="happy" min="0" max="10" value="<?php echo $happy;?>"><br><br>
+        <input type="range" id="happy" name="happy" min="0" max="10"><br><br>
 
         <!-- submit, reset, image input type -->
 		<input type="submit" name="submit1" value="Submit" class="submitbutton"><br><br>
