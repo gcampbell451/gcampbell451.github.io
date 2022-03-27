@@ -20,7 +20,8 @@
                 <a href = "?p=contents/samscars/samsusedcars.html">Sam's Used Cars</a> |
                 <a href="?p=contents/m6_forms.php">M6 Forms</a> |
                 <a href="?p=contents/m7_everything_form.php">Everything Form</a> |
-                <a href="?p=contents/m7_everything_form.php">Math, Dates, & Strings</a>
+                <a href="?p=contents/m7_everything_form.php">Math, Dates, & Strings</a> |
+                <a href="?p=contents/m9_dynamize.php">Dynamize</a>
 		    </nav>
         </div>
 </header>
@@ -47,6 +48,9 @@
         </li>
         <li class="toc_li">
             <a href="?p=contents/m8_math_dates_strings.php">Demonstrate Math, Dates, & Strings</a>
+        </li>
+        <li class="toc_li">
+            <a href="?p=contents/m9_dynamize.php">Dynamize a Site with Text Records</a>
         </li>
 	</ol>
 <?php
