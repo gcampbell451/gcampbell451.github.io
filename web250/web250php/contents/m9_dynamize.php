@@ -1,4 +1,5 @@
 <h2 class="center" id="toc_h2">Gregory Campbell | Dynamize a Site with Text Records</h2>
+<div class="brand_box">
 <h4 class="center">The Axes, Et Cetera Staff</h4>
 <?php
     // open and read the file
@@ -32,3 +33,4 @@
 
 ?>
 <h4 class="center">Thanks for taking the time to read about our staff! We're here to help you with all of your vintage instrument needs!</h4>
+</div>

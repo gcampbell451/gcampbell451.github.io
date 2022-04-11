@@ -1,14 +1,16 @@
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Sam's Used Cars</title>
-   </head>
+<meta charset="utf-8">
+<title>Sam's Used Cars</title>
+<link rel = "stylesheet" type = "text/css" href = "styles/default.css" />
+</head>
 
    
 <body>
-<h1>Sam's Used Cars</h1>
-<h3>Complete Inventory</h3>
- <?php
+<h1 class="center">Sam's Used Cars</h1>
+<h3 class="center">Complete Inventory</h3>
+<div class="brand_box">
+<?php
 include 'db.php';
 $query = "SELECT * FROM inventory ORDER BY Make";
 /* Try to insert the new car into the database */
@@ -46,6 +48,7 @@ while ($result_ar = mysqli_fetch_assoc($result)) {
 echo "</table>";
 $mysqli->close();
 ?>
- </body>
+</div>
+</body>
  
 </html>

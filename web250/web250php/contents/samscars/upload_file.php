@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Photo Upload</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/default.css" />
+</head>
+<h1 class="center">Sam's Used Cars</h1>
+<h3 class="center">Photo Upload</h3>
+<div class="brand_box">
 <?php
  include 'db.php';
  $vin = trim($_POST['VIN']);
@@ -58,3 +68,6 @@ if ($result = $mysqli->query($query)) {
   
   include 'footer.php'
 ?> 
+</div>
+</body>
+</html>

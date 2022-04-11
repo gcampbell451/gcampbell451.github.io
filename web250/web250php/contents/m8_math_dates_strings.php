@@ -1,15 +1,16 @@
 <main>
-    <h2 class="center" id="toc_h2">Gregory Campbell | Demonstrate Math, Dates, & Strings</h2>		
+    <h2 class="center" id="toc_h2">Gregory Campbell | Demonstrate Math, Dates, & Strings</h2>	
+    <div class="brand_box">	
     <?php 
        // echo(), strtoupper(), date(), sunrise(), sunset(), gmdate(), mktime() = 5 date fxns
        echo strtoupper("<h4>welcome to axes, et cetera!</h4>");
        echo date("l") . ", " . date("F d") . ", " . date("Y");
        echo("<br>Charlotte, NC<br>Sunrise: " . date_sunrise(time(),SUNFUNCS_RET_STRING,35.23,-80.84,90.833,-5)); 
        echo("<br>Sunset: " . date_sunset(time(),SUNFUNCS_RET_STRING,35.23,-80.84,90.833,-5));
-       echo("<br>Did you know? December 19, 1974 was on a ".gmdate("l", mktime(0,0,0,12,19,1974)) . ".");
+       echo("<br>Did you know? December 19, 1974 was on a ".gmdate("l", mktime(0,0,0,12,19,1974)) . ".<br><br>");
     ?>
 
-    <div class="brand_box">
+    
     <?php
        // chop(), printf()
        $special = "1986 B.C. Rich Warlock!!!!!";

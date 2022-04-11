@@ -3,10 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Car Entry Form</title>
+<link rel = "stylesheet" type = "text/css" href = "styles/default.css" />
 </head>
 <body>
-<h1>Sam's Used Cars
-</h1>
+<h1 class="center">Sam's Used Cars</h1>
+<div class="brand_box">
 <?php
 include 'db.php';
 $vin = $_GET['VIN'];
@@ -53,5 +54,6 @@ Price: <input name="Asking_Price" type="text" value= "<?php echo "$price" ?>" />
 <br />
 <input name="Submit1" type="submit" value="submit" /><br />
 &nbsp;</form>
+</div>
 </body>
 </html>

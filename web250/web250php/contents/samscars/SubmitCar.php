@@ -1,10 +1,10 @@
-
 <html>
 <head>
     <title>Car Saved</title>
+    <link rel = "stylesheet" type = "text/css" href = "styles/default.css" />
 </head>
-<body bgcolor="#FFFFFF" text="#000000" >
-
+<body >
+<div class="brand_box">
 <?php 
 // Capture the values posted to this php program from the text fields
 
@@ -47,5 +47,6 @@ else
 $mysqli->close();
 include 'footer.php'
 ?>
+</div>
 </body>
 </html>

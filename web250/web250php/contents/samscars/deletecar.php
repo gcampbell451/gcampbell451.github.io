@@ -1,11 +1,11 @@
 <html>
 <head>
-<title>Sam's Used Cars</title>
+<title>Car Deleted</title>
+<link rel = "stylesheet" type = "text/css" href = "styles/default.css" />
 </head>
-
 <body>
-
-<h1>Sam's Used Cars</h1>
+<div class="brand_box">
+<h1 class="center">Sam's Used Cars</h1>
 <?php 
 include 'db.php';
 $vin = $_GET['VIN'];
@@ -22,8 +22,10 @@ else
 
 $mysqli->close();
    
+
+ echo "<br><br><a href='http://localhost/web250/index.php?p=contents/samscars/samsusedcars.html'>Sam's Used Cars Home</a>";
+
 ?>
-
 </body>
-
+</div>
 </html>

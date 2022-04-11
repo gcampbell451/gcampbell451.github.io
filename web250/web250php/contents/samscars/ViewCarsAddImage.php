@@ -2,13 +2,13 @@
 <head>
     <meta charset="utf-8">
     <title>Sam's Used Cars</title>
-    
+    <link rel = "stylesheet" type = "text/css" href = "styles/default.css" />
     <style>
   /* The grid is used to format a table instead of a grid control on the list of Notes */
 #Grid
 {
-font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-width:50%;
+/*font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;*/
+width:80%;
 border-collapse:collapse;
 margin-left: auto;
 margin-right: auto;
@@ -51,10 +51,10 @@ background-color:teal;
 </style>
  
 </head> 
-<body background="bg.jpg">
-<h1>Sam's Used Cars</h1>
-<h3>Current Inventory</h3>
- <div class="auto-style1">
+<body>
+<h1 class="center">Sam's Used Cars</h1>
+<h3 class="center">Current Inventory</h3>
+ <div class="auto-style1 brand_box">
  <?php
 include 'db.php';
 $query = "SELECT * FROM inventory";
@@ -79,9 +79,9 @@ $class ="odd";  // Keep track of whether a row was even or odd, so we can style 
 // Loop through all the rows returned by the query, creating a table row for each
 while ($result_ar = mysqli_fetch_assoc($result)) {
     echo "<tr class=\"$class\">";
-    echo "<td><a href='contents/samscars/viewcar.php?VIN=".$result_ar['VIN']."'>" . $result_ar['Make'] . "</a></td>";
+    echo "<td><a href='viewcar.php?VIN=".$result_ar['VIN']."'>" . $result_ar['Make'] . "</a></td>";
     echo "<td>" . $result_ar['Model'] . "</td>";
-   echo "<td><a href='contents/samscars/AddImage.php?VIN=".$result_ar['VIN']."'>Add Image</a> </td>";
+   echo "<td><a href='AddImage.php?VIN=".$result_ar['VIN']."'>Add Image</a> </td>";
    echo "</tr>\n";
    
    // If the last row was even, make the next one odd and vice-versa
@@ -97,7 +97,7 @@ echo "</table>";
 $mysqli->close();
 include 'footer.php'
 ?>
-
+</div>
  </body>
  
 </html>

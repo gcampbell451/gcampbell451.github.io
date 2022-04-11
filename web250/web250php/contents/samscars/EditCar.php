@@ -1,9 +1,10 @@
 <html>
 <head>
 <title>Car Saved</title>
+<link rel = "stylesheet" type = "text/css" href = "styles/default.css" />
 </head>
 <body bgcolor="#FFFFFF" text="#000000" >
-
+<div class="brand_box">
 <?php
 // Capture the values posted to this php program from the text fields in the form
 
@@ -52,5 +53,6 @@ else
 $mysqli->close();
 ?>
 <p><a href="ViewCarsWithStyle2.php">View Cars with Edit Links</a></p>
+</div>
 </body>
 </html>

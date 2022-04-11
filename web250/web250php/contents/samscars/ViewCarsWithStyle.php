@@ -2,11 +2,12 @@
 <head>
     <meta charset="utf-8">
     <title>Sam's Used Cars</title>
+    <link rel = "stylesheet" type = "text/css" href = "styles/default.css" />
 <style>
   /* The grid is used to format a table instead of a grid control on the list of Notes */
 #Grid
 {
-font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+
 width:80%;
 border-collapse:collapse;
 margin-left: auto;
@@ -48,8 +49,9 @@ background-color:teal;
  </style>
 </head> 
 <body>
-<h1>Sam's Used Cars</h1>
-<h3>Complete Inventory</h3>
+<h1 class="center">Sam's Used Cars</h1>
+<h3 class="center">Complete Inventory</h3>
+<div class="brand_box">
  <?php
 include 'db.php';
 $query = "SELECT * FROM inventory ORDER BY Make";
@@ -95,6 +97,7 @@ $mysqli->close();
 echo "<br/>\n";
 include 'footer.php';
 ?>
+</div>
  </body>
  
 </html>
