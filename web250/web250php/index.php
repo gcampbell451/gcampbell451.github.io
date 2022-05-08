@@ -40,6 +40,9 @@
         <li class="toc_li">
             <a href="?p=contents/m9_dynamize.php">Dynamize a Site with Text Records</a>
         </li>
+        <li class="toc_li">
+            <a href="?p=contents/m11_login.html">Login Page</a>
+        </li>
 	</ol>
 <?php
 	$sPage = $_GET["p"];
