@@ -9,11 +9,11 @@
 <?php 
 include 'db.php';
 $vin = $_GET['VIN'];
-$query = "DELETE FROM INVENTORY WHERE VIN='$vin'";
-echo "$query <BR>";
+$query = "DELETE FROM inventory WHERE VIN='$vin'";
+echo "$query <br>";
 /* Try to query the database */
 if ($result = $mysqli->query($query)) {
-   Echo "The vehicle with VIN $vin has been deleted.";
+   echo "The vehicle with VIN $vin has been deleted.";
 }
 else
 {
@@ -21,10 +21,9 @@ else
 }
 
 $mysqli->close();
-   
 
- echo "<br><br><a href='http://localhost/web250/index.php?p=contents/samscars/samsusedcars.html'>Sam's Used Cars Home</a>";
 
+ include 'footer.php'
 ?>
 </body>
 </div>
