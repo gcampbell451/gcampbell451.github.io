@@ -16,7 +16,7 @@ $mypassword = stripslashes($mypassword);
 //$myusername = mysql_real_escape_string($myusername);
 //$mypassword = mysql_real_escape_string($mypassword);
 
-$query = "SELECT * FROM Users WHERE username='$myusername' and password = '$mypassword'";
+$query = "SELECT * FROM users WHERE username='$myusername' and password = '$mypassword'";
 $result = $mysqli -> query($query);
 
 $count = mysqli_num_rows($result);
@@ -35,5 +35,6 @@ if($count == 1)
 else
 {
     echo "Wrong Username or Password";
+    header("location: ?p=login.php");
 }
 ?>
