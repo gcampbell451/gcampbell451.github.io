@@ -62,7 +62,7 @@
 		<input type="text" name="get_instrument" id="get_instrument" class="label_entry"><br><br>
 		<label for="get_price">What is your asking price?</label>
 		<input type="text" name="get_price" id="get_price" class="label_entry"><br><br>
-		<input type="hidden" name="p" value="m6_forms.php">
+		<input type="hidden" name="p" value="contents/m6_forms.php">
 		<input type="submit" name = "submit3" value="Submit" class="submitbutton">
 	</form>
 
