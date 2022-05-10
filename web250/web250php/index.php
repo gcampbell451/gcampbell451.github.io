@@ -43,6 +43,9 @@
         <li class="toc_li">
             <a href="?p=contents/m11_login.html">Login Page</a>
         </li>
+        <li class="toc_li">
+            <a href="?p=contents/samscars/view_instruments_project.php">Axes, Et Cetera Inventory</a>
+        </li>
 	</ol>
 <?php
 	$sPage = $_GET["p"];
