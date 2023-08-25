@@ -1,0 +1,19 @@
+Master Bathroom
+10
+15.5
+Abundant
+
+Master Bedroom
+16
+16.25
+Moderate
+
+Living Room
+30
+25
+Little
+
+Kitchen
+20
+12
+Moderate

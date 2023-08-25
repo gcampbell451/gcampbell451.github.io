@@ -1,0 +1,16 @@
+CSC 143
+Introduction to Object Oriented Programming
+5
+3
+
+CSC 151
+Java Programming
+5
+3
+
+CSC 120
+Computing Fundamentals
+5
+4
+
+
