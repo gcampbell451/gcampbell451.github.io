@@ -1,0 +1,68 @@
+
+DATA plants;
+    INFILE '~/sasuser.v94/MyRawData/Flowers.dat';
+    INPUT CustID $ @9 SaleDate MMDDYY10. Petunia SnapDragon
+         Marigold;
+   Month = MONTH(SaleDate);
+RUN;
+
+proc print data = plants;
+	format SaleDate MMDDYY10.;
+run;
+
+proc means data = plants;
+run;
+
+proc means min median mean max data = plants maxdec=0;
+run;
+
+
+* Calculate means by Month for flower sales;
+PROC MEANS DATA = plants MAXDEC = 0;
+   CLASS Month;
+   VAR Petunia SnapDragon Marigold;
+   TITLE 'Summary of Flower Sales by Month';
+RUN;
+
+PROC MEANS DATA = plants MAXDEC = 0;
+   BY Month;
+   VAR Petunia SnapDragon Marigold;
+   TITLE 'Summary of Flower Sales by Month';
+RUN;
+
+PROC MEANS NOPRINT DATA = plants;
+   CLASS CustID;
+   VAR Petunia SnapDragon Marigold;
+      OUTPUT OUT = totals  
+      MAX(Petunia SnapDragon Marigold) = MaxP MaxS MaxM
+      SUM(Petunia SnapDragon Marigold) = TotP TotS TotM;
+RUN;
+
+proc print data = totals;
+run;
+
+
+DATA orders;
+   INFILE '~/sasuser.v94/MyRawData/Coffee.dat';
+   INPUT Coffee $ Window $ @@;
+RUN;
+
+proc print data = orders;
+run;
+
+proc freq data = orders;
+run;
+
+proc freq data = orders;
+	tables coffee window;
+run;
+
+proc freq data = orders;
+	tables window * coffee;
+	tables window * coffee / MISSING NOPERCENT NOCOL NOROW;
+	tables coffee window;
+run;
+
+
+
+

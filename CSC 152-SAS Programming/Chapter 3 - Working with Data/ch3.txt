@@ -1,0 +1,108 @@
+DATA myhotel;
+  INFILE '~/sasuser.v94/MyRawData/KyotoHotels.dat';
+  INPUT Hotel $ 1-25 Yen Kilometers;
+  USD = Yen * 0.0089;
+RUN;
+
+DATA myhotel;
+  INFILE '~/sasuser.v94/MyRawData/KyotoHotels.dat';
+  INPUT Hotel $ 1-25 Yen Meters;
+  USD = Yen * 0.0089;
+  Meters = Meters * 1000;
+RUN;
+
+DATA pumpkin;
+   INFILE '~/sasuser.v94/MyRawData/Pumpkin.dat';
+   INPUT Name $16. Age 3. +1 Type $1. +1 Date MMDDYY10.
+         (Score1 Score2 Score3) (4.1);
+   Type = UPCASE(Type);
+   MeanScore = (Score1 + Score2 + Score3) / 3;
+RUN;
+
+proc print data = pumpkin;
+run;
+
+DATA pumpkin;
+   INFILE '~/sasuser.v94/MyRawData/Pumpkin.dat';
+   INPUT Name $16. Age 3. +1 Type $1. +1 Date MMDDYY10.
+         (Score1 Score2 Score3) (4.1);
+   Type = UPCASE(Type);
+   MeanScore = MEAN(Score1, Score2, Score3);
+RUN;
+
+proc print data = pumpkin;
+run;
+
+DATA pumpkin;
+   INFILE '~/sasuser.v94/MyRawData/Pumpkin.dat';
+   INPUT Name $16. Age 3. +1 Type $1. +1 Date MMDDYY10.
+         (Score1 Score2 Score3) (4.1);
+   Type = UPCASE(Type);
+   MeanScore = ROUND(MEAN(Score1, Score2, Score3), .01);
+RUN;
+
+proc print data = pumpkin;
+run;
+
+DATA librarycards;
+   INFILE '~/sasuser.v94/MyRawData/Library.dat' TRUNCOVER;
+   INPUT Name $11. + 1 BirthDate MMDDYY10. +1 IssueDate ANYDTDTE10.
+      DueDate DATE11.;
+RUN;
+
+PROC PRINT DATA = librarycards;
+   FORMAT Issuedate MMDDYY8. DueDate WEEKDATE17.;
+   TITLE 'SAS Dates without and with Formats';
+RUN;
+
+DATA librarycards;
+   INFILE '~/sasuser.v94/MyRawData/Library.dat' TRUNCOVER;
+   INPUT Name $11. + 1 BirthDate MMDDYY10. +1 IssueDate ANYDTDTE10.
+      DueDate DATE11.;
+   DaysOverDue = TODAY() - DueDate;
+   CurrentAge = INT(YRDIF(BirthDate, TODAY(), 'AGE'));
+   IF IssueDate > '01JAN2020'D THEN NewCard = 'yes';
+RUN;
+PROC PRINT DATA = librarycards;
+   FORMAT Issuedate MMDDYY8. DueDate WEEKDATE17.;
+   TITLE 'SAS Dates without and with Formats';
+RUN;
+
+/********************************************
+initialize sum:    sum = 0
+initialize max:    max = 0
+read a number and store it as "x"
+do until you run out of input
+	sum   = sum + x
+	if x > max
+		max = x
+	read next number and store it as "x"
+	end of loop
+*********************************************/
+
+PROC IMPORT DATAFILE = '~/sasuser.v94/MyRawData/Games.txt' OUT = gamestats REPLACE;
+RUN;
+* Using RETAIN and sum statements to find most runs and total runs;
+DATA gamestats;
+   SET gamestats;
+   RETAIN MaxRuns 0;
+   MaxRuns = MAX(MaxRuns, Runs);
+   RETAIN RunsToDate 0;
+   RunsToDate = RunsToDate + Runs;
+RUN;
+
+proc print data = gamestats;
+run;
+
+PROC IMPORT DATAFILE = '~/sasuser.v94/MyRawData/Games.txt' OUT = gamestats REPLACE;
+RUN;
+* Using RETAIN and sum statements to find most runs and total runs;
+DATA gamestats;
+   SET gamestats;
+   RETAIN MaxRuns;
+   MaxRuns = MAX(MaxRuns, Runs);
+   RunsToDate + Runs;
+RUN;
+
+proc print data = gamestats;
+run;

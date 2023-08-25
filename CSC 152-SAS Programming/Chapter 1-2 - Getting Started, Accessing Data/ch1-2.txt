@@ -1,0 +1,74 @@
+* Read data from external file into a transient SAS data set
+DATA uspresidents;
+   INFILE '~/sasuser.v94/MyRawData/President.dat';
+   INPUT President $ Party $ Number;
+RUN;
+
+* Read data from external file into a permanent SAS data set;
+LIBNAME mylib '~/sasuser.v94/MySASLib';
+DATA mylib.pres_perm;
+   INFILE '~/sasuser.v94/MyRawData/President.dat';
+   INPUT President $ Party $ Number;
+RUN;
+
+* Read data from a permanent SAS data set into a transient SAS data set;
+LIBNAME mylib '~/sasuser.v94/MySASLib';
+DATA uspresidents;
+	SET mylib.pres_perm;
+RUN;
+
+
+* Read from keyboard input into a trnasient SAS data set;
+DATA uspresidents;
+   INPUT President $ Party $ Number;
+   DATALINES;
+Adams F 2
+Lincoln R 16
+Grant R 18
+Kennedy D 35
+Roosevelt D 26
+Van Buren D 8
+   ;
+RUN;
+
+/*
+Roosevelt D 26
+Van Buren D 8
+*/
+
+* 2.10;
+LIBNAME pump '~/sasuser.v94/MySASLib';
+* Create a permanent SAS data set named contest;
+* Read the file Pumpkin.dat using formatted input;
+DATA pump.contest;
+   INFILE '~/sasuser.v94/MyRawData/Pumpkin.dat';
+   INPUT Name $16. Age 3. +1 Type $1. +1 Date MMDDYY10.
+         (Score1 Score2 Score3) (4.1);
+RUN;
+
+* 2.13;
+DATA dogbreeds;
+*   INPUT @'Breed ' DogBreed $;
+*   INPUT @'Breed ' DogBreed $20.;
+    INPUT @'Breed ' DogBreed :$20.;
+   DATALINES;
+My dog Sam  Breed Rottweiler  Vet Bills $478
+;
+RUN;
+
+
+* 2.16;
+
+DATA freeways;
+   INFILE '~/sasuser.v94/MyRawData/Traffic.dat';
+   INPUT Type $ @;
+   IF Type = 'surface' THEN DELETE;
+   INPUT Name $ 9-38 AMTraffic PMTraffic;
+RUN;
+
+DATA freeways;
+   INFILE '~/sasuser.v94/MyRawData/Traffic.dat';
+   INPUT Type $ @;
+   IF Type = 'freeway';
+   INPUT Name $ 9-38 AMTraffic PMTraffic;
+RUN;
