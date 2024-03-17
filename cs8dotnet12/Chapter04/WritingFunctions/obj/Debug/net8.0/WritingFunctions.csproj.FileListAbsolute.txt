@@ -1,0 +1,15 @@
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\bin\Debug\net8.0\WritingFunctions.exe
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\bin\Debug\net8.0\WritingFunctions.deps.json
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\bin\Debug\net8.0\WritingFunctions.runtimeconfig.json
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\bin\Debug\net8.0\WritingFunctions.dll
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\bin\Debug\net8.0\WritingFunctions.pdb
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\WritingFunctions.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\WritingFunctions.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\WritingFunctions.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\WritingFunctions.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\WritingFunctions.sourcelink.json
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\WritingFunctions.dll
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\refint\WritingFunctions.dll
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\WritingFunctions.pdb
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\WritingFunctions.genruntimeconfig.cache
+D:\GitHub repo\gcampbell451\gcampbell451.github.io\cs12dotnet8\Chapter04\WritingFunctions\obj\Debug\net8.0\ref\WritingFunctions.dll
