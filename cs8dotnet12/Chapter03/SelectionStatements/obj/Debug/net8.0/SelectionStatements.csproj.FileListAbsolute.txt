@@ -1,0 +1,14 @@
+D:\cs12dotnet8\Chapter03\SelectionStatements\bin\Debug\net8.0\SelectionStatements.exe
+D:\cs12dotnet8\Chapter03\SelectionStatements\bin\Debug\net8.0\SelectionStatements.deps.json
+D:\cs12dotnet8\Chapter03\SelectionStatements\bin\Debug\net8.0\SelectionStatements.runtimeconfig.json
+D:\cs12dotnet8\Chapter03\SelectionStatements\bin\Debug\net8.0\SelectionStatements.dll
+D:\cs12dotnet8\Chapter03\SelectionStatements\bin\Debug\net8.0\SelectionStatements.pdb
+D:\cs12dotnet8\Chapter03\SelectionStatements\obj\Debug\net8.0\SelectionStatements.GeneratedMSBuildEditorConfig.editorconfig
+D:\cs12dotnet8\Chapter03\SelectionStatements\obj\Debug\net8.0\SelectionStatements.AssemblyInfoInputs.cache
+D:\cs12dotnet8\Chapter03\SelectionStatements\obj\Debug\net8.0\SelectionStatements.AssemblyInfo.cs
+D:\cs12dotnet8\Chapter03\SelectionStatements\obj\Debug\net8.0\SelectionStatements.csproj.CoreCompileInputs.cache
+D:\cs12dotnet8\Chapter03\SelectionStatements\obj\Debug\net8.0\SelectionStatements.dll
+D:\cs12dotnet8\Chapter03\SelectionStatements\obj\Debug\net8.0\refint\SelectionStatements.dll
+D:\cs12dotnet8\Chapter03\SelectionStatements\obj\Debug\net8.0\SelectionStatements.pdb
+D:\cs12dotnet8\Chapter03\SelectionStatements\obj\Debug\net8.0\SelectionStatements.genruntimeconfig.cache
+D:\cs12dotnet8\Chapter03\SelectionStatements\obj\Debug\net8.0\ref\SelectionStatements.dll
