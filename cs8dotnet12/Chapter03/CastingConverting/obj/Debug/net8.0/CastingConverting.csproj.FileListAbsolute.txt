@@ -1,0 +1,14 @@
+D:\cs12dotnet8\Chapter03\CastingConverting\obj\Debug\net8.0\CastingConverting.GeneratedMSBuildEditorConfig.editorconfig
+D:\cs12dotnet8\Chapter03\CastingConverting\obj\Debug\net8.0\CastingConverting.AssemblyInfoInputs.cache
+D:\cs12dotnet8\Chapter03\CastingConverting\obj\Debug\net8.0\CastingConverting.AssemblyInfo.cs
+D:\cs12dotnet8\Chapter03\CastingConverting\obj\Debug\net8.0\CastingConverting.csproj.CoreCompileInputs.cache
+D:\cs12dotnet8\Chapter03\CastingConverting\bin\Debug\net8.0\CastingConverting.exe
+D:\cs12dotnet8\Chapter03\CastingConverting\bin\Debug\net8.0\CastingConverting.deps.json
+D:\cs12dotnet8\Chapter03\CastingConverting\bin\Debug\net8.0\CastingConverting.runtimeconfig.json
+D:\cs12dotnet8\Chapter03\CastingConverting\bin\Debug\net8.0\CastingConverting.dll
+D:\cs12dotnet8\Chapter03\CastingConverting\bin\Debug\net8.0\CastingConverting.pdb
+D:\cs12dotnet8\Chapter03\CastingConverting\obj\Debug\net8.0\CastingConverting.dll
+D:\cs12dotnet8\Chapter03\CastingConverting\obj\Debug\net8.0\refint\CastingConverting.dll
+D:\cs12dotnet8\Chapter03\CastingConverting\obj\Debug\net8.0\CastingConverting.pdb
+D:\cs12dotnet8\Chapter03\CastingConverting\obj\Debug\net8.0\CastingConverting.genruntimeconfig.cache
+D:\cs12dotnet8\Chapter03\CastingConverting\obj\Debug\net8.0\ref\CastingConverting.dll
