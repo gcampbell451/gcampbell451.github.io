@@ -1,0 +1,14 @@
+D:\cs12dotnet8\Chapter03\ConsoleApp1\bin\Debug\net8.0\Handling Exceptions.exe
+D:\cs12dotnet8\Chapter03\ConsoleApp1\bin\Debug\net8.0\Handling Exceptions.deps.json
+D:\cs12dotnet8\Chapter03\ConsoleApp1\bin\Debug\net8.0\Handling Exceptions.runtimeconfig.json
+D:\cs12dotnet8\Chapter03\ConsoleApp1\bin\Debug\net8.0\Handling Exceptions.dll
+D:\cs12dotnet8\Chapter03\ConsoleApp1\bin\Debug\net8.0\Handling Exceptions.pdb
+D:\cs12dotnet8\Chapter03\ConsoleApp1\obj\Debug\net8.0\Handling Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+D:\cs12dotnet8\Chapter03\ConsoleApp1\obj\Debug\net8.0\Handling Exceptions.AssemblyInfoInputs.cache
+D:\cs12dotnet8\Chapter03\ConsoleApp1\obj\Debug\net8.0\Handling Exceptions.AssemblyInfo.cs
+D:\cs12dotnet8\Chapter03\ConsoleApp1\obj\Debug\net8.0\Handling Exceptions.csproj.CoreCompileInputs.cache
+D:\cs12dotnet8\Chapter03\ConsoleApp1\obj\Debug\net8.0\Handling Exceptions.dll
+D:\cs12dotnet8\Chapter03\ConsoleApp1\obj\Debug\net8.0\refint\Handling Exceptions.dll
+D:\cs12dotnet8\Chapter03\ConsoleApp1\obj\Debug\net8.0\Handling Exceptions.pdb
+D:\cs12dotnet8\Chapter03\ConsoleApp1\obj\Debug\net8.0\Handling Exceptions.genruntimeconfig.cache
+D:\cs12dotnet8\Chapter03\ConsoleApp1\obj\Debug\net8.0\ref\Handling Exceptions.dll
