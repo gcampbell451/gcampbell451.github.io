@@ -1,0 +1,11 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\bin\Debug\netstandard2.0\PacktLibraryNetStandard2.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\bin\Debug\netstandard2.0\PacktLibraryNetStandard2.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\bin\Debug\netstandard2.0\PacktLibraryNetStandard2.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\obj\Debug\netstandard2.0\PacktLibraryNetStandard2.csproj.AssemblyReference.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\obj\Debug\netstandard2.0\PacktLibraryNetStandard2.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\obj\Debug\netstandard2.0\PacktLibraryNetStandard2.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\obj\Debug\netstandard2.0\PacktLibraryNetStandard2.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\obj\Debug\netstandard2.0\PacktLibraryNetStandard2.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\obj\Debug\netstandard2.0\PacktLibraryNetStandard2.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\obj\Debug\netstandard2.0\PacktLibraryNetStandard2.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryNetStandard2\obj\Debug\netstandard2.0\PacktLibraryNetStandard2.pdb
