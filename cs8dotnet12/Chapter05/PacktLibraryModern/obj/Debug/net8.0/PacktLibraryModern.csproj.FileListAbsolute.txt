@@ -1,0 +1,12 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\bin\Debug\net8.0\PacktLibraryModern.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\bin\Debug\net8.0\PacktLibraryModern.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\bin\Debug\net8.0\PacktLibraryModern.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\obj\Debug\net8.0\PacktLibraryModern.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\obj\Debug\net8.0\PacktLibraryModern.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\obj\Debug\net8.0\PacktLibraryModern.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\obj\Debug\net8.0\PacktLibraryModern.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\obj\Debug\net8.0\PacktLibraryModern.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\obj\Debug\net8.0\PacktLibraryModern.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\obj\Debug\net8.0\refint\PacktLibraryModern.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\obj\Debug\net8.0\PacktLibraryModern.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PacktLibraryModern\obj\Debug\net8.0\ref\PacktLibraryModern.dll
