@@ -17,3 +17,5 @@ D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PeopleApp\bin\Debug\
 D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PeopleApp\bin\Debug\net8.0\PacktLibraryNetStandard2.pdb
 D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PeopleApp\obj\Debug\net8.0\PeopleApp.csproj.AssemblyReference.cache
 D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PeopleApp\obj\Debug\net8.0\PeopleApp.csproj.Up2Date
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PeopleApp\bin\Debug\net8.0\PacktLibraryModern.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter05\PeopleApp\bin\Debug\net8.0\PacktLibraryModern.pdb
