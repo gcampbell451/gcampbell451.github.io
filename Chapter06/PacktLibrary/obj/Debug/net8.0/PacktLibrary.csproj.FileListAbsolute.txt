@@ -1,0 +1,12 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\bin\Debug\net8.0\PacktLibrary.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\bin\Debug\net8.0\PacktLibrary.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\bin\Debug\net8.0\PacktLibrary.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\obj\Debug\net8.0\PacktLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\obj\Debug\net8.0\PacktLibrary.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\obj\Debug\net8.0\PacktLibrary.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\obj\Debug\net8.0\PacktLibrary.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\obj\Debug\net8.0\PacktLibrary.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\obj\Debug\net8.0\PacktLibrary.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\obj\Debug\net8.0\refint\PacktLibrary.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\obj\Debug\net8.0\PacktLibrary.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter06\PacktLibrary\obj\Debug\net8.0\ref\PacktLibrary.dll
