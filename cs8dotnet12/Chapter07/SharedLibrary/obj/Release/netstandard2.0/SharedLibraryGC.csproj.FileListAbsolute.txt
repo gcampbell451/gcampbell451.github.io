@@ -1,0 +1,11 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\bin\Release\netstandard2.0\SharedLibraryGC.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\bin\Release\netstandard2.0\SharedLibraryGC.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\bin\Release\netstandard2.0\SharedLibraryGC.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\obj\Release\netstandard2.0\SharedLibraryGC.csproj.AssemblyReference.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\obj\Release\netstandard2.0\SharedLibraryGC.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\obj\Release\netstandard2.0\SharedLibraryGC.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\obj\Release\netstandard2.0\SharedLibraryGC.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\obj\Release\netstandard2.0\SharedLibraryGC.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\obj\Release\netstandard2.0\SharedLibraryGC.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\obj\Release\netstandard2.0\SharedLibraryGC.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\obj\Release\netstandard2.0\SharedLibraryGC.pdb

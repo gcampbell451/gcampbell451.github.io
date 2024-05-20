@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = SharedLibrary
+build_property.ProjectDir = D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\SharedLibrary\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
