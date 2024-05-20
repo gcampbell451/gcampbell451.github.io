@@ -1,0 +1,15 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\bin\Debug\net8.0\WorkingWithNumbers.exe
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\bin\Debug\net8.0\WorkingWithNumbers.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\bin\Debug\net8.0\WorkingWithNumbers.runtimeconfig.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\bin\Debug\net8.0\WorkingWithNumbers.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\bin\Debug\net8.0\WorkingWithNumbers.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\WorkingWithNumbers.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\WorkingWithNumbers.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\WorkingWithNumbers.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\WorkingWithNumbers.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\WorkingWithNumbers.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\WorkingWithNumbers.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\refint\WorkingWithNumbers.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\WorkingWithNumbers.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\WorkingWithNumbers.genruntimeconfig.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithNumbers\obj\Debug\net8.0\ref\WorkingWithNumbers.dll

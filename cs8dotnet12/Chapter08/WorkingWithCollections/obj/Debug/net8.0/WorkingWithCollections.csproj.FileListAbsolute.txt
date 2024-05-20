@@ -1,0 +1,15 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\bin\Debug\net8.0\WorkingWithCollections.exe
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\bin\Debug\net8.0\WorkingWithCollections.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\bin\Debug\net8.0\WorkingWithCollections.runtimeconfig.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\bin\Debug\net8.0\WorkingWithCollections.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\bin\Debug\net8.0\WorkingWithCollections.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\WorkingWithCollections.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\WorkingWithCollections.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\WorkingWithCollections.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\WorkingWithCollections.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\WorkingWithCollections.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\WorkingWithCollections.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\refint\WorkingWithCollections.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\WorkingWithCollections.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\WorkingWithCollections.genruntimeconfig.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithCollections\obj\Debug\net8.0\ref\WorkingWithCollections.dll
