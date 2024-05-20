@@ -1,0 +1,15 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\bin\Debug\net8.0\WorkingWithRegularExpressions.exe
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\bin\Debug\net8.0\WorkingWithRegularExpressions.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\bin\Debug\net8.0\WorkingWithRegularExpressions.runtimeconfig.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\bin\Debug\net8.0\WorkingWithRegularExpressions.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\bin\Debug\net8.0\WorkingWithRegularExpressions.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\WorkingWithRegularExpressions.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\WorkingWithRegularExpressions.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\WorkingWithRegularExpressions.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\WorkingWithRegularExpressions.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\WorkingWithRegularExpressions.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\WorkingWithRegularExpressions.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\refint\WorkingWithRegularExpressions.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\WorkingWithRegularExpressions.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\WorkingWithRegularExpressions.genruntimeconfig.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter08\WorkingWithRegularExpressions\obj\Debug\net8.0\ref\WorkingWithRegularExpressions.dll
