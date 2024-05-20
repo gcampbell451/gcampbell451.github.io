@@ -1,0 +1,15 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\bin\Debug\net8.0\WorkingWithStreams.exe
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\bin\Debug\net8.0\WorkingWithStreams.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\bin\Debug\net8.0\WorkingWithStreams.runtimeconfig.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\bin\Debug\net8.0\WorkingWithStreams.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\bin\Debug\net8.0\WorkingWithStreams.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\WorkingWithStreams.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\WorkingWithStreams.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\WorkingWithStreams.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\WorkingWithStreams.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\WorkingWithStreams.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\WorkingWithStreams.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\refint\WorkingWithStreams.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\WorkingWithStreams.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\WorkingWithStreams.genruntimeconfig.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithStreams\obj\Debug\net8.0\ref\WorkingWithStreams.dll

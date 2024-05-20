@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Re6wZtO732QXuVpPgo4SfB5f8qbWXySl8PuqUE9+dPIQTEJrTJPZyjE8zatbf6FEvxMkKuMJ/LEml1xs5jY6zA==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter09\\WorkingWithFileSystems\\WorkingWithFileSystems.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gcamp\\.nuget\\packages\\spectre.console\\0.47.0\\spectre.console.0.47.0.nupkg.sha512",
+    "C:\\Users\\gcamp\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
+  ],
+  "logs": []
+}
