@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "c4w63eKwwzQ/ulqrWNc73mpjhPaImvkcfNrTCtpgr7xw16wi99dprYPV0c5Q2jbL1frynB09cY+DHuQiLvvMHQ==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter09\\WorkingWithEnvVars\\WorkingWithEnvVars.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gcamp\\.nuget\\packages\\spectre.console\\0.47.0\\spectre.console.0.47.0.nupkg.sha512",
+    "C:\\Users\\gcamp\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
+  ],
+  "logs": []
+}

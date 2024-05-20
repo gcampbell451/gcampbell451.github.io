@@ -1,0 +1,15 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\bin\Debug\net8.0\WorkingWithEncodings.exe
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\bin\Debug\net8.0\WorkingWithEncodings.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\bin\Debug\net8.0\WorkingWithEncodings.runtimeconfig.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\bin\Debug\net8.0\WorkingWithEncodings.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\bin\Debug\net8.0\WorkingWithEncodings.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\WorkingWithEncodings.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\WorkingWithEncodings.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\WorkingWithEncodings.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\WorkingWithEncodings.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\WorkingWithEncodings.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\WorkingWithEncodings.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\refint\WorkingWithEncodings.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\WorkingWithEncodings.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\WorkingWithEncodings.genruntimeconfig.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithEncodings\obj\Debug\net8.0\ref\WorkingWithEncodings.dll

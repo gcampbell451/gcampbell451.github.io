@@ -1,0 +1,15 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\bin\Debug\net8.0\ControllingJson.exe
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\bin\Debug\net8.0\ControllingJson.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\bin\Debug\net8.0\ControllingJson.runtimeconfig.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\bin\Debug\net8.0\ControllingJson.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\bin\Debug\net8.0\ControllingJson.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\ControllingJson.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\ControllingJson.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\ControllingJson.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\ControllingJson.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\ControllingJson.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\ControllingJson.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\refint\ControllingJson.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\ControllingJson.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\ControllingJson.genruntimeconfig.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\ControllingJson\obj\Debug\net8.0\ref\ControllingJson.dll
