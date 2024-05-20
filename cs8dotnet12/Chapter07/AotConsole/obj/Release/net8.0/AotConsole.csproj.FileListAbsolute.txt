@@ -1,0 +1,15 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\bin\Release\net8.0\AotConsole.exe
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\bin\Release\net8.0\AotConsole.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\bin\Release\net8.0\AotConsole.runtimeconfig.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\bin\Release\net8.0\AotConsole.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\bin\Release\net8.0\AotConsole.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\AotConsole.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\AotConsole.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\AotConsole.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\AotConsole.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\AotConsole.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\AotConsole.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\refint\AotConsole.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\AotConsole.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\AotConsole.genruntimeconfig.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter07\AotConsole\obj\Release\net8.0\ref\AotConsole.dll

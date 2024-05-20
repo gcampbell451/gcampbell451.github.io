@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "P1avFdiSJEsARarSHaSAOQyQVrSXHa0qXbhm16P3WeM3wAm9eboux51cqM0uqlcrmIGmalkhZkjsZ4FfCWNyRw==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter07\\AotConsole\\AotConsole.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gcamp\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.2\\microsoft.dotnet.ilcompiler.8.0.2.nupkg.sha512",
+    "C:\\Users\\gcamp\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.2\\microsoft.net.illink.tasks.8.0.2.nupkg.sha512",
+    "C:\\Users\\gcamp\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.2\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
