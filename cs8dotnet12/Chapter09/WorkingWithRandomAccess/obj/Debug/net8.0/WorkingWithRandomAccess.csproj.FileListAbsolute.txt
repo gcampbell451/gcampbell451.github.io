@@ -1,0 +1,15 @@
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\bin\Debug\net8.0\WorkingWithRandomAccess.exe
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\bin\Debug\net8.0\WorkingWithRandomAccess.deps.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\bin\Debug\net8.0\WorkingWithRandomAccess.runtimeconfig.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\bin\Debug\net8.0\WorkingWithRandomAccess.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\bin\Debug\net8.0\WorkingWithRandomAccess.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\WorkingWithRandomAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\WorkingWithRandomAccess.AssemblyInfoInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\WorkingWithRandomAccess.AssemblyInfo.cs
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\WorkingWithRandomAccess.csproj.CoreCompileInputs.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\WorkingWithRandomAccess.sourcelink.json
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\WorkingWithRandomAccess.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\refint\WorkingWithRandomAccess.dll
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\WorkingWithRandomAccess.pdb
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\WorkingWithRandomAccess.genruntimeconfig.cache
+D:\GitHub repo\gcampbell451.github.io\cs8dotnet12\Chapter09\WorkingWithRandomAccess\obj\Debug\net8.0\ref\WorkingWithRandomAccess.dll
