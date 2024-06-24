@@ -1,0 +1,148 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\WorkingWithEFCore\\WorkingWithEFCore.csproj": {}
+  },
+  "projects": {
+    "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\Northwind.EntityModels\\Northwind.EntityModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\Northwind.EntityModels\\Northwind.EntityModels.csproj",
+        "projectName": "Northwind.EntityModels",
+        "projectPath": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\Northwind.EntityModels\\Northwind.EntityModels.csproj",
+        "packagesPath": "C:\\Users\\gcamp\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\Northwind.EntityModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gcamp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\WorkingWithEFCore\\WorkingWithEFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\WorkingWithEFCore\\WorkingWithEFCore.csproj",
+        "projectName": "WorkingWithEFCore",
+        "projectPath": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\WorkingWithEFCore\\WorkingWithEFCore.csproj",
+        "packagesPath": "C:\\Users\\gcamp\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\WorkingWithEFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gcamp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\Northwind.EntityModels\\Northwind.EntityModels.csproj": {
+                "projectPath": "D:\\GitHub repo\\gcampbell451.github.io\\cs8dotnet12\\Chapter10\\Northwind.EntityModels\\Northwind.EntityModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
